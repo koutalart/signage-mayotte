@@ -1,12 +1,12 @@
 {
-  "updated": "2026-03-19 12:32 UTC",
+  "updated": "2026-03-19 14:01 UTC",
   "meteo": {
     "temp": 30,
     "feels": 35,
-    "condition": "Pluie",
-    "icon": "🌧️",
-    "wind": 16,
-    "humidity": 81,
+    "condition": "Orageux",
+    "icon": "⛈️",
+    "wind": 14,
+    "humidity": 82,
     "hourly_temps": [
       30.3,
       30.2,
@@ -29,14 +29,24 @@
     ]
   },
   "ticker": [
+    "Au moins 18 migrants périssent au nord de la Grande Comore en tentant de gagner la rive, les passeurs leur ont fait croire qu'ils étaient arrivés à Mayotte",
+    "Élections municipales 2026 : \"nous avons vraiment fait bouger les choses à Acoua pendant cette mandature\", estime Marib Hanaffi, maire sortant et candidat",
     "Le sac intelligent de quatre collégiens mahorais remporte un concours national d'innovation",
     "Montez à bord du porte-hélicoptères Dixmude actuellement en escale à Mayotte",
     "Crise de l'eau à Mayotte : le village de M'tsahara coupé à cause d'un incident technique",
-    "Toiher-Eddine \"Sauzée\" Saandani, candidat dans la commune d'Acoua, veut mettre l'accent sur les écoles",
-    "“Les Nounous” : la nouvelle série événement arrive sur Mayotte la 1ère",
-    "\"Je veux jouer la carte de la transparence\" Issilamou Hamada, candidat au second tour à Tsingoni"
+    "Toiher-Eddine \"Sauzée\" Saandani, candidat dans la commune d'Acoua, veut mettre l'accent sur les écoles"
   ],
   "actus_mayotte": [
+    {
+      "title": "Au moins 18 migrants périssent au nord de la Grande Comore en tentant de gagner la rive, les passeurs leur ont fait croire qu'ils étaient arrivés à Mayotte",
+      "desc": "Déposés dans l'obscurité et sur un banc de sable, des migrants originaires d'Afrique continentale ont perdu la vie en essayant d'atteindre le rivage, à Mitsamihuli, au nord de la G",
+      "img": "https://la1ere.franceinfo.fr/image/xLmDID4Cp-dUBePJMu6yioppj4k/600x400/outremer/2026/03/19/comores-migrants-69bbeda1ddf6b109725558.jpg"
+    },
+    {
+      "title": "Élections municipales 2026 : \"nous avons vraiment fait bouger les choses à Acoua pendant cette mandature\", estime Marib Hanaffi, maire sortant et candidat",
+      "desc": "Avec pratiquement seize points d'écart avec son prédécesseur Ahmed Darouéchi, Marib Hanaffi est en ballottage défavorable avant le second tour des élections municipales d'Acoua, ce",
+      "img": "https://la1ere.franceinfo.fr/image/b3yqnS5b-tbCKFDDZLymX4spoyk/600x400/outremer/2026/03/19/whatsapp-image-2026-03-19-at-13-09-42-69bbe8435fd66396624723.jpg"
+    },
     {
       "title": "Le sac intelligent de quatre collégiens mahorais remporte un concours national d'innovation",
       "desc": "Quatre collégiens, trois filles et un garçon, du collège Ouvoimoja à Passamainty, sont les lauréats du concours réservé aux collégiens Science Factor 2026, pour leur invention “Sac",
@@ -56,16 +66,6 @@
       "title": "Toiher-Eddine \"Sauzée\" Saandani, candidat dans la commune d'Acoua, veut mettre l'accent sur les écoles",
       "desc": "Toiher-Eddine \"Sauzée\" Saandani, candidat LR de la liste \"Unis pour Acoua et M'tsangadoua\" est arrivé en troisième position lors du premier tour. Il s'est allié à la liste d'Issouf",
       "img": "https://la1ere.franceinfo.fr/image/mrN1xrRCXKMpUH5xpTxN21gMPWQ/600x400/outremer/2026/03/19/5de8d917-f6cc-4e10-ac7e-9c3808f2778f-69bb9b16f1651128456053.jpg"
-    },
-    {
-      "title": "“Les Nounous” : la nouvelle série événement arrive sur Mayotte la 1ère",
-      "desc": "Entre rires, émotions et réalités du quotidien, Les Nounous vous plonge dans l’univers intense de six femmes de ménage au cœur d’une cité bourgeoise d’Abidjan. Une série touchante ",
-      "img": "https://la1ere.franceinfo.fr/image/S7-IbpWoMHAstviNiAhPOZ056bU/600x400/outremer/2026/03/19/7k6b1913-69bb8cf532b1d303860495.jpg"
-    },
-    {
-      "title": "\"Je veux jouer la carte de la transparence\" Issilamou Hamada, candidat au second tour à Tsingoni",
-      "desc": "Issilamou Hamada est le maire sortant de la commune de Tsingoni. Arrivé en tête au premier tour, il a choisi de fusionner sa liste avec deux autres candidats pour optimiser ses cha",
-      "img": "https://la1ere.franceinfo.fr/image/wIIoMURLC9Af5VAlEYHcDR9IzV0/600x400/outremer/2026/03/19/photo-2026-03-19-07-01-03-69bb89a25f0e6087230934.jpg"
     }
   ],
   "actus_outremer": [
