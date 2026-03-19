@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-Frame-Options" content="ALLOWALL">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mayotte la 1ère — Jeudi Info &amp; Société</title>
+<link rel="stylesheet" href="./signage.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-txt">mayotte</span>
+      <span class="logo-dot"></span>
+      <span class="logo-num">1</span>
+    </div>
+    <div class="hclock">
+      <div class="c-time" id="clock">--:--</div>
+      <div class="c-date" id="date">---</div>
+    </div>
+  </header>
+
+  <!-- BARRE THÈME -->
+  <div class="theme-bar">
+    <span class="tb-day">Jeudi</span>
+    <span class="tb-sep"></span>
+    <span class="tb-theme">Info &amp; Société</span>
+    <span class="tb-dot"></span>
+  </div>
+
+  <!-- SLIDES -->
+  <div class="slides-wrap" id="slides-wrap">
+
+    <!-- ══ S0 — INTRO RÉSUMÉ ══ -->
+    <!-- style inline = fallback absolu si CSS bloqué par CSP serveur -->
+    <div class="slide active" id="s0" data-duration="15000" style="opacity:1;transform:translateY(0);pointer-events:auto;">
+      <div class="intro-slide">
+        <div class="intro-clock-wrap">
+          <div class="intro-time" id="intro-time">--:--</div>
+          <div class="intro-date" id="intro-date">---</div>
+        </div>
+        <div class="intro-fete" id="intro-fete">
+          <span class="intro-fete-dot"></span>
+          <span id="intro-fete-txt">---</span>
+        </div>
+        <div class="intro-divider"></div>
+        <div class="intro-label">Au programme</div>
+        <div class="intro-topics" id="intro-topics">
+          <!-- Généré par JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ S1 — ARS MAYOTTE ══ -->
+    <div class="slide" id="s1">
+      <div class="inst-slide">
+        <div class="inst-deco" style="background:#1B5E20;"></div>
+        <div class="inst-header">
+          <span class="inst-badge" style="background:#2E7D32;">🏥 Santé publique</span>
+        </div>
+        <div class="inst-org">ARS<br>Mayotte</div>
+        <div class="inst-line" style="background:#2E7D32;"></div>
+        <div class="inst-update" id="ars-update">🔄 Mise à jour quotidienne</div>
+        <div class="inst-news-list" id="ars-news-list">
+          <div class="ars-item">
+            <span class="ars-icon">🏥</span>
+            <div class="ars-text">
+              <div class="ars-title">Chargement des actualités ARS…</div>
+              <div class="ars-desc">Récupération du flux en cours.</div>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="border-top:4px solid #2E7D32;">
+          <div class="card-label" style="color:#81C784;">📞 Numéros d'urgence</div>
+          <div class="card-body">15 · SAMU &nbsp;·&nbsp; 17 · Police &nbsp;·&nbsp; 18 · Pompiers &nbsp;·&nbsp; 3114 · Prévention suicide</div>
+        </div>
+        <div class="source-pill">ARS Mayotte · ars.sante.fr</div>
+      </div>
+    </div>
+
+    <!-- ══ S2 — MÉTÉO LES HAUTS VALLONS ══ -->
+    <div class="slide" id="s2">
+      <div class="meteo-slide">
+        <!-- ENTÊTE -->
+        <div class="meteo-header">
+          <span class="meteo-badge">🌤️ Météo</span>
+          <span class="meteo-loc-tag">📍 Mayotte</span>
+        </div>
+        <!-- BLOC PRINCIPAL -->
+        <div class="meteo-main">
+          <div class="meteo-icon-temp-row">
+            <div class="meteo-big-icon" id="meteo-big-icon">⏳</div>
+            <div class="meteo-big-temp" id="meteo-big-temp" style="color:#29B6F6;">--°</div>
+          </div>
+          <div class="meteo-cond-txt" id="meteo-cond-txt">Chargement…</div>
+          <div class="meteo-feels" id="meteo-feels">Ressenti --°C</div>
+          <div class="meteo-details-row">
+            <div class="meteo-detail-pill">
+              <span class="mdp-icon">💨</span>
+              <div>
+                <div class="mdp-val" id="meteo-wind" style="color:#4FC3F7;">--</div>
+                <div class="mdp-lbl">Vent km/h</div>
+              </div>
+            </div>
+            <div class="meteo-detail-pill">
+              <span class="mdp-icon">💧</span>
+              <div>
+                <div class="mdp-val" id="meteo-hum" style="color:#29B6F6;">--</div>
+                <div class="mdp-lbl">Humidité %</div>
+              </div>
+            </div>
+            <div class="meteo-detail-pill">
+              <span class="mdp-icon">🌧️</span>
+              <div>
+                <div class="mdp-val" id="meteo-rain" style="color:#90CAF9;">--</div>
+                <div class="mdp-lbl">Précip. mm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- PRÉVISIONS HORAIRES -->
+        <div class="meteo-forecast-strip" id="meteo-forecast-strip"></div>
+        <div class="meteo-source">open-meteo.com · Mayotte</div>
+      </div>
+    </div>
+
+    <!-- ══ S3 — MUNICIPALES : 1er TOUR ══ -->
+    <div class="slide" id="s3" data-expires="2026-03-24">
+      <div class="std-slide">
+        <div class="slide-header"><span class="s-badge elec">🗳️ Municipales 2026</span></div>
+        <div class="slide-title xs">1er tour<br>15 mars 2026<br>3 maires élus</div>
+        <div class="accent-line al-elec"></div>
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-glow" style="background:#42A5F5;"></div>
+            <div class="stat-val" style="color:#42A5F5;font-size:46px;">58,20%</div>
+            <div class="stat-lbl">Participation<br>à 17h</div>
+            <div class="stat-bar"><div class="stat-bar-fill" style="background:linear-gradient(90deg,#42A5F5,#1565C0);width:58.2%;"></div></div>
+          </div>
+          <div class="stat">
+            <div class="stat-glow" style="background:#81C784;"></div>
+            <div class="stat-val" style="color:#81C784;font-size:72px;">3</div>
+            <div class="stat-lbl">Élus dès<br>le 1er tour</div>
+            <div class="stat-bar"><div class="stat-bar-fill" style="background:linear-gradient(90deg,#4CAF50,#1B5E20);width:17.6%;"></div></div>
+          </div>
+          <div class="stat">
+            <div class="stat-glow" style="background:#42A5F5;"></div>
+            <div class="stat-val" style="color:#64B5F6;font-size:72px;">14</div>
+            <div class="stat-lbl">Communes<br>au 2e tour</div>
+            <div class="stat-bar"><div class="stat-bar-fill" style="background:linear-gradient(90deg,#42A5F5,#0D47A1);width:82.4%;"></div></div>
+          </div>
+        </div>
+        <div class="card elec-top">
+          <div class="card-label cl-elec">✅ Maires élus dès le 1er tour</div>
+          <div class="commune-list">
+            <div class="commune-item">
+              <div class="ci-track elu" style="width:60.9%;"></div>
+              <div class="ci-colorbar elu-bar"></div>
+              <div class="ci-name">Mamoudzou</div>
+              <div class="ci-cand">Ambdilwahedou Soumaila</div>
+              <div class="ci-score elu-score">60,9 %</div>
+              <div class="ci-badge ci-elu">✓ Élu</div>
+            </div>
+            <div class="commune-item">
+              <div class="ci-track elu" style="width:58.5%;"></div>
+              <div class="ci-colorbar elu-bar"></div>
+              <div class="ci-name">M'tsangamouji</div>
+              <div class="ci-cand">Saïd Maanrifa Ibrahima (LR)</div>
+              <div class="ci-score elu-score">58,5 %</div>
+              <div class="ci-badge ci-elu">✓ Élu</div>
+            </div>
+            <div class="commune-item">
+              <div class="ci-track elu" style="width:55.9%;"></div>
+              <div class="ci-colorbar elu-bar"></div>
+              <div class="ci-name">Chiconi</div>
+              <div class="ci-cand">Mohamadi Madi Ousseni (DVD)</div>
+              <div class="ci-score elu-score">55,9 %</div>
+              <div class="ci-badge ci-elu">✓ Élu</div>
+            </div>
+          </div>
+        </div>
+        <div class="source-pill">Mayotte la 1ère · France Télévisions — 15 mars 2026</div>
+      </div>
+    </div>
+
+    <!-- ══ S4 — MUNICIPALES : NORD & CENTRE ══ -->
+    <div class="slide" id="s4" data-expires="2026-03-24">
+      <div class="std-slide">
+        <div class="slide-header"><span class="s-badge elec">🗳️ Municipales 2026</span></div>
+        <div class="slide-title xs">2e tour · 22 mars<br>Nord &amp; Centre</div>
+        <div class="accent-line al-elec"></div>
+        <div class="commune-list">
+          <div class="commune-item"><div class="ci-track" style="width:31%;"></div><div class="ci-colorbar"></div><div class="ci-name">Dzaoudzi-Lab.</div><div class="ci-cand">Houmadi · Oili 30,6% · Novou 29,4%</div><div class="ci-badge ci-t2">▲ Triangulaire</div></div>
+          <div class="commune-item"><div class="ci-track" style="width:28%;"></div><div class="ci-colorbar"></div><div class="ci-name">Koungou</div><div class="ci-cand">Ahamadi "Raos" et Mahamoudou en tête</div><div class="ci-badge ci-t2">▲ 5 listes</div></div>
+          <div class="commune-item"><div class="ci-track" style="width:26%;"></div><div class="ci-colorbar"></div><div class="ci-name">M'tsamboro</div><div class="ci-cand">Ben Said 25,6% · Nourdine 24,5% · Oili 19%</div><div class="ci-badge ci-t2">▲ 4 listes</div></div>
+          <div class="commune-item"><div class="ci-track" style="width:32%;"></div><div class="ci-colorbar"></div><div class="ci-name">Dembéni</div><div class="ci-cand">Saïdi 32,3% · Hamada 30,4% · Kamal 26,9%</div><div class="ci-badge ci-t2">▲ Triangulaire</div></div>
+          <div class="commune-item"><div class="ci-track" style="width:31%;"></div><div class="ci-colorbar"></div><div class="ci-name">Tsingoni</div><div class="ci-cand">Issilamou Hamada (LR) 31,4%</div><div class="ci-badge ci-t2">▲ 5 listes</div></div>
+          <div class="commune-item"><div class="ci-track" style="width:28%;"></div><div class="ci-colorbar"></div><div class="ci-name">Bandraboua</div><div class="ci-cand">Abdou-Lihariti "Maradona" Antoissi en tête</div><div class="ci-badge ci-t2">▲ 5 listes</div></div>
+        </div>
+        <div class="source-pill">Mayotte la 1ère · France Info — la1ere.franceinfo.fr</div>
+      </div>
+    </div>
+
+    <!-- ══ S5 — MUNICIPALES : SUD ══ -->
+    <div class="slide" id="s5" data-expires="2026-03-24">
+      <div class="std-slide">
+        <div class="slide-header"><span class="s-badge elec">🗳️ Municipales 2026</span></div>
+        <div class="slide-title xs">2e tour · 22 mars<br>Sud de Mayotte</div>
+        <div class="accent-line al-elec"></div>
+        <div class="commune-list">
+          <div class="commune-item"><div class="ci-track" style="width:41%;"></div><div class="ci-colorbar"></div><div class="ci-name">Bandrélé</div><div class="ci-cand">Ali Moussa Ben 41,4% · Rama 34,4%</div><div class="ci-badge ci-t2">▲ Triangulaire</div></div>
+          <div class="commune-item"><div class="ci-track" style="width:33%;"></div><div class="ci-colorbar"></div><div class="ci-name">Chirongui</div><div class="ci-cand">Roukia Lahadji 33,3% · Adrachi Velou 27,7%</div><div class="ci-badge ci-t2">▲ Triangulaire</div></div>
+          <div class="commune-item"><div class="ci-track" style="width:30%;"></div><div class="ci-colorbar"></div><div class="ci-name">Kani-Kéli</div><div class="ci-cand">5 listes qualifiées au 2e tour</div><div class="ci-badge ci-t2">▲ 5 listes</div></div>
+          <div class="commune-item"><div class="ci-track" style="width:28%;"></div><div class="ci-colorbar"></div><div class="ci-name">Acoua</div><div class="ci-cand">Darouechi · Hanaffi (sortant) · Saandani</div><div class="ci-badge ci-t2">▲ 4 listes</div></div>
+          <div class="commune-item"><div class="ci-track" style="width:32%;"></div><div class="ci-colorbar"></div><div class="ci-name">Sada</div><div class="ci-cand">Houssamoudine Abdallah (sortant) en tête</div><div class="ci-badge ci-t2">▲ 4 listes</div></div>
+        </div>
+        <div class="card elec-top" style="margin-top:auto;">
+          <div class="card-label cl-elec">📅 Rendez-vous</div>
+          <div class="card-body">2ème tour dimanche 22 mars — bureaux ouverts de 8h à 18h</div>
+        </div>
+        <div class="source-pill">Mayotte la 1ère · France Info — la1ere.franceinfo.fr</div>
+      </div>
+    </div>
+
+    <!-- ══ S6 — APRÈS LE 1ER TOUR ══ -->
+    <div class="slide" id="s6" data-expires="2026-03-24">
+      <div class="std-slide">
+        <div class="slide-header"><span class="s-badge elec">🗳️ Municipales 2026</span></div>
+        <div class="slide-title xs">Et après<br>le 1er tour ?</div>
+        <div class="accent-line al-elec"></div>
+        <div class="flash-list">
+          <div class="flash-item el"><span class="fi-icon">📊</span><div><div class="fi-title">Ce qui s'est passé — 15 mars</div><div class="fi-desc">Participation record : 58,20%. Sur 17 communes, 3 maires ont été élus dès le 1er tour en obtenant plus de 50% des suffrages.</div></div></div>
+          <div class="flash-item el"><span class="fi-icon">⚖️</span><div><div class="fi-title">Le 2e tour — comment ça marche ?</div><div class="fi-desc">Au 2e tour, c'est la majorité simple qui l'emporte : la liste qui obtient le plus de voix est élue, sans seuil minimum requis.</div></div></div>
+          <div class="flash-item el"><span class="fi-icon">🔺</span><div><div class="fi-title">Les triangulaires — un enjeu clé</div><div class="fi-desc">Dans plusieurs communes, 3 listes ou plus sont en compétition. La dispersion des voix peut renverser le résultat.</div></div></div>
+        </div>
+        <div class="card elec-top">
+          <div class="card-label cl-elec">📅 22 mars 2026 · 2e tour</div>
+          <div class="card-body">14 communes aux urnes · Bureaux 8h–18h · Résultats sur mayotte.la1ere.fr</div>
+        </div>
+        <div class="source-pill">Mayotte la 1ère · France Info</div>
+      </div>
+    </div>
+
+    <!-- ══ S7 — INTERNATIONAL : IRAN ══ -->
+    <div class="slide" id="s7" data-expires="2026-03-28">
+      <div class="std-slide">
+        <div class="slide-header"><span class="s-badge iran">🌍 International</span></div>
+        <div class="slide-title sm">Conflit en Iran<br>Jour 17</div>
+        <div class="accent-line al-iran"></div>
+        <div class="flash-list">
+          <div class="flash-item ir"><span class="fi-icon">💥</span><div><div class="fi-title">États-Unis &amp; Israël vs Iran</div><div class="fi-desc">Débuté le 28 fév. 2026 — frappes américano-israéliennes, ripostes iraniennes massives.</div></div></div>
+          <div class="flash-item ir"><span class="fi-icon">⚠️</span><div><div class="fi-title">2 200+ morts au Moyen-Orient</div><div class="fi-desc">1 300+ en Iran · 850+ au Liban · Iran : 700 missiles et 3 600 drones tirés.</div></div></div>
+          <div class="flash-item ir"><span class="fi-icon">🛢️</span><div><div class="fi-title">Détroit d'Hormuz sous tension</div><div class="fi-desc">Transport pétrolier perturbé — forte hausse du prix du pétrole sur les marchés mondiaux.</div></div></div>
+        </div>
+        <div class="card iran-top">
+          <div class="card-label cl-iran">🇫🇷 Position de la France</div>
+          <div class="card-body">La France ne participe pas. Macron a convoqué un G7. Un militaire français tué en Kurdistan irakien.</div>
+        </div>
+        <div class="source-pill">France Info · France Télévisions — 16 mars 2026</div>
+      </div>
+    </div>
+
+    <!-- ══ S7B — INTERNATIONAL : SOUDAN ══ -->
+    <div class="slide" id="s7b" data-expires="2026-04-01">
+      <div class="std-slide">
+        <div class="slide-header"><span class="s-badge intl2">🌍 International</span></div>
+        <div class="slide-title sm">Soudan<br>Crise majeure</div>
+        <div class="accent-line al-intl2"></div>
+        <div class="flash-list">
+          <div class="flash-item i2"><span class="fi-icon">⚔️</span><div><div class="fi-title">2 ans de guerre civile</div><div class="fi-desc">Depuis avril 2023, les forces armées soudanaises et les paramilitaires RSF s'affrontent. 12 millions de déplacés.</div></div></div>
+          <div class="flash-item i2"><span class="fi-icon">🆘</span><div><div class="fi-title">Pire crise humanitaire mondiale</div><div class="fi-desc">L'ONU alerte : famine dans plusieurs régions, accès humanitaire bloqué. 25 millions de personnes en insécurité alimentaire.</div></div></div>
+          <div class="flash-item i2"><span class="fi-icon">🌊</span><div><div class="fi-title">Impact sur l'Afrique de l'Est</div><div class="fi-desc">Des milliers de réfugiés arrivent en Éthiopie et au Tchad. La région de l'océan Indien reste en vigilance migratoire.</div></div></div>
+        </div>
+        <div class="card intl2-top">
+          <div class="card-label cl-intl2">🇫🇷 Aide française</div>
+          <div class="card-body">La France a débloqué 45 M€ d'aide humanitaire en 2026 via le CDCS. Appel au cessez-le-feu à l'ONU.</div>
+        </div>
+        <div class="source-pill">France Info · France Télévisions — mars 2026</div>
+      </div>
+    </div>
+
+    <!-- ══ S7C — ACTUALITÉS OUTRE-MER ══ -->
+    <div class="slide" id="s7c">
+      <div class="om-slide">
+        <div class="slide-header"><span class="s-badge om">🏝️ Outre-mer</span></div>
+        <div class="slide-title xs">Actu<br>Outre-mer</div>
+        <div class="accent-line al-om"></div>
+        <div class="om-items" id="om-items">
+          <!-- Chargé par JS (La 1ère RSS) -->
+          <div class="om-item"><span class="om-icon">🏝️</span><div class="om-text"><div class="om-title">Toute l'actualité des Outre-mer</div><div class="om-desc">Chargement du fil d'actualité La 1ère en cours…</div></div></div>
+        </div>
+        <div class="source-pill" id="om-source">La 1ère · France Info · France Télévisions</div>
+      </div>
+    </div>
+
+    <!-- ══ S_RADIO — SLIDE SPÉCIALE RADIO ══ -->
+    <div class="slide" id="s-radio">
+      <div class="radio-special">
+        <!-- Ondes animées en fond -->
+        <div class="radio-waves">
+          <div class="rw"></div>
+          <div class="rw"></div>
+          <div class="rw"></div>
+          <div class="rw"></div>
+          <div class="rw"></div>
+        </div>
+
+        <div class="radio-special-header">
+          <span class="radio-special-badge">📻 Radio</span>
+          <span class="radio-freq-tag">100.0 FM · Mayotte</span>
+        </div>
+        <div class="radio-special-title">Mayotte<br>la 1ère<br>Radio</div>
+        <div class="radio-special-sub">En direct · 24h/24 · 7j/7</div>
+        <div class="radio-accent"></div>
+
+        <div class="radio-programs">
+          <div class="rp-item" style="border-left-color:#FFD740;">
+            <span class="rp-icon">🌅</span>
+            <div class="rp-time" style="color:#FFD740;">06h30</div>
+            <div>
+              <div class="rp-name">Mayotte Matin</div>
+              <div class="rp-desc">La matinale · actu, météo, sport</div>
+            </div>
+            <span class="rp-freq">Lun – Ven</span>
+          </div>
+          <div class="rp-item">
+            <span class="rp-icon">📰</span>
+            <div class="rp-time">12h00</div>
+            <div>
+              <div class="rp-name">Journal Radio</div>
+              <div class="rp-desc">L'essentiel en 5 minutes</div>
+            </div>
+            <span class="rp-freq">Quotidien</span>
+          </div>
+          <div class="rp-item" style="border-left-color:#FFAB40;">
+            <span class="rp-icon">🌙</span>
+            <div class="rp-time" style="color:#FFAB40;">18h00</div>
+            <div>
+              <div class="rp-name">Journal du Soir</div>
+              <div class="rp-desc">Résumé de la journée · Lun–Ven</div>
+            </div>
+            <span class="rp-freq">Lun – Ven</span>
+          </div>
+          <div class="rp-item" style="border-left-color:#EF5350;">
+            <span class="rp-icon">⚡</span>
+            <div class="rp-time" style="color:#EF5350;">H/H</div>
+            <div>
+              <div class="rp-name">Flash Info</div>
+              <div class="rp-desc">Toutes les heures, toute la journée</div>
+            </div>
+            <span class="rp-freq">Continu</span>
+          </div>
+        </div>
+
+        <div class="radio-footer">
+          <div class="radio-footer-main">
+            <div class="radio-footer-name">🎙️ Écouter en direct</div>
+            <div class="radio-footer-url">la1ere.franceinfo.fr · appli France Info</div>
+          </div>
+          <div class="radio-qr">
+            <img loading="lazy" decoding="async" src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https%3A%2F%2Fla1ere.franceinfo.fr%2Fmayotte&format=png" alt="QR" onerror="this.style.display='none'">
+            <div class="radio-qr-lbl">Écouter</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ S_RADIO2 — GRILLE DES PROGRAMMES ══ -->
+    <div class="slide" id="s-radio2">
+      <div class="radio-schedule-slide">
+        <!-- Réutilise les ondes radio du fond -->
+        <div class="radio-waves">
+          <div class="rw"></div>
+          <div class="rw"></div>
+          <div class="rw"></div>
+          <div class="rw"></div>
+          <div class="rw"></div>
+        </div>
+
+        <div class="rg-header">
+          <span class="radio-special-badge">📻 Radio</span>
+          <span class="radio-freq-tag">100.0 FM · Mayotte</span>
+        </div>
+        <div class="rg-title">Grille des<br>programmes</div>
+        <div class="rg-sub" id="rg-day-label">Aujourd'hui sur Mayotte la 1ère</div>
+        <div class="rg-accent"></div>
+
+        <!-- Grille construite dynamiquement par JS -->
+        <div class="rg-grid" id="rg-grid"></div>
+
+        <div class="radio-footer">
+          <div class="radio-footer-main">
+            <div class="radio-footer-name">🎙️ Écouter en direct</div>
+            <div class="radio-footer-url">la1ere.franceinfo.fr · appli France Info</div>
+          </div>
+          <div class="radio-qr">
+            <img loading="lazy" decoding="async" src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https%3A%2F%2Fla1ere.franceinfo.fr%2Fmayotte&format=png" alt="QR" onerror="this.style.display='none'">
+            <div class="radio-qr-lbl">Écouter</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ S_RDV — RENDEZ-VOUS DE LA SEMAINE ══ -->
+    <div class="slide" id="s-rdv" data-duration="15000">
+      <div class="rdv-slide">
+
+        <div class="rdv-top-bar">
+          <span class="rdv-badge">📺 Rendez-vous de la semaine</span>
+          <span class="rdv-channel-tag">Mayotte la 1ère</span>
+        </div>
+
+        <!-- HERO IMAGE -->
+        <div class="rdv-hero-wrap">
+          <img loading="lazy" decoding="async" id="rdv-hero-img"
+               src="https://medias.france.tv/0hcGhdDJr7rCpvVdfMuQziNkvGk/1080x870/filters:quality(85)/n/v/t/phpheztvn.jpg"
+               alt=""
+               onerror="this.src='https://medias.france.tv/0hcGhdDJr7rCpvVdfMuQziNkvGk/400x533/filters:quality(85)/n/v/t/phpheztvn.jpg'">
+          <div class="rdv-hero-grad"></div>
+          <div class="rdv-hero-info">
+            <div class="rdv-hero-pill" id="rdv-hero-pill">
+              <span class="rdv-pulse-dot"></span>
+              <span id="rdv-hero-time">19h00</span>
+              <span style="font-weight:300;opacity:.7;">· tous les soirs</span>
+            </div>
+            <div class="rdv-hero-title" id="rdv-hero-title">Le 19h à Mayotte</div>
+            <div class="rdv-hero-desc" id="rdv-hero-desc">Le journal de la rédaction de Mayotte la 1ère — toute l'actualité locale et internationale.</div>
+          </div>
+        </div>
+
+        <!-- AUTRES ÉMISSIONS -->
+        <div class="rdv-prog-strip" id="rdv-prog-strip">
+          <!-- Populated by JS -->
+        </div>
+
+        <div class="rdv-footer-bar">france.tv/la1ere/mayotte</div>
+
+      </div>
+    </div>
+
+    <!-- ══ S-COLOCS — AVANT-PREMIÈRE COLOCS S3 ══ -->
+    <div class="slide" id="s-colocs" data-duration="15000" data-expires="2026-04-02">
+      <div class="colocs-slide">
+        <div class="colocs-hero-wrap">
+          <img loading="lazy" decoding="async" src="https://la1ere.franceinfo.fr/image/62j9r6JKui69SZMwXB1VZFI38yU/0x1:1049x592/900x506/filters:format(webp):quality(80)/outremer%2F2026%2F03%2F16%2Fcolocs-web-cover-69b7da8902817285998598.png" alt="Colocs saison 3" onerror="this.parentNode.style.display='none'">
+          <div class="colocs-hero-grad"></div>
+        </div>
+        <div class="colocs-top-bar">
+          <span class="colocs-badge">📺 Avant-première</span>
+          <span class="colocs-channel-tag">Mayotte La 1ère</span>
+        </div>
+        <div class="colocs-main">
+          <div class="colocs-saison">Série · Saison 3</div>
+          <div class="colocs-title">COLOCS !</div>
+          <div class="colocs-subtitle">Elles sont quatre, elles sont fortes</div>
+          <div class="colocs-divider"></div>
+          <div class="colocs-premiere-label">Dès le</div>
+          <div class="colocs-date-row">
+            <div class="colocs-date">23 mars</div>
+            <div class="colocs-time">à 20h00</div>
+          </div>
+          <div class="colocs-desc">Une série de Jacqueline Djoumoi-Guez.<br>8 épisodes tournés à Mayotte.</div>
+        </div>
+        <div class="colocs-footer">
+          <span class="colocs-eps">8 épisodes</span>
+          <span class="colocs-channel">france.tv · la1ere · mayotte</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ S9 — BONNE SEMAINE ══ -->
+    <div class="slide" id="s9">
+      <div class="std-slide">
+        <div class="slide-header"><span class="s-badge alt">Mayotte la 1ère</span></div>
+        <div class="slide-title">Bonne semaine<br>à toutes<br>&amp; tous !</div>
+        <div class="accent-line al-blue"></div>
+        <div class="card accent-top">
+          <div class="card-label cl-blue">🎙️ Notre mission</div>
+          <div class="card-title">Informer, divertir, valoriser Mayotte</div>
+          <div class="card-body">Ensemble, nous portons la voix de Mayotte sur toutes les antennes France Télévisions.</div>
+        </div>
+        <div class="stat-row" style="margin-top:8px;">
+          <div class="stat">
+            <div class="stat-glow" style="background:#0082E6;"></div>
+            <div class="stat-val" style="color:#64B5F6;font-size:42px;">La 1ère</div>
+            <div class="stat-lbl">TV &amp; Radio</div>
+            <div class="stat-bar"><div class="stat-bar-fill" style="background:linear-gradient(90deg,#0082E6,#004cb5);width:100%;"></div></div>
+          </div>
+          <div class="stat">
+            <div class="stat-glow" style="background:#F4C300;"></div>
+            <div class="stat-val" style="color:#FFD740;font-size:48px;">H24</div>
+            <div class="stat-lbl">En continu</div>
+            <div class="stat-bar"><div class="stat-bar-fill" style="background:linear-gradient(90deg,#F4C300,#E65100);width:100%;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /slides-wrap -->
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-label"><span class="ticker-dot"></span>JEUDI</div>
+    <div class="ticker-content">
+      <div class="t-track">
+        <span class="ti">🗳️ Municipales 2026 · 2e tour dimanche 22 mars · 14 communes aux urnes à Mayotte</span>
+        <span class="ts">◆</span>
+        <span class="ti">✅ Mamoudzou · Chiconi · M'tsangamouji — 3 maires élus dès le 1er tour</span>
+        <span class="ts">◆</span>
+        <span class="ti">🌍 Conflit en Iran · Jour 17 · 2 200+ morts · Détroit d'Hormuz sous tension</span>
+        <span class="ts">◆</span>
+        <span class="ti">🌍 Soudan · 2 ans de conflit · 12 millions de déplacés · Crise humanitaire majeure</span>
+        <span class="ts">◆</span>
+        <span class="ti">📺 Le 19h à Mayotte 19h00 · Mahabari en shimaore 19h30 · Tous les jours</span>
+        <span class="ts">◆</span>
+        <span class="ti">📻 Mayotte la 1ère Radio · 100.0 FM · En direct sur la1ere.franceinfo.fr</span>
+        <span class="ts">◆</span>
+        <span class="ti">🌐 Toute l'actu Outre-mer sur la1ere.franceinfo.fr</span>
+        <span class="ts">◆</span>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /app -->
+
+<script src="./signage.js"></script>
+</body>
+</html>
