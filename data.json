@@ -1,20 +1,93 @@
 {
-  "updated": "2026-03-19 00:00 UTC",
+  "updated": "2026-03-19 12:32 UTC",
   "meteo": {
-    "temp": 28,
-    "feels": 31,
-    "condition": "Partiellement nuageux",
-    "icon": "⛅",
-    "wind": 18,
-    "humidity": 78,
-    "hourly_temps": [27, 27, 28, 29, 30, 30, 29, 28],
-    "hourly_codes": [1, 1, 0, 0, 1, 2, 2, 1]
+    "temp": 30,
+    "feels": 35,
+    "condition": "Pluie",
+    "icon": "🌧️",
+    "wind": 16,
+    "humidity": 81,
+    "hourly_temps": [
+      30.3,
+      30.2,
+      30.1,
+      29.9,
+      29.9,
+      29.8,
+      29.3,
+      29.4
+    ],
+    "hourly_codes": [
+      0,
+      1,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1
+    ]
   },
   "ticker": [
-    "Bienvenue sur Mayotte La 1ère",
-    "Restez connectés pour toute l'actualité de Mayotte",
-    "Les données seront mises à jour automatiquement"
+    "Le sac intelligent de quatre collégiens mahorais remporte un concours national d'innovation",
+    "Montez à bord du porte-hélicoptères Dixmude actuellement en escale à Mayotte",
+    "Crise de l'eau à Mayotte : le village de M'tsahara coupé à cause d'un incident technique",
+    "Toiher-Eddine \"Sauzée\" Saandani, candidat dans la commune d'Acoua, veut mettre l'accent sur les écoles",
+    "“Les Nounous” : la nouvelle série événement arrive sur Mayotte la 1ère",
+    "\"Je veux jouer la carte de la transparence\" Issilamou Hamada, candidat au second tour à Tsingoni"
   ],
-  "actus_mayotte": [],
-  "actus_outremer": []
+  "actus_mayotte": [
+    {
+      "title": "Le sac intelligent de quatre collégiens mahorais remporte un concours national d'innovation",
+      "desc": "Quatre collégiens, trois filles et un garçon, du collège Ouvoimoja à Passamainty, sont les lauréats du concours réservé aux collégiens Science Factor 2026, pour leur invention “Sac",
+      "img": "https://la1ere.franceinfo.fr/image/jexUfxY_DsVXhLn5hiAHLFREsrA/600x400/outremer/2026/03/19/whatsapp-image-2026-03-19-at-09-13-52-69bbdaaa579ce739610772.jpg"
+    },
+    {
+      "title": "Montez à bord du porte-hélicoptères Dixmude actuellement en escale à Mayotte",
+      "desc": "En escale dans le lagon mahorais, ce jeudi 19 mars, le Dixmude est un porte-hélicoptères mis en service depuis 2012. Actuellement en mission de formation, il a offert l'opportunité",
+      "img": "https://la1ere.franceinfo.fr/image/c2UaLwOQk6jWizDePGMA7u16RXY/600x400/outremer/2026/03/19/dixmude-1-69bbc8e4c3b1d882495404.jpg"
+    },
+    {
+      "title": "Crise de l'eau à Mayotte : le village de M'tsahara coupé à cause d'un incident technique",
+      "desc": "Une coupure d'eau non prévue est en cours, ce jeudi 19 mars, et ne concerne que M'tsahara. Le niveau du réservoir de tête qui alimente le village au nord de Grande-Terre est en eff",
+      "img": "https://la1ere.franceinfo.fr/image/-kz8wNAvm5QNw3K88WNyGnBEaCQ/600x400/outremer/2019/10/03/5d95aad55ab43_robinet.jpg"
+    },
+    {
+      "title": "Toiher-Eddine \"Sauzée\" Saandani, candidat dans la commune d'Acoua, veut mettre l'accent sur les écoles",
+      "desc": "Toiher-Eddine \"Sauzée\" Saandani, candidat LR de la liste \"Unis pour Acoua et M'tsangadoua\" est arrivé en troisième position lors du premier tour. Il s'est allié à la liste d'Issouf",
+      "img": "https://la1ere.franceinfo.fr/image/mrN1xrRCXKMpUH5xpTxN21gMPWQ/600x400/outremer/2026/03/19/5de8d917-f6cc-4e10-ac7e-9c3808f2778f-69bb9b16f1651128456053.jpg"
+    },
+    {
+      "title": "“Les Nounous” : la nouvelle série événement arrive sur Mayotte la 1ère",
+      "desc": "Entre rires, émotions et réalités du quotidien, Les Nounous vous plonge dans l’univers intense de six femmes de ménage au cœur d’une cité bourgeoise d’Abidjan. Une série touchante ",
+      "img": "https://la1ere.franceinfo.fr/image/S7-IbpWoMHAstviNiAhPOZ056bU/600x400/outremer/2026/03/19/7k6b1913-69bb8cf532b1d303860495.jpg"
+    },
+    {
+      "title": "\"Je veux jouer la carte de la transparence\" Issilamou Hamada, candidat au second tour à Tsingoni",
+      "desc": "Issilamou Hamada est le maire sortant de la commune de Tsingoni. Arrivé en tête au premier tour, il a choisi de fusionner sa liste avec deux autres candidats pour optimiser ses cha",
+      "img": "https://la1ere.franceinfo.fr/image/wIIoMURLC9Af5VAlEYHcDR9IzV0/600x400/outremer/2026/03/19/photo-2026-03-19-07-01-03-69bb89a25f0e6087230934.jpg"
+    }
+  ],
+  "actus_outremer": [
+    {
+      "title": "6 cas de variole B (Mpox) identifiés  depuis le début de l’année",
+      "desc": "Ce jeudi 5 février, trois cas supplémentaires de variole B (Mpox) ont été identifiés sur le territoire et pris en charge rapidement grâce au système de veille et de surveillance ac",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
+    },
+    {
+      "title": "Deux cas de variole B (Mpox) identifiés",
+      "desc": "Ces mardi 27 et mercredi 28 janvier, deux cas de variole B (Mpox) ont été détectés sur le territoire. L’Agence Régionale de Santé (ARS) a été immédiatement informée et a mis en œuv",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
+    },
+    {
+      "title": "L’Agence Régionale de Santé, le rectorat et l’Observatoire régional de la santé de Mayotte lancent la 2ᵉ édition de l’étude “Santé des jeunes”",
+      "desc": "Ce lundi 26 janvier, l’Agence Régionale de Santé de Mayotte, en lien avec le rectorat et l’Observatoire régional de la santé de Mayotte, lançait la seconde édition de l’étude “Sant",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
+    },
+    {
+      "title": "Virus Mpox : identification d'un premier cas",
+      "desc": "Le 16 décembre, 5 cas de Mpox ont été confirmés à Madagascar et localisés dans la région côtière de Mahajanga, au Nord-Ouest du pays. Depuis, une centaine de cas suspects et une di",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
+    }
+  ]
 }
