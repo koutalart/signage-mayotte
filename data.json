@@ -1,12 +1,12 @@
 {
-  "updated": "2026-03-19 15:41 UTC",
+  "updated": "2026-03-19 16:44 UTC",
   "meteo": {
-    "temp": 29,
+    "temp": 30,
     "feels": 36,
-    "condition": "Orageux",
-    "icon": "⛈️",
+    "condition": "Nuageux",
+    "icon": "☁️",
     "wind": 9,
-    "humidity": 82,
+    "humidity": 81,
     "hourly_temps": [
       30.3,
       30.2,
@@ -29,14 +29,24 @@
     ]
   },
   "ticker": [
+    "Madagascar : le gouvernement annoncé la semaine prochaine après un passage au détecteur de mensonges",
+    "Élections municipales 2026 à Kani-Kéli : Hanyou Achirafi espère mobiliser la jeunesse au second tour",
     "Au moins 18 migrants périssent au nord de la Grande Comore en tentant de gagner la rive, les passeurs leur ont fait croire qu'ils étaient arrivés à Mayotte",
     "Élections municipales 2026 : \"nous avons vraiment fait bouger les choses à Acoua pendant cette mandature\", estime Marib Hanaffi, maire sortant et candidat",
     "Le sac intelligent de quatre collégiens mahorais remporte un concours national d'innovation",
-    "Montez à bord du porte-hélicoptères Dixmude actuellement en escale à Mayotte",
-    "Crise de l'eau à Mayotte : le village de M'tsahara coupé à cause d'un incident technique",
-    "Toiher-Eddine \"Sauzée\" Saandani, candidat dans la commune d'Acoua, veut mettre l'accent sur les écoles"
+    "Montez à bord du porte-hélicoptères Dixmude actuellement en escale à Mayotte"
   ],
   "actus_mayotte": [
+    {
+      "title": "Madagascar : le gouvernement annoncé la semaine prochaine après un passage au détecteur de mensonges",
+      "desc": "Le nouveau gouvernement de Madagascar ne sera annoncé que \"lundi ou mardi\" car les candidats aux postes de ministre sont soumis au polygraphe, a expliqué Michael Randrianirina, ce ",
+      "img": "https://la1ere.franceinfo.fr/image/NGNY4d4jOaEWIVJ_R_k6vILg9mA/600x400/outremer/2026/02/20/000-987w2ke-6998d29920040568904036.jpg"
+    },
+    {
+      "title": "Élections municipales 2026 à Kani-Kéli : Hanyou Achirafi espère mobiliser la jeunesse au second tour",
+      "desc": "À trois jours du second tour des élections municipales, Hanyou Achirafi était l'invité de l'émission Zakweli, ce jeudi 19 mars. Le conseiller municipal sortant de Kani-Kéli, deuxiè",
+      "img": "https://la1ere.franceinfo.fr/image/0VtxErtsOG162jizMO1Q1uWmkt0/600x400/outremer/2026/03/19/whatsapp-image-2026-03-19-at-13-30-05-69bc01be5eb78086572672.jpg"
+    },
     {
       "title": "Au moins 18 migrants périssent au nord de la Grande Comore en tentant de gagner la rive, les passeurs leur ont fait croire qu'ils étaient arrivés à Mayotte",
       "desc": "Déposés dans l'obscurité et sur un banc de sable, des migrants originaires d'Afrique continentale ont perdu la vie en essayant d'atteindre le rivage, à Mitsamihuli, au nord de la G",
@@ -56,16 +66,6 @@
       "title": "Montez à bord du porte-hélicoptères Dixmude actuellement en escale à Mayotte",
       "desc": "En escale dans le lagon mahorais, ce jeudi 19 mars, le Dixmude est un porte-hélicoptères mis en service depuis 2012. Actuellement en mission de formation, il a offert l'opportunité",
       "img": "https://la1ere.franceinfo.fr/image/c2UaLwOQk6jWizDePGMA7u16RXY/600x400/outremer/2026/03/19/dixmude-1-69bbc8e4c3b1d882495404.jpg"
-    },
-    {
-      "title": "Crise de l'eau à Mayotte : le village de M'tsahara coupé à cause d'un incident technique",
-      "desc": "Une coupure d'eau non prévue est en cours, ce jeudi 19 mars, et ne concerne que M'tsahara. Le niveau du réservoir de tête qui alimente le village au nord de Grande-Terre est en eff",
-      "img": "https://la1ere.franceinfo.fr/image/-kz8wNAvm5QNw3K88WNyGnBEaCQ/600x400/outremer/2019/10/03/5d95aad55ab43_robinet.jpg"
-    },
-    {
-      "title": "Toiher-Eddine \"Sauzée\" Saandani, candidat dans la commune d'Acoua, veut mettre l'accent sur les écoles",
-      "desc": "Toiher-Eddine \"Sauzée\" Saandani, candidat LR de la liste \"Unis pour Acoua et M'tsangadoua\" est arrivé en troisième position lors du premier tour. Il s'est allié à la liste d'Issouf",
-      "img": "https://la1ere.franceinfo.fr/image/mrN1xrRCXKMpUH5xpTxN21gMPWQ/600x400/outremer/2026/03/19/5de8d917-f6cc-4e10-ac7e-9c3808f2778f-69bb9b16f1651128456053.jpg"
     }
   ],
   "actus_outremer": [
