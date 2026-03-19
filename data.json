@@ -1,31 +1,31 @@
 {
-  "updated": "2026-03-19 21:24 UTC",
+  "updated": "2026-03-19 22:16 UTC",
   "meteo": {
-    "temp": 30,
-    "feels": 37,
-    "condition": "Nuageux",
-    "icon": "☁️",
+    "temp": 29,
+    "feels": 36,
+    "condition": "Partiellement nuageux",
+    "icon": "⛅",
     "wind": 2,
     "humidity": 80,
     "hourly_temps": [
-      29.8,
-      29.7,
-      29.5,
-      29.3,
-      29.1,
-      29.2,
       29.4,
+      29.4,
+      29.3,
+      29.3,
+      29.4,
+      29.5,
+      29.5,
       29.4
     ],
     "hourly_codes": [
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3,
-      3
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
     ]
   },
   "ticker": [
