@@ -1,20 +1,94 @@
 {
-  "updated": "2026-03-19 00:00 UTC",
+  "updated": "2026-03-20 13:53 UTC",
   "meteo": {
-    "temp": 28,
-    "feels": 31,
-    "condition": "Partiellement nuageux",
-    "icon": "⛅",
-    "wind": 18,
-    "humidity": 78,
-    "hourly_temps": [27, 27, 28, 29, 30, 30, 29, 28],
-    "hourly_codes": [1, 1, 0, 0, 1, 2, 2, 1]
+    "temp": 30,
+    "feels": 36,
+    "condition": "Nuageux",
+    "icon": "☁️",
+    "wind": 10,
+    "humidity": 80,
+    "precipitation": 0.0,
+    "hourly_temps": [
+      29.4,
+      29.4,
+      29.3,
+      29.0,
+      29.0,
+      29.1,
+      29.3,
+      29.4
+    ],
+    "hourly_codes": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      1,
+      2
+    ]
   },
   "ticker": [
-    "Bienvenue sur Mayotte La 1ère",
-    "Restez connectés pour toute l'actualité de Mayotte",
-    "Les données seront mises à jour automatiquement"
+    "« Il faut déposer une demande de bourse et attendre le retour du CROUS », insiste M’colo Bacar M’colo, responsable du site de Mayotte pour le CROUS",
+    "Alliances, fusions, candidats qualifiés : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
+    "La Charte sociale européenne étendue aux territoires ultramarins, une \"victoire historique\" pour les associations",
+    "Dernière ligne droite avant l’Aïd : foule et embouteillages à Majicavo Dubaï",
+    "Île Maurice : le vice Premier ministre Paul Bérenger démissionne, un séisme politique au sommet de l'Etat mauricien",
+    "Congés bonifiés : les trajets vers l’aéroport exclus de la prise en charge, confirme la justice"
   ],
-  "actus_mayotte": [],
-  "actus_outremer": []
+  "actus_mayotte": [
+    {
+      "title": "« Il faut déposer une demande de bourse et attendre le retour du CROUS », insiste M’colo Bacar M’colo, responsable du site de Mayotte pour le CROUS",
+      "desc": "La campagne de demande de bourse est ouverte depuis le 2 mars. Les futurs étudiants sont invités à constituer leur dossier social étudiant (DSE), indispensable pour bénéficier d’un",
+      "img": "https://la1ere.franceinfo.fr/image/vSO9NnBnAxReCjDWAIeZcPU5b3M/600x400/outremer/2020/12/09/5fd0cf7b643b1_0676756001534405210_1-1540474.jpg"
+    },
+    {
+      "title": "Alliances, fusions, candidats qualifiés : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
+      "desc": "Le second tour des élections municipales se tient ce dimanche 22 mars. Après d'âpres négociations en vue de fusions, 37 candidats ont validé leurs listes dans les 14 communes mahor",
+      "img": "https://la1ere.franceinfo.fr/image/SxH8ykAVdRDHhjf2w8_EqjaFgbU/600x400/outremer/2026/03/15/whatsapp-image-2026-03-15-at-15-44-27-69b6bd9e6963c834092591.jpg"
+    },
+    {
+      "title": "La Charte sociale européenne étendue aux territoires ultramarins, une \"victoire historique\" pour les associations",
+      "desc": "La France a annoncé jeudi 19 mars l'extension de la Charte sociale européenne à ses territoires d'outre-mer, une décision vécue comme une \"victoire historique\" par les associations",
+      "img": "https://la1ere.franceinfo.fr/image/KUtef2bC4bE7pa6y5lcb8AVpq6Y/600x400/outremer/2021/05/10/60992ecbdc93e_europe_parlement-1662024.jpg"
+    },
+    {
+      "title": "Dernière ligne droite avant l’Aïd : foule et embouteillages à Majicavo Dubaï",
+      "desc": "À la veille de l’Aïd el-Fitr, l’effervescence est bien palpable à Majicavo Dubaï, ce vendredi. Malgré une météo capricieuse, les habitants se mobilisent pour finaliser leurs dernie",
+      "img": "https://la1ere.franceinfo.fr/image/3-cu6LTqahh3YPh0dyY4aAJaZEM/600x400/outremer/2026/03/20/whatsapp-image-2026-03-20-at-12-46-22-69bd20b04bbb0899980133.jpg"
+    },
+    {
+      "title": "Île Maurice : le vice Premier ministre Paul Bérenger démissionne, un séisme politique au sommet de l'Etat mauricien",
+      "desc": "Le vice Premier Ministre et leader du Mouvement Militant Mauricien (MMM), Paul Bérenger, a annoncé sa démission ce vendredi 20 mars, dans un contexte de fortes tensions internes au",
+      "img": "https://la1ere.franceinfo.fr/image/-cyajOCd_m3pvy9E2R76VC0syoc/600x400/outremer/2026/03/20/paul-69bd01fae263b032842474.png"
+    },
+    {
+      "title": "Congés bonifiés : les trajets vers l’aéroport exclus de la prise en charge, confirme la justice",
+      "desc": "La justice administrative confirme une interprétation stricte du congé bonifié. Saisie par plusieurs fonctionnaires ultramarins, elle valide le refus de certaines administrations d",
+      "img": "https://la1ere.franceinfo.fr/image/KwzQC0iUzpdzdBP9sj4amhHfyqQ/600x400/outremer/2026/03/19/ta33-585x369-69bc0b3ec0430747480873.jpg"
+    }
+  ],
+  "actus_outremer": [
+    {
+      "title": "6 cas de variole B (Mpox) identifiés  depuis le début de l’année",
+      "desc": "Ce jeudi 5 février, trois cas supplémentaires de variole B (Mpox) ont été identifiés sur le territoire et pris en charge rapidement grâce au système de veille et de surveillance ac",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
+    },
+    {
+      "title": "Deux cas de variole B (Mpox) identifiés",
+      "desc": "Ces mardi 27 et mercredi 28 janvier, deux cas de variole B (Mpox) ont été détectés sur le territoire. L’Agence Régionale de Santé (ARS) a été immédiatement informée et a mis en œuv",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
+    },
+    {
+      "title": "L’Agence Régionale de Santé, le rectorat et l’Observatoire régional de la santé de Mayotte lancent la 2ᵉ édition de l’étude “Santé des jeunes”",
+      "desc": "Ce lundi 26 janvier, l’Agence Régionale de Santé de Mayotte, en lien avec le rectorat et l’Observatoire régional de la santé de Mayotte, lançait la seconde édition de l’étude “Sant",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
+    },
+    {
+      "title": "Virus Mpox : identification d'un premier cas",
+      "desc": "Le 16 décembre, 5 cas de Mpox ont été confirmés à Madagascar et localisés dans la région côtière de Mahajanga, au Nord-Ouest du pays. Depuis, une centaine de cas suspects et une di",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
+    }
+  ]
 }
