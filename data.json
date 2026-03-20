@@ -1,20 +1,20 @@
 {
-  "updated": "2026-03-20 01:04 UTC",
+  "updated": "2026-03-20 04:02 UTC",
   "meteo": {
     "temp": 29,
-    "feels": 36,
+    "feels": 35,
     "condition": "Partiellement nuageux",
     "icon": "⛅",
-    "wind": 5,
-    "humidity": 80,
+    "wind": 12,
+    "humidity": 79,
     "hourly_temps": [
       29.4,
       29.4,
       29.3,
+      29.0,
+      29.0,
+      29.1,
       29.3,
-      29.4,
-      29.5,
-      29.5,
       29.4
     ],
     "hourly_codes": [
@@ -24,19 +24,29 @@
       2,
       2,
       2,
-      2,
+      1,
       2
     ]
   },
   "ticker": [
+    "Pâtisserie, décoration, les préparatifs battent leur plein pour l'Aïd-el-Fitr à Mayotte",
+    "Un jeune Mahorais tué par balles à Brest : le tireur présumé de 18 ans écroué",
     "Le bagad de Lann-Bihoué fait retentir le son de la cornemuse à Mamoudzou et Dzaoudzi",
     "Madagascar : le gouvernement annoncé la semaine prochaine après un passage au détecteur de mensonges",
     "Élections municipales 2026 : \"on a toujours travaillé avec la population parce que notre projet vient d'elle\", affirme Hanyou Achirafi, candidat à Kani-Kéli",
-    "Au moins 18 migrants périssent au nord de la Grande Comore en tentant de gagner la rive, les passeurs leur ont fait croire qu'ils étaient arrivés à Mayotte",
-    "Élections municipales 2026 : \"nous avons vraiment fait bouger les choses à Acoua pendant cette mandature\", estime Marib Hanaffi, maire sortant et candidat",
-    "Le sac intelligent de quatre collégiens mahorais remporte un concours national d'innovation"
+    "Au moins 18 migrants périssent au nord de la Grande Comore en tentant de gagner la rive, les passeurs leur ont fait croire qu'ils étaient arrivés à Mayotte"
   ],
   "actus_mayotte": [
+    {
+      "title": "Pâtisserie, décoration, les préparatifs battent leur plein pour l'Aïd-el-Fitr à Mayotte",
+      "desc": "Comme chaque année, les professionnels à Mayotte sont particulièrement sollicités pour l'Aïd-el-Fitr. A l'approche de cette fête religieuse, de nombreux Mahorais ont déjà commencé ",
+      "img": "https://la1ere.franceinfo.fr/image/PoP9lliSM9bbkerhYibPUiP6JW0/600x400/outremer/2026/03/20/qkdz6927-frame-0-69bcad2d15a10154783480.png"
+    },
+    {
+      "title": "Un jeune Mahorais tué par balles à Brest : le tireur présumé de 18 ans écroué",
+      "desc": "Le 14 novembre 2025, un homme d'une vingtaine d'années, originaire de Mayotte, a été tué par balles dans un quartier populaire de Brest. Quatre mois plus tard, un individu vient d'",
+      "img": "https://la1ere.franceinfo.fr/image/E6bSgPt8PwONLMl5D_DQzr42Aw0/600x400/outremer/2026/03/19/000-36ry7g8-69bc6d52a8581345195264.jpg"
+    },
     {
       "title": "Le bagad de Lann-Bihoué fait retentir le son de la cornemuse à Mamoudzou et Dzaoudzi",
       "desc": "En marge de l'escale du porte-hélicoptères Dixmude à Mayotte, le bagad de Lann Bihoué a donné plusieurs représentations, ce jeudi 19 mars. La formation musicale bretonne, composée ",
@@ -56,16 +66,6 @@
       "title": "Au moins 18 migrants périssent au nord de la Grande Comore en tentant de gagner la rive, les passeurs leur ont fait croire qu'ils étaient arrivés à Mayotte",
       "desc": "Déposés dans l'obscurité et sur un banc de sable, des migrants originaires d'Afrique continentale ont perdu la vie en essayant d'atteindre le rivage, à Mitsamihuli, au nord de la G",
       "img": "https://la1ere.franceinfo.fr/image/xLmDID4Cp-dUBePJMu6yioppj4k/600x400/outremer/2026/03/19/comores-migrants-69bbeda1ddf6b109725558.jpg"
-    },
-    {
-      "title": "Élections municipales 2026 : \"nous avons vraiment fait bouger les choses à Acoua pendant cette mandature\", estime Marib Hanaffi, maire sortant et candidat",
-      "desc": "Avec pratiquement seize points d'écart avec son prédécesseur Ahmed Darouéchi, Marib Hanaffi est en ballottage défavorable avant le second tour des élections municipales d'Acoua, ce",
-      "img": "https://la1ere.franceinfo.fr/image/b3yqnS5b-tbCKFDDZLymX4spoyk/600x400/outremer/2026/03/19/whatsapp-image-2026-03-19-at-13-09-42-69bbe8435fd66396624723.jpg"
-    },
-    {
-      "title": "Le sac intelligent de quatre collégiens mahorais remporte un concours national d'innovation",
-      "desc": "Quatre collégiens, trois filles et un garçon, du collège Ouvoimoja à Passamainty, sont les lauréats du concours réservé aux collégiens Science Factor 2026, pour leur invention “Sac",
-      "img": "https://la1ere.franceinfo.fr/image/jexUfxY_DsVXhLn5hiAHLFREsrA/600x400/outremer/2026/03/19/whatsapp-image-2026-03-19-at-09-13-52-69bbdaaa579ce739610772.jpg"
     }
   ],
   "actus_outremer": [
