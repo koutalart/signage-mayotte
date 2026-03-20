@@ -261,8 +261,8 @@ body.w-stormy #app {
 .meteo-loc-tag { font-size:22px; font-weight:300; color:rgba(255,255,255,0.4); letter-spacing:1px; }
 .meteo-main {
   flex:1; display:flex; flex-direction:column;
-  align-items:center; justify-content:center;
-  gap:36px; padding:0 44px;
+  align-items:center; justify-content:flex-start;
+  gap:36px; padding:60px 44px 0;
 }
 .meteo-icon-temp-row { display:flex; align-items:center; gap:24px; }
 .meteo-big-icon { font-size:170px; line-height:1; }

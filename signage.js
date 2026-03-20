@@ -168,7 +168,32 @@ try {
       if(!r.ok) return;
       var payload=await r.json(); // ← JSON, pas XML
       var rawItems=(payload.actus_mayotte||[]).slice(0,5);
-      if(rawItems.length===0) return;
+
+      // Fallback institutionnel si aucune actu disponible
+      if(rawItems.length===0) {
+        var list=document.getElementById('ars-news-list');
+        var updEl=document.getElementById('ars-update');
+        if(list) {
+          list.innerHTML='';
+          var fallbacks=[
+            {icon:'💊', titre:'Paludisme — Prévention', desc:'Utilisez les répulsifs et les moustiquaires. Le paludisme reste endémique à Mayotte. Consultez votre médecin en cas de fièvre.'},
+            {icon:'💧', titre:'Eau potable — Vigilance', desc:'En période de restriction, privilégiez l\'eau en bouteille pour les nourrissons. Respectez les consignes de l\'ARS.'},
+            {icon:'🌡️', titre:'Dengue — Surveillance active', desc:'Éliminez les eaux stagnantes autour de votre domicile. Signalez tout foyer de moustiques à l\'ARS Mayotte.'}
+          ];
+          fallbacks.forEach(function(fb){
+            var div=document.createElement('div'); div.className='ars-item';
+            div.style.borderLeftColor='#2E7D32'; div.style.background='rgba(46,125,50,0.08)';
+            div.innerHTML='<span class="ars-icon">'+fb.icon+'</span>'
+              +'<div class="ars-text">'
+                +'<div class="ars-title">'+fb.titre+'</div>'
+                +'<div class="ars-desc">'+fb.desc+'</div>'
+              +'</div>';
+            list.appendChild(div);
+          });
+        }
+        if(updEl) updEl.textContent='🔄 Informations permanentes ARS Mayotte';
+        return;
+      }
 
       var list=document.getElementById('ars-news-list');
       var updEl=document.getElementById('ars-update');
