@@ -1,12 +1,12 @@
 {
-  "updated": "2026-03-20 16:29 UTC",
+  "updated": "2026-03-20 17:28 UTC",
   "meteo": {
     "temp": 30,
     "feels": 36,
-    "condition": "Partiellement nuageux",
-    "icon": "⛅",
-    "wind": 6,
-    "humidity": 79,
+    "condition": "Nuageux",
+    "icon": "☁️",
+    "wind": 7,
+    "humidity": 80,
     "precipitation": 0.0,
     "hourly_temps": [
       29.4,
@@ -30,14 +30,19 @@
     ]
   },
   "ticker": [
+    "L’Aïd El-Fitr sera célébré ce samedi 21 mars à Mayotte",
     "Circulation perturbée à Tsingoni suite à des barrages et caillassages sur la route",
     "« Il faut déposer une demande de bourse et attendre le retour du CROUS », insiste M’colo Bacar M’colo, responsable du site de Mayotte pour le CROUS",
     "Alliances, fusions, candidats qualifiés : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
     "La Charte sociale européenne étendue aux territoires ultramarins, une \"victoire historique\" pour les associations",
-    "Dernière ligne droite avant l’Aïd : foule et embouteillages à Majicavo Dubaï",
-    "Île Maurice : le vice Premier ministre Paul Bérenger démissionne, un séisme politique au sommet de l'Etat mauricien"
+    "Dernière ligne droite avant l’Aïd : foule et embouteillages à Majicavo Dubaï"
   ],
   "actus_mayotte": [
+    {
+      "title": "L’Aïd El-Fitr sera célébré ce samedi 21 mars à Mayotte",
+      "desc": "Après des semaines de jeûne, l’Aïd el-Fitr sera fêté ce samedi à Mayotte. Cette fête marque la fin du mois sacré de Ramadan pour les musulmans de l’île.",
+      "img": "https://la1ere.franceinfo.fr/image/J_HNjrfGK4leAUJo7lEu1J4VcsI/600x400/outremer/2025/04/03/whatsapp-image-2025-04-03-at-13-17-01-67ee602eaad96479973918.jpg"
+    },
     {
       "title": "Circulation perturbée à Tsingoni suite à des barrages et caillassages sur la route",
       "desc": "La circulation a été fortement perturbée ce vendredi à Tsingoni, suite à des barrages et des caillassages. Ces perturbations faisaient suite au drame survenu plus tôt près de la ca",
@@ -62,11 +67,6 @@
       "title": "Dernière ligne droite avant l’Aïd : foule et embouteillages à Majicavo Dubaï",
       "desc": "À la veille de l’Aïd el-Fitr, l’effervescence est bien palpable à Majicavo Dubaï, ce vendredi. Malgré une météo capricieuse, les habitants se mobilisent pour finaliser leurs dernie",
       "img": "https://la1ere.franceinfo.fr/image/3-cu6LTqahh3YPh0dyY4aAJaZEM/600x400/outremer/2026/03/20/whatsapp-image-2026-03-20-at-12-46-22-69bd20b04bbb0899980133.jpg"
-    },
-    {
-      "title": "Île Maurice : le vice Premier ministre Paul Bérenger démissionne, un séisme politique au sommet de l'Etat mauricien",
-      "desc": "Le vice Premier Ministre et leader du Mouvement Militant Mauricien (MMM), Paul Bérenger, a annoncé sa démission ce vendredi 20 mars, dans un contexte de fortes tensions internes au",
-      "img": "https://la1ere.franceinfo.fr/image/-cyajOCd_m3pvy9E2R76VC0syoc/600x400/outremer/2026/03/20/paul-69bd01fae263b032842474.png"
     }
   ],
   "actus_outremer": [
