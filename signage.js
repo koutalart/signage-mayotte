@@ -248,23 +248,13 @@ async function loadProgramme() {
     if (tl && p.jour) tl.innerHTML = `<span class="ticker-dot"></span>${p.jour}`;
 
     if (p.stories) {
-      // Dynamic story rendering: elections handled separately, others fill s7/s7b/s7c
-      const intlSlots = ['s7', 's7b', 's7c'];
-      let slotIdx = 0;
-      for (const [key, story] of Object.entries(p.stories)) {
-        if (key === 'elections') {
-          if (story.data_expires) {
-            ['s3','s4','s5','s6'].forEach(id => {
-              const el = document.getElementById(id);
-              if (el) el.dataset.expires = story.data_expires;
-            });
-          }
-          continue;
-        }
-        if (slotIdx < intlSlots.length) {
-          renderStory(intlSlots[slotIdx], story);
-          slotIdx++;
-        }
+      if (p.stories.iran) renderStory('s7', p.stories.iran);
+      if (p.stories.soudan) renderStory('s7b', p.stories.soudan);
+      if (p.stories.elections && p.stories.elections.data_expires) {
+        ['s3','s4','s5','s6'].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.dataset.expires = p.stories.elections.data_expires;
+        });
       }
     }
     buildTickerFromProgramme(p);
