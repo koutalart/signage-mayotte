@@ -1,0 +1,88 @@
+{
+  "_aide": "Éditer chaque matin sur GitHub (bouton crayon). 'compteur_debut' calcule Jour X automatiquement. Mettre 'actif': false pour masquer une story. data_expires masque la slide après la date.",
+
+  "jour": "VENDREDI",
+  "theme": "INFO & SOCIÉTÉ",
+
+  "agenda": [
+    { "emoji": "🏥", "label": "Santé" },
+    { "emoji": "🌤️", "label": "Météo" },
+    { "emoji": "🗳️", "label": "Élections" },
+    { "emoji": "🌍", "label": "International" },
+    { "emoji": "🏝️", "label": "Outre-mer" }
+  ],
+
+  "stories": {
+    "iran": {
+      "actif": true,
+      "titre": "Conflit en Iran",
+      "compteur_debut": "2026-02-28",
+      "flash": [
+        {
+          "icon": "💥",
+          "titre": "États-Unis & Israël vs Iran",
+          "desc": "Débuté le 28 fév. 2026 — frappes américano-israéliennes, ripostes iraniennes massives."
+        },
+        {
+          "icon": "⚠️",
+          "titre": "2 200+ morts au Moyen-Orient",
+          "desc": "1 300+ en Iran · 850+ au Liban · 700 missiles et 3 600 drones tirés par l'Iran."
+        },
+        {
+          "icon": "🛢️",
+          "titre": "Détroit d'Hormuz sous tension",
+          "desc": "Transport pétrolier perturbé — forte hausse du prix du pétrole sur les marchés mondiaux."
+        }
+      ],
+      "card_label": "🇫🇷 Position de la France",
+      "card_body": "La France ne participe pas. Macron a convoqué un G7. Un militaire français tué en Kurdistan irakien.",
+      "source": "France Info · France Télévisions — 20 mars 2026",
+      "data_expires": "2026-03-28",
+      "ticker": "🌍 Conflit en Iran · Jour {X} · 2 200+ morts · Détroit d'Hormuz sous tension"
+    },
+
+    "soudan": {
+      "actif": true,
+      "titre": "Soudan — Crise majeure",
+      "compteur_debut": null,
+      "flash": [
+        {
+          "icon": "⚔️",
+          "titre": "2 ans de guerre civile",
+          "desc": "Depuis avril 2023, les forces armées soudanaises et les paramilitaires RSF s'affrontent. 12 millions de déplacés."
+        },
+        {
+          "icon": "🆘",
+          "titre": "Pire crise humanitaire mondiale",
+          "desc": "L'ONU alerte : famine dans plusieurs régions, accès humanitaire bloqué. 25 millions en insécurité alimentaire."
+        },
+        {
+          "icon": "🌊",
+          "titre": "Impact sur l'Afrique de l'Est",
+          "desc": "Des milliers de réfugiés arrivent en Éthiopie et au Tchad. L'océan Indien en vigilance migratoire."
+        }
+      ],
+      "card_label": "🇫🇷 Aide française",
+      "card_body": "La France a débloqué 45 M€ d'aide humanitaire en 2026 via le CDCS. Appel au cessez-le-feu à l'ONU.",
+      "source": "France Info · France Télévisions — mars 2026",
+      "data_expires": "2026-04-01",
+      "ticker": "🌍 Soudan · 2 ans de conflit · 12 millions de déplacés · Crise humanitaire majeure"
+    },
+
+    "elections": {
+      "actif": true,
+      "titre": "Municipales 2026",
+      "compteur_debut": null,
+      "flash": [],
+      "data_expires": "2026-03-24",
+      "ticker": "🗳️ Municipales 2026 · 2e tour dimanche 22 mars · 14 communes aux urnes à Mayotte"
+    }
+  },
+
+  "ticker_extra": [
+    "✅ Mamoudzou · Chiconi · M'tsangamouji — 3 maires élus dès le 1er tour",
+    "📺 Le 19h à Mayotte 19h00 · Mahabari en shimaore 19h30 · Tous les jours",
+    "📻 Mayotte la 1ère Radio · 100.0 FM · En direct sur la1ere.franceinfo.fr",
+    "🌐 Toute l'actu Outre-mer sur la1ere.franceinfo.fr"
+  ]
+}

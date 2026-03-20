@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-Frame-Options" content="ALLOWALL">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mayotte la 1ère — Jeudi Info &amp; Société</title>
+<title>Mayotte la 1ère — Signage</title>
 <link rel="stylesheet" href="./signage.css">
 </head>
 <body>
@@ -23,11 +23,11 @@
     </div>
   </header>
 
-  <!-- BARRE THÈME -->
+  <!-- BARRE THÈME — remplie dynamiquement par loadProgramme() depuis programme.json -->
   <div class="theme-bar">
-    <span class="tb-day">Jeudi</span>
+    <span class="tb-day" id="theme-day">---</span>
     <span class="tb-sep"></span>
-    <span class="tb-theme">Info &amp; Société</span>
+    <span class="tb-theme" id="theme-label">---</span>
     <span class="tb-dot"></span>
   </div>
 
@@ -35,7 +35,7 @@
   <div class="slides-wrap" id="slides-wrap">
 
     <!-- ══ S0 — INTRO RÉSUMÉ ══ -->
-    <!-- style inline = fallback absolu si CSS bloqué par CSP serveur -->
+    <!-- style inline = fallback absolu si CSS bloqué -->
     <div class="slide active" id="s0" data-duration="15000" style="opacity:1;transform:translateY(0);pointer-events:auto;">
       <div class="intro-slide">
         <div class="intro-clock-wrap">
@@ -49,7 +49,7 @@
         <div class="intro-divider"></div>
         <div class="intro-label">Au programme</div>
         <div class="intro-topics" id="intro-topics">
-          <!-- Généré par JS -->
+          <!-- Généré par JS (buildIntroTopics) -->
         </div>
       </div>
     </div>
@@ -68,8 +68,8 @@
           <div class="ars-item">
             <span class="ars-icon">🏥</span>
             <div class="ars-text">
-              <div class="ars-title">Chargement des actualités ARS…</div>
-              <div class="ars-desc">Récupération du flux en cours.</div>
+              <div class="ars-title">Chargement des actualités santé…</div>
+              <div class="ars-desc">Récupération du fil d'actualité en cours.</div>
             </div>
           </div>
         </div>
@@ -84,12 +84,10 @@
     <!-- ══ S2 — MÉTÉO LES HAUTS VALLONS ══ -->
     <div class="slide" id="s2">
       <div class="meteo-slide">
-        <!-- ENTÊTE -->
         <div class="meteo-header">
           <span class="meteo-badge">🌤️ Météo</span>
           <span class="meteo-loc-tag">📍 Mayotte</span>
         </div>
-        <!-- BLOC PRINCIPAL -->
         <div class="meteo-main">
           <div class="meteo-icon-temp-row">
             <div class="meteo-big-icon" id="meteo-big-icon">⏳</div>
@@ -121,7 +119,6 @@
             </div>
           </div>
         </div>
-        <!-- PRÉVISIONS HORAIRES -->
         <div class="meteo-forecast-strip" id="meteo-forecast-strip"></div>
         <div class="meteo-source">open-meteo.com · Mayotte</div>
       </div>
@@ -244,11 +241,13 @@
       </div>
     </div>
 
-    <!-- ══ S7 — INTERNATIONAL : IRAN ══ -->
+    <!-- ══ S7 — INTERNATIONAL : IRAN ══
+         Titre et contenu remplis dynamiquement par renderStory('s7', ...) depuis programme.json.
+         Le contenu ci-dessous sert de fallback si programme.json est inaccessible. -->
     <div class="slide" id="s7" data-expires="2026-03-28">
       <div class="std-slide">
         <div class="slide-header"><span class="s-badge iran">🌍 International</span></div>
-        <div class="slide-title sm">Conflit en Iran<br>Jour 17</div>
+        <div class="slide-title sm">Conflit en Iran</div>
         <div class="accent-line al-iran"></div>
         <div class="flash-list">
           <div class="flash-item ir"><span class="fi-icon">💥</span><div><div class="fi-title">États-Unis &amp; Israël vs Iran</div><div class="fi-desc">Débuté le 28 fév. 2026 — frappes américano-israéliennes, ripostes iraniennes massives.</div></div></div>
@@ -259,11 +258,12 @@
           <div class="card-label cl-iran">🇫🇷 Position de la France</div>
           <div class="card-body">La France ne participe pas. Macron a convoqué un G7. Un militaire français tué en Kurdistan irakien.</div>
         </div>
-        <div class="source-pill">France Info · France Télévisions — 16 mars 2026</div>
+        <div class="source-pill">France Info · France Télévisions</div>
       </div>
     </div>
 
-    <!-- ══ S7B — INTERNATIONAL : SOUDAN ══ -->
+    <!-- ══ S7B — INTERNATIONAL : SOUDAN ══
+         Contenu rempli dynamiquement par renderStory('s7b', ...) depuis programme.json. -->
     <div class="slide" id="s7b" data-expires="2026-04-01">
       <div class="std-slide">
         <div class="slide-header"><span class="s-badge intl2">🌍 International</span></div>
@@ -289,7 +289,6 @@
         <div class="slide-title xs">Actu<br>Outre-mer</div>
         <div class="accent-line al-om"></div>
         <div class="om-items" id="om-items">
-          <!-- Chargé par JS (La 1ère RSS) -->
           <div class="om-item"><span class="om-icon">🏝️</span><div class="om-text"><div class="om-title">Toute l'actualité des Outre-mer</div><div class="om-desc">Chargement du fil d'actualité La 1ère en cours…</div></div></div>
         </div>
         <div class="source-pill" id="om-source">La 1ère · France Info · France Télévisions</div>
@@ -299,15 +298,10 @@
     <!-- ══ S_RADIO — SLIDE SPÉCIALE RADIO ══ -->
     <div class="slide" id="s-radio">
       <div class="radio-special">
-        <!-- Ondes animées en fond -->
         <div class="radio-waves">
-          <div class="rw"></div>
-          <div class="rw"></div>
-          <div class="rw"></div>
-          <div class="rw"></div>
-          <div class="rw"></div>
+          <div class="rw"></div><div class="rw"></div><div class="rw"></div>
+          <div class="rw"></div><div class="rw"></div>
         </div>
-
         <div class="radio-special-header">
           <span class="radio-special-badge">📻 Radio</span>
           <span class="radio-freq-tag">100.0 FM · Mayotte</span>
@@ -315,46 +309,32 @@
         <div class="radio-special-title">Mayotte<br>la 1ère<br>Radio</div>
         <div class="radio-special-sub">En direct · 24h/24 · 7j/7</div>
         <div class="radio-accent"></div>
-
         <div class="radio-programs">
           <div class="rp-item" style="border-left-color:#FFD740;">
             <span class="rp-icon">🌅</span>
             <div class="rp-time" style="color:#FFD740;">06h30</div>
-            <div>
-              <div class="rp-name">Mayotte Matin</div>
-              <div class="rp-desc">La matinale · actu, météo, sport</div>
-            </div>
+            <div><div class="rp-name">Mayotte Matin</div><div class="rp-desc">La matinale · actu, météo, sport</div></div>
             <span class="rp-freq">Lun – Ven</span>
           </div>
           <div class="rp-item">
             <span class="rp-icon">📰</span>
             <div class="rp-time">12h00</div>
-            <div>
-              <div class="rp-name">Journal Radio</div>
-              <div class="rp-desc">L'essentiel en 5 minutes</div>
-            </div>
+            <div><div class="rp-name">Journal Radio</div><div class="rp-desc">L'essentiel en 5 minutes</div></div>
             <span class="rp-freq">Quotidien</span>
           </div>
           <div class="rp-item" style="border-left-color:#FFAB40;">
             <span class="rp-icon">🌙</span>
             <div class="rp-time" style="color:#FFAB40;">18h00</div>
-            <div>
-              <div class="rp-name">Journal du Soir</div>
-              <div class="rp-desc">Résumé de la journée · Lun–Ven</div>
-            </div>
+            <div><div class="rp-name">Journal du Soir</div><div class="rp-desc">Résumé de la journée · Lun–Ven</div></div>
             <span class="rp-freq">Lun – Ven</span>
           </div>
           <div class="rp-item" style="border-left-color:#EF5350;">
             <span class="rp-icon">⚡</span>
             <div class="rp-time" style="color:#EF5350;">H/H</div>
-            <div>
-              <div class="rp-name">Flash Info</div>
-              <div class="rp-desc">Toutes les heures, toute la journée</div>
-            </div>
+            <div><div class="rp-name">Flash Info</div><div class="rp-desc">Toutes les heures, toute la journée</div></div>
             <span class="rp-freq">Continu</span>
           </div>
         </div>
-
         <div class="radio-footer">
           <div class="radio-footer-main">
             <div class="radio-footer-name">🎙️ Écouter en direct</div>
@@ -371,15 +351,10 @@
     <!-- ══ S_RADIO2 — GRILLE DES PROGRAMMES ══ -->
     <div class="slide" id="s-radio2">
       <div class="radio-schedule-slide">
-        <!-- Réutilise les ondes radio du fond -->
         <div class="radio-waves">
-          <div class="rw"></div>
-          <div class="rw"></div>
-          <div class="rw"></div>
-          <div class="rw"></div>
-          <div class="rw"></div>
+          <div class="rw"></div><div class="rw"></div><div class="rw"></div>
+          <div class="rw"></div><div class="rw"></div>
         </div>
-
         <div class="rg-header">
           <span class="radio-special-badge">📻 Radio</span>
           <span class="radio-freq-tag">100.0 FM · Mayotte</span>
@@ -387,10 +362,7 @@
         <div class="rg-title">Grille des<br>programmes</div>
         <div class="rg-sub" id="rg-day-label">Aujourd'hui sur Mayotte la 1ère</div>
         <div class="rg-accent"></div>
-
-        <!-- Grille construite dynamiquement par JS -->
         <div class="rg-grid" id="rg-grid"></div>
-
         <div class="radio-footer">
           <div class="radio-footer-main">
             <div class="radio-footer-name">🎙️ Écouter en direct</div>
@@ -407,13 +379,10 @@
     <!-- ══ S_RDV — RENDEZ-VOUS DE LA SEMAINE ══ -->
     <div class="slide" id="s-rdv" data-duration="15000">
       <div class="rdv-slide">
-
         <div class="rdv-top-bar">
           <span class="rdv-badge">📺 Rendez-vous de la semaine</span>
           <span class="rdv-channel-tag">Mayotte la 1ère</span>
         </div>
-
-        <!-- HERO IMAGE -->
         <div class="rdv-hero-wrap">
           <img loading="lazy" decoding="async" id="rdv-hero-img"
                src="https://medias.france.tv/0hcGhdDJr7rCpvVdfMuQziNkvGk/1080x870/filters:quality(85)/n/v/t/phpheztvn.jpg"
@@ -430,14 +399,8 @@
             <div class="rdv-hero-desc" id="rdv-hero-desc">Le journal de la rédaction de Mayotte la 1ère — toute l'actualité locale et internationale.</div>
           </div>
         </div>
-
-        <!-- AUTRES ÉMISSIONS -->
-        <div class="rdv-prog-strip" id="rdv-prog-strip">
-          <!-- Populated by JS -->
-        </div>
-
+        <div class="rdv-prog-strip" id="rdv-prog-strip"></div>
         <div class="rdv-footer-bar">france.tv/la1ere/mayotte</div>
-
       </div>
     </div>
 
@@ -501,25 +464,12 @@
 
   </div><!-- /slides-wrap -->
 
-  <!-- TICKER -->
+  <!-- TICKER — construit dynamiquement par buildTickerFromProgramme() depuis programme.json -->
   <div class="ticker">
-    <div class="ticker-label"><span class="ticker-dot"></span>JEUDI</div>
+    <div class="ticker-label" id="ticker-day-label"><span class="ticker-dot"></span>---</div>
     <div class="ticker-content">
       <div class="t-track">
-        <span class="ti">🗳️ Municipales 2026 · 2e tour dimanche 22 mars · 14 communes aux urnes à Mayotte</span>
-        <span class="ts">◆</span>
-        <span class="ti">✅ Mamoudzou · Chiconi · M'tsangamouji — 3 maires élus dès le 1er tour</span>
-        <span class="ts">◆</span>
-        <span class="ti">🌍 Conflit en Iran · Jour 17 · 2 200+ morts · Détroit d'Hormuz sous tension</span>
-        <span class="ts">◆</span>
-        <span class="ti">🌍 Soudan · 2 ans de conflit · 12 millions de déplacés · Crise humanitaire majeure</span>
-        <span class="ts">◆</span>
-        <span class="ti">📺 Le 19h à Mayotte 19h00 · Mahabari en shimaore 19h30 · Tous les jours</span>
-        <span class="ts">◆</span>
-        <span class="ti">📻 Mayotte la 1ère Radio · 100.0 FM · En direct sur la1ere.franceinfo.fr</span>
-        <span class="ts">◆</span>
-        <span class="ti">🌐 Toute l'actu Outre-mer sur la1ere.franceinfo.fr</span>
-        <span class="ts">◆</span>
+        <!-- Rempli par buildTickerFromProgramme() au chargement -->
       </div>
     </div>
   </div>

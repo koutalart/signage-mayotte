@@ -35,10 +35,8 @@ try {
     if (!app) return;
     var vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
     var vw = Math.max(document.documentElement.clientWidth  || 0, window.innerWidth  || 0);
-    // Guard : si le viewport n'est pas encore disponible, on attend
     if (!vw || !vh || vw < 10 || vh < 10) return;
     var scale = Math.min(vw / 1080, vh / 1920);
-    // Guard : ne jamais scaler à 0 ou une valeur invalide → contenu invisible
     if (!scale || scale <= 0 || !isFinite(scale)) scale = 1;
     app.style.transform = 'scale(' + scale + ')';
     app.style.marginLeft = ((vw - 1080 * scale) / 2) + 'px';
@@ -46,7 +44,6 @@ try {
   }
   window.addEventListener('load', initScale);
   window.addEventListener('resize', initScale);
-  // Tentative immédiate + retry si viewport pas encore disponible
   initScale();
   setTimeout(initScale, 200);
   setTimeout(initScale, 800);
@@ -66,7 +63,7 @@ try {
 
 
 try {
-  // ══ MÉTÉO — Les Hauts Vallons, Kawéni, Mamoudzou ══
+  // ══ MÉTÉO — Mayotte (open-meteo via data.json) ══
   function wmoToCondition(code) {
     if (code===0)  return {cond:'sunny',        icon:'☀️',  label:'Ensoleillé',            color:'#FFD740'};
     if (code<=2)   return {cond:'partly-cloudy',icon:'⛅',  label:'Partiellement nuageux', color:'#81D4FA'};
@@ -77,17 +74,25 @@ try {
 
   async function initWeather() {
     try {
-      // Lit data.json généré par GitHub Actions (météo pré-fetchée côté serveur)
       var r = await fetchSafe('./data.json');
       if(!r.ok) return;
       var payload = await r.json();
       if(!payload.meteo || !payload.meteo.temp) return;
       var m = payload.meteo;
-      var data = { current: { temperature_2m: m.temp, weathercode: (m.condition==='Ensoleillé'?0:m.condition==='Partiellement nuageux'?1:m.condition==='Nuageux'?3:m.condition==='Pluie'?61:95), windspeed_10m: m.wind, relativehumidity_2m: m.humidity, apparent_temperature: m.feels }, hourly: { temperature_2m: m.hourly_temps||[], weathercode: m.hourly_codes||[] } };
-      var cur  = data.current;
+
+      // Reconstituer un objet current compatible
+      var cur = {
+        temperature_2m:     m.temp,
+        apparent_temperature: m.feels,
+        windspeed_10m:      m.wind,
+        relativehumidity_2m: m.humidity,
+        precipitation:      (typeof m.precipitation === 'number') ? m.precipitation : 0,
+        weathercode:        (m.condition==='Ensoleillé'?0 : m.condition==='Partiellement nuageux'?1 :
+                             m.condition==='Nuageux'?3 : m.condition==='Pluie'?61 : 95)
+      };
+      var hourly = { temperature_2m: m.hourly_temps||[], weathercode: m.hourly_codes||[] };
       var cond = wmoToCondition(cur.weathercode);
 
-      // Mise à jour
       var elIcon  = document.getElementById('meteo-big-icon');
       var elTemp  = document.getElementById('meteo-big-temp');
       var elCond  = document.getElementById('meteo-cond-txt');
@@ -98,9 +103,7 @@ try {
 
       if(elIcon)  elIcon.textContent  = cond.icon;
       if(elTemp)  { elTemp.textContent = Math.round(cur.temperature_2m)+'°'; elTemp.style.color=cond.color; }
-      // Ajouter UV si disponible
-      var uvTxt = (cur.uv_index!==undefined) ? ' · UV '+Math.round(cur.uv_index) : '';
-      if(elCond)  elCond.textContent  = cond.label + uvTxt;
+      if(elCond)  elCond.textContent  = cond.label;
       if(elFeels) elFeels.textContent = 'Ressenti '+Math.round(cur.apparent_temperature)+'°C';
       if(elWind)  elWind.textContent  = Math.round(cur.windspeed_10m);
       if(elHum)   elHum.textContent   = Math.round(cur.relativehumidity_2m)+'%';
@@ -108,41 +111,40 @@ try {
 
       // ── Prévisions horaires (prochaines 5h) ──
       var strip=document.getElementById('meteo-forecast-strip');
-      if(strip&&data.hourly){
+      if(strip && hourly.temperature_2m.length > 0){
         strip.innerHTML='';
         var nowH=new Date().getHours();
         for(var hi=1;hi<=5;hi++){
           var idx=nowH+hi;
-          if(idx>=data.hourly.time.length) break;
-          var fc=wmoToCondition(data.hourly.weathercode[idx]);
+          if(idx>=hourly.temperature_2m.length) break;
+          var fc=wmoToCondition(hourly.weathercode[idx]||0);
           var div=document.createElement('div');
           div.className='mf-item'+(hi===1?' mf-next':'');
           var hStr=String(idx%24).padStart(2,'0')+'h';
           div.innerHTML='<div class="mf-hour">'+hStr+'</div>'
             +'<div class="mf-icon">'+fc.icon+'</div>'
-            +'<div class="mf-temp" style="color:'+fc.color+';">'+Math.round(data.hourly.temperature_2m[idx])+'°</div>';
+            +'<div class="mf-temp" style="color:'+fc.color+';">'+Math.round(hourly.temperature_2m[idx])+'°</div>';
           strip.appendChild(div);
         }
       }
     } catch(e){ console.error('Weather fetch:',e); }
   }
 
-
   initWeather();
   setInterval(initWeather, 3600000); // Actualisation toutes les heures
 } catch(e){ console.error('Weather:',e); }
 
+
 try {
-  // ══ ARS RSS — résumé + codes couleur de gravité ══
+  // ══ ARS — Actualités Santé (filtrées depuis actus_mayotte) ══
   var arsIconMap={drogue:'💊',vaccin:'💉',paludisme:'🦟',dengue:'🦟',moustique:'🦟',
     urgence:'🚑',samu:'🚑','épidémie':'🌡️',epidemie:'🌡️',cholera:'🌡️','choléra':'🌡️',
-    alerte:'⚠️',intoxication:'☣️',cancer:'🎗️',cancer:'🎗️'};
+    alerte:'⚠️',intoxication:'☣️',cancer:'🎗️'};
 
-  // Niveaux de gravité : critique (rouge) → alerte (orange) → normal (vert)
   var ARS_SEV = {
     critique: {
       keys:['epidemie','épidémie','cholera','choléra','urgence','alerte','contamination',
-            'intoxication','danger','mortel','mortelle','critique','épidémique','epidémique'],
+            'intoxication','danger','mortel','mortelle','critique','épidémique'],
       border:'#B71C1C', bg:'rgba(183,28,28,0.13)'
     },
     alerte: {
@@ -152,9 +154,9 @@ try {
     },
     normal: { border:'#2E7D32', bg:'rgba(46,125,50,0.08)' }
   };
+
   function getArsSev(text){
-    var t=text.toLowerCase();
-    var i;
+    var t=text.toLowerCase(); var i;
     for(i=0;i<ARS_SEV.critique.keys.length;i++) if(t.includes(ARS_SEV.critique.keys[i])) return 'critique';
     for(i=0;i<ARS_SEV.alerte.keys.length;i++) if(t.includes(ARS_SEV.alerte.keys[i])) return 'alerte';
     return 'normal';
@@ -164,18 +166,28 @@ try {
     try {
       var r=await fetchSafe('./data.json');
       if(!r.ok) return;
-      var xml=await r.text();
-      var doc=(new DOMParser()).parseFromString(xml,'text/xml');
-      var items=Array.from(doc.querySelectorAll('item')).slice(0,3);
+      var payload=await r.json(); // ← JSON, pas XML
+      var rawItems=(payload.actus_mayotte||[]).slice(0,5);
+      if(rawItems.length===0) return;
+
       var list=document.getElementById('ars-news-list');
       var updEl=document.getElementById('ars-update');
       if(!list) return;
       list.innerHTML='';
       var hasAlert=false;
-      items.forEach(function(item){
-        var rawT=(item.querySelector('title')||{}).textContent||'';
-        var rawD=(item.querySelector('description')||{}).textContent||'';
-        var t=stripHtml(rawT).trim(); var d=stripHtml(rawD).trim();
+
+      // Prioriser les items liés à la santé, sinon prendre les 3 premiers
+      var healthKeys=['santé','sante','ars','médecin','medecin','hôpital','hopital',
+                      'paludisme','dengue','vaccin','maladie','épidémie','epidemie',
+                      'urgence','samu','clinique'];
+      var healthItems=rawItems.filter(function(it){
+        var combo=(it.title+' '+it.desc).toLowerCase();
+        return healthKeys.some(function(k){ return combo.includes(k); });
+      });
+      var items=(healthItems.length>0 ? healthItems : rawItems).slice(0,3);
+
+      items.forEach(function(it){
+        var t=it.title||''; var d=it.desc||'';
         var summary=firstSentence(d,140);
         if(!summary||summary.length<20) summary=d.substring(0,140)+'…';
         var combo=(t+' '+d).toLowerCase();
@@ -193,6 +205,7 @@ try {
           +'</div>';
         list.appendChild(div);
       });
+
       if(updEl){ var td=new Date(); updEl.textContent='🔄 MÀJ '+td.toLocaleDateString('fr-FR',{day:'numeric',month:'long'}); }
       if(hasAlert){ var inst=document.querySelector('#s1 .inst-slide'); if(inst) inst.classList.add('ars-alert'); }
     } catch(e){ console.error('ARS fetch:',e); }
@@ -200,35 +213,33 @@ try {
   initARSSlide();
 } catch(e){ console.error('ARS init:',e); }
 
+
 try {
-  // ══ ACTUS RSS — injectées avant s3 ══
+  // ══ ACTUS RSS — slides injectées avant s3 ══
   async function initActusSlides() {
     try {
       var r=await fetchSafe('./data.json');
       if(!r.ok) return;
-      var xml=await r.text();
-      var doc=(new DOMParser()).parseFromString(xml,'text/xml');
-      var items=Array.from(doc.querySelectorAll('item')).slice(0,5);
+      var payload=await r.json(); // ← JSON, pas XML
+      var items=(payload.actus_mayotte||[]).slice(0,5);
+      if(items.length===0) return;
+
       var wrap=document.getElementById('slides-wrap');
       var s3El=document.getElementById('s3');
+      if(!wrap||!s3El) return;
+
       var iMap={politique:'🏛️',president:'🏛️',sante:'🏥',hopital:'🏥',
                 environnement:'🌊',eau:'🌊',sport:'⚽',football:'⚽',culture:'🎭',international:'🌍'};
-      items.forEach(function(item){
-        var title=(item.querySelector('title')||{}).textContent||'';
-        var rawDesc=(item.querySelector('description')||{}).textContent||'';
-        if(!title.trim()) return;
-        // Extraire l'image AVANT de stripper le HTML
-        var tmpImg=document.createElement('div'); tmpImg.innerHTML=rawDesc;
-        var firstImg=tmpImg.querySelector('img');
-        var imgSrc=firstImg?firstImg.getAttribute('src'):'';
-        if(!imgSrc){
-          var enc=item.querySelector('enclosure');
-          if(enc&&(enc.getAttribute('type')||'').startsWith('image')) imgSrc=enc.getAttribute('url')||'';
-        }
-        var cleanTitle=stripHtml(title).trim();
-        var cleanDesc=stripHtml(rawDesc).trim();
-        var combo=(cleanTitle+' '+cleanDesc).toLowerCase(); var icon='📰';
+
+      items.forEach(function(it){
+        var title=(it.title||'').trim();
+        var cleanDesc=(it.desc||'').trim();
+        var imgSrc=it.img||'';
+        if(!title) return;
+
+        var combo=(title+' '+cleanDesc).toLowerCase(); var icon='📰';
         for(var k in iMap){if(combo.includes(k)){icon=iMap[k];break;}}
+
         var slide=document.createElement('div');
         slide.className='slide actu-slide';
         slide.dataset.duration='15000';
@@ -239,7 +250,7 @@ try {
           '<div class="actu-progress"><div class="actu-progress-fill"></div></div>'
           +'<span class="actu-badge">📰 Actualité Mayotte</span>'
           +mediaHtml
-          +'<h3 class="actu-title">'+cleanTitle+'</h3>'
+          +'<h3 class="actu-title">'+title+'</h3>'
           +'<div class="actu-line"></div>'
           +'<div class="actu-body">'+cleanDesc+'</div>'
           +'<div class="actu-source">France Info · Mayotte la 1ère · la1ere.franceinfo.fr</div>';
@@ -250,29 +261,27 @@ try {
   initActusSlides();
 } catch(e){ console.error('Actus init:',e); }
 
+
 try {
-  // ══ OUTRE-MER — proxy local (./news.php) ══
+  // ══ OUTRE-MER — actus_outremer depuis data.json ══
   async function initOutremerSlide() {
     try {
-      // Proxy local — kamili.yt fetche francetvinfo côté serveur
       var r=await fetchSafe('./data.json');
+      if(!r.ok) return;
       var parsed=await r.json();
-      var items=null;
-      if(parsed&&parsed.items&&parsed.items.length>0){
-        // Convertir au format attendu
-        items=parsed.items.slice(0,4).map(function(it){
-          return {title:it.title,description:it.desc,enclosure:{link:it.img||''}};
-        });
-      }
-      if(!items||items.length===0) return;
+      var rawItems=parsed.actus_outremer||[]; // ← champ correct (pas parsed.items)
+      if(rawItems.length===0) return;
+
       var omList=document.getElementById('om-items');
       if(!omList) return;
       omList.innerHTML='';
+
       var territories=['Mayotte','Martinique','Guadeloupe','Réunion','Guyane','Polynésie','Nouvelle-Calédonie','Saint-Martin','Wallis'];
       var omIcons={'Mayotte':'🏝️','Martinique':'🌺','Guadeloupe':'🌿','Réunion':'🌋','Guyane':'🌿','Polynésie':'🌊','Nouvelle-Calédonie':'⚓','default':'🏝️'};
-      items.forEach(function(it){
-        var title=stripHtml(it.title||'').trim();
-        var desc=stripHtml(it.description||'').trim();
+
+      rawItems.slice(0,4).forEach(function(it){
+        var title=(it.title||'').trim();
+        var desc=(it.desc||'').trim();
         if(!title) return;
         var cleanDesc=desc.substring(0,130)+(desc.length>130?'…':'');
         var territory=''; var combo=title+' '+desc;
@@ -287,52 +296,177 @@ try {
           +'</div>';
         omList.appendChild(div);
       });
+
       var srcEl=document.getElementById('om-source');
-      if(srcEl) srcEl.textContent='France Info · La 1ère · francetvinfo.fr';
+      if(srcEl) srcEl.textContent='La 1ère · France Info · France Télévisions';
     } catch(e){ console.error('Outremer fetch:',e); }
   }
   initOutremerSlide();
 } catch(e){ console.error('Outremer init:',e); }
 
-try {
-  // ══ INTERNATIONAL IRAN — Mise à jour quotidienne RSS ══
-  async function initIranSlide() {
-    try {
-      // Proxy local — kamili.yt fetche francetvinfo côté serveur
-      var r2=await fetchSafe('./data.json');
-      var natData=await r2.json();
-      if(!natData||!natData.items||natData.items.length===0) return;
-      // Simuler un doc XML avec les items JSON
-      var doc=null; // skip XML parsing — on utilise natData.items directement
-      var iranItems=Array.from(doc.querySelectorAll('item')).filter(function(item){
-        var t=(item.querySelector('title')||{}).textContent||'';
-        var d=(item.querySelector('description')||{}).textContent||'';
-        return (t+' '+d).toLowerCase().includes('iran');
-      }).slice(0,3);
-      if(iranItems.length===0) return; // Pas de news Iran : on garde le statique
-      var flashList=document.querySelector('#s7 .flash-list');
-      if(!flashList) return;
-      flashList.innerHTML='';
-      iranItems.forEach(function(item){
-        var title=stripHtml((item.querySelector('title')||{}).textContent||'').trim();
-        var desc=stripHtml((item.querySelector('description')||{}).textContent||'').trim();
-        var summary=firstSentence(desc,130);
-        if(!summary||summary.length<10) summary=desc.substring(0,130)+'…';
-        var div=document.createElement('div'); div.className='flash-item ir';
-        div.innerHTML='<span class="fi-icon">🌍</span>'
-          +'<div><div class="fi-title">'+title+'</div>'
-          +'<div class="fi-desc">'+summary+'</div></div>';
-        flashList.appendChild(div);
-      });
-      var srcEl=document.querySelector('#s7 .source-pill');
-      if(srcEl){ var today=new Date(); srcEl.textContent='France Info · France Télévisions — '+today.toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'}); }
-    } catch(e){ console.error('Iran fetch:',e); }
-  }
-  initIranSlide();
-} catch(e){ console.error('Iran init:',e); }
 
 try {
-  // ══ RADIO GRILLE — 2ème slide dynamique ══
+  // ══ PROGRAMME.JSON — contenu éditorial quotidien ══
+
+  // Calcul automatique de Jour X depuis une date de début
+  function getJourX(dateDebut) {
+    if (!dateDebut) return null;
+    try {
+      var debut = new Date(dateDebut + 'T00:00:00');
+      var today = new Date(); today.setHours(0,0,0,0);
+      var j = Math.floor((today - debut) / 86400000) + 1;
+      return j > 0 ? j : null;
+    } catch(e) { return null; }
+  }
+
+  // Rendu d'une story dans une slide (iran, soudan, etc.)
+  function renderStory(slideId, story) {
+    var slide = document.getElementById(slideId);
+    if (!slide) return;
+
+    // Appliquer data-expires si fourni
+    if (story.data_expires) slide.dataset.expires = story.data_expires;
+
+    // Masquer si inactif
+    if (story.actif === false) {
+      slide.dataset.expired = 'true';
+      slide.style.display = 'none';
+      return;
+    }
+
+    // Titre + compteur Jour X
+    var titleEl = slide.querySelector('.slide-title');
+    if (titleEl && story.titre) {
+      var jourX = getJourX(story.compteur_debut);
+      var titreHtml = story.titre;
+      if (jourX) titreHtml += '<br>Jour ' + jourX;
+      titleEl.innerHTML = titreHtml;
+    }
+
+    // Flash items (si fournis et non vides)
+    if (story.flash && story.flash.length > 0) {
+      var flashList = slide.querySelector('.flash-list');
+      if (flashList) {
+        flashList.innerHTML = '';
+        var cssClass = (slideId === 's7') ? 'ir' : 'i2';
+        story.flash.forEach(function(item) {
+          var div = document.createElement('div');
+          div.className = 'flash-item ' + cssClass;
+          div.innerHTML = '<span class="fi-icon">' + (item.icon||'📌') + '</span>'
+            + '<div><div class="fi-title">' + (item.titre||'') + '</div>'
+            + '<div class="fi-desc">' + (item.desc||'') + '</div></div>';
+          flashList.appendChild(div);
+        });
+      }
+    }
+
+    // Card
+    if (story.card_label) {
+      var cardLabel = slide.querySelector('.card-label');
+      if (cardLabel) cardLabel.innerHTML = story.card_label;
+    }
+    if (story.card_body) {
+      var cardBody = slide.querySelector('.card-body');
+      if (cardBody) cardBody.textContent = story.card_body;
+    }
+
+    // Source
+    if (story.source) {
+      var srcEl = slide.querySelector('.source-pill');
+      if (srcEl) srcEl.textContent = story.source;
+    }
+  }
+
+  // Construction du ticker depuis programme.json
+  function buildTickerFromProgramme(p) {
+    var items = [];
+
+    // Stories actives → ajouter leur ticker
+    if (p.stories) {
+      Object.keys(p.stories).forEach(function(key) {
+        var s = p.stories[key];
+        if (s.actif === false) return;
+        if (!s.ticker) return;
+
+        // Vérifier expiration
+        if (s.data_expires) {
+          var exp = new Date(s.data_expires + 'T23:59:59');
+          if (new Date() > exp) return;
+        }
+
+        var ticker = s.ticker;
+        // Remplacer {X} par le compteur Jour X
+        if (s.compteur_debut) {
+          var j = getJourX(s.compteur_debut);
+          if (j) ticker = ticker.replace('{X}', j);
+        }
+        items.push(ticker);
+      });
+    }
+
+    // Ticker extra (infos permanentes)
+    if (p.ticker_extra && p.ticker_extra.length > 0) {
+      items = items.concat(p.ticker_extra);
+    }
+
+    if (items.length === 0) return;
+
+    var track = document.querySelector('.t-track');
+    if (track) {
+      track.innerHTML = items.map(function(t) {
+        return '<span class="ti">' + t + '</span><span class="ts">◆</span>';
+      }).join('');
+      tickerX = 1080; // reset position du ticker RAF
+    }
+  }
+
+  // Chargement principal de programme.json
+  async function loadProgramme() {
+    try {
+      var r = await fetchSafe('./programme.json');
+      if (!r.ok) return;
+      var p = await r.json();
+
+      // ── Barre de thème ──
+      var tbDay   = document.querySelector('.tb-day');
+      var tbTheme = document.querySelector('.tb-theme');
+      if (tbDay && p.jour)   tbDay.textContent   = p.jour;
+      if (tbTheme && p.theme) tbTheme.textContent = p.theme;
+
+      // ── Label JEUDI/VENDREDI dans le ticker ──
+      var tickerLabel = document.querySelector('.ticker-label');
+      if (tickerLabel && p.jour) {
+        tickerLabel.innerHTML = '<span class="ticker-dot"></span>' + p.jour;
+      }
+
+      // ── Stories ──
+      if (p.stories) {
+        if (p.stories.iran)      renderStory('s7',  p.stories.iran);
+        if (p.stories.soudan)    renderStory('s7b', p.stories.soudan);
+        // elections → pas de renderStory car contenu factuel fixe
+        // mais on peut appliquer data_expires
+        if (p.stories.elections && p.stories.elections.data_expires) {
+          var elSlides = ['s3','s4','s5','s6'];
+          elSlides.forEach(function(sid) {
+            var sl = document.getElementById(sid);
+            if (sl) sl.dataset.expires = p.stories.elections.data_expires;
+          });
+        }
+      }
+
+      // ── Ticker ──
+      buildTickerFromProgramme(p);
+
+      console.log('programme.json chargé ✓', p.jour, p.theme);
+    } catch(e) { console.error('Programme fetch:', e); }
+  }
+
+  loadProgramme();
+} catch(e){ console.error('Programme init:', e); }
+
+
+try {
+  // ══ RADIO GRILLE — grille des programmes ══
   var RADIO_GRID_DATA = [
     { id:'rg-0', start:5,  end:6,  name:'Réveil Mayotte',   desc:'Démarrage en douceur · Ambiance et musique',     icon:'🌅', color:'#FFECB3', days:'Lun–Ven' },
     { id:'rg-1', start:6,  end:9,  name:'Mayotte Matin',    desc:'La matinale · Actu, météo, sport',               icon:'☀️', color:'#FFD740', days:'Lun–Ven' },
@@ -374,7 +508,6 @@ try {
 
   function updateRadioGrid() {
     var now=new Date(); var h=now.getHours(); var m=now.getMinutes();
-    // Mise à jour du label du jour
     var lbl=document.getElementById('rg-day-label');
     if(lbl){
       var JOURS_G=['Dimanche','Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi'];
@@ -399,16 +532,16 @@ try {
 
   buildRadioGrid();
   updateRadioGrid();
-  setInterval(updateRadioGrid, 60000); // Mise à jour chaque minute
+  setInterval(updateRadioGrid, 60000);
 } catch(e){ console.error('Radio grid:',e); }
+
 
 try {
 /* ══════════════════════════════════════════════
    S0 — INTRO : HORLOGE LARGE + FÊTE + RÉSUMÉ
-   Auto-refresh à chaque heure pile
 ══════════════════════════════════════════════ */
 
-  // ── Fête du jour (calendrier français des saints) ──
+  // ── Fête du jour ──
   var FETES = {
     "01-01":"Jour de l'An","01-02":"Basile","01-03":"Geneviève","01-04":"Odilon","01-05":"Édouard",
     "01-06":"Melchior","01-07":"Raymond","01-08":"Lucien","01-09":"Alix","01-10":"Guillaume",
@@ -468,7 +601,7 @@ try {
     "09-11":"Adelphe","09-12":"Apollinaire","09-13":"Aimé","09-14":"La Sainte Croix","09-15":"Roland",
     "09-16":"Edith","09-17":"Renaud","09-18":"Nadège","09-19":"Émilie","09-20":"Davy",
     "09-21":"Matthieu","09-22":"Maurice","09-23":"Constance","09-24":"Thècle","09-25":"Hermann",
-    "09-26":"Côme & Damien","09-27":"Vinvent de Paul","09-28":"Venceslas","09-29":"Michel","09-30":"Jérôme",
+    "09-26":"Côme & Damien","09-27":"Vincent de Paul","09-28":"Venceslas","09-29":"Michel","09-30":"Jérôme",
     "10-01":"Thérèse de l'Enfant-Jésus","10-02":"Léger","10-03":"Gérard","10-04":"François d'Assise","10-05":"Fleur",
     "10-06":"Bruno","10-07":"Serge","10-08":"Pélagie","10-09":"Denis","10-10":"Ghislain",
     "10-11":"Firmin","10-12":"Wilfrid","10-13":"Géraud","10-14":"Juste","10-15":"Thérèse d'Avila",
@@ -512,7 +645,7 @@ try {
     { id:'s-radio', icon:'📻', label:'Radio' },
     { id:'s-radio2',icon:'📻', label:'Grille Radio' },
     { id:'s-rdv',   icon:'📺', label:'Rendez-vous TV' },
-    { id:'s-colocs', icon:'🎬', label:'Colocs S3' },
+    { id:'s-colocs',icon:'🎬', label:'Colocs S3' },
     { id:'s9',      icon:'👋', label:'Bonne semaine' }
   ];
 
@@ -524,11 +657,11 @@ try {
     TOPICS.forEach(function(t){
       var el = document.getElementById(t.id);
       if (!el) return;
-      // Masquer si expirée
       if (el.dataset.expires) {
         var exp = new Date(el.dataset.expires + 'T23:59:59');
         if (now > exp) return;
       }
+      if (el.dataset.expired === 'true') return;
       var chip = document.createElement('div');
       chip.className = 'intro-chip';
       chip.innerHTML = '<span>'+t.icon+'</span> '+t.label;
@@ -536,7 +669,6 @@ try {
     });
   }
 
-  // ── Mise à jour de l'horloge intro ──
   function updateIntro() {
     var n = new Date();
     var timeEl = document.getElementById('intro-time');
@@ -544,25 +676,25 @@ try {
     var feteEl = document.getElementById('intro-fete-txt');
     if (timeEl) timeEl.textContent = n.toLocaleTimeString('fr-FR', {hour:'2-digit', minute:'2-digit'});
     if (dateEl) dateEl.textContent = n.toLocaleDateString('fr-FR', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
-    if (feteEl) {
-      var f = getFete();
-      feteEl.textContent = f ? f : '—';
-    }
+    if (feteEl) { var f = getFete(); feteEl.textContent = f ? f : '—'; }
   }
   updateIntro();
-  setInterval(updateIntro, 10000); // toutes les 10s suffit (pas de secondes affichées)
-  buildIntroTopics();
+  setInterval(updateIntro, 10000);
+
+  // Rebuild intro topics après que loadProgramme ait pu masquer des slides
+  setTimeout(buildIntroTopics, 1500);
 
   // ── Auto-refresh toutes les heures pile ──
   (function scheduleHourlyRefresh() {
     var now = new Date();
     var msToNextHour = (3600 - now.getMinutes()*60 - now.getSeconds()) * 1000 - now.getMilliseconds();
     setTimeout(function() {
-      try { location.reload(); } catch(e) { /* iframe bloqué */ }
+      try { location.reload(); } catch(e) {}
     }, msToNextHour);
   })();
 
 } catch(e){ console.error('Intro slide:', e); }
+
 
 try {
   // ══ ROTATION + AUTO-EXPIRATION ══
@@ -591,13 +723,11 @@ try {
   }
 
   function showSlide(n){
-    // Marquer toutes les slides comme inactives
     rotSlides.forEach(function(s){
       s.classList.add('inactive');
       s.classList.remove('active');
       s.querySelectorAll('.stat-bar-fill').forEach(function(b){ b.classList.remove('animated'); });
     });
-    // Activer la slide courante (retire .inactive, ajoute .active)
     if(rotSlides[n]){
       rotSlides[n].classList.remove('inactive');
       rotSlides[n].classList.add('active');
@@ -619,25 +749,22 @@ try {
     }, dur);
   }
 
-  // Démarrage initial
-  // Nettoyer le style inline de s0 (mis pour le fallback CSS-only)
-  // maintenant que JS tourne, les classes .active/.inactive prennent le relais
   var _s0 = document.getElementById('s0');
   if(_s0){ _s0.removeAttribute('style'); }
   buildRotation();
   showSlide(0);
   scheduleNext();
 
-  // Reconstruction après chargement async des actus et outre-mer (5s)
+  // Reconstruction après chargement async des actus (5s)
   setTimeout(function(){
     var current = rotSlides[rotIdx];
     buildRotation();
     var newIdx = rotSlides.indexOf(current);
     if(newIdx>=0) rotIdx=newIdx;
-    // Pas besoin de relancer le timer — il tourne déjà
   }, 5000);
 
 } catch(e){ console.error('Rotation:',e); }
+
 
 try {
   // ══ TICKER RAF ══
@@ -661,7 +788,7 @@ try {
 
 try {
 /* ══════════════════════════════════════════════
-   RDV DE LA SEMAINE — données dynamiques
+   RDV DE LA SEMAINE
 ══════════════════════════════════════════════ */
   var RDV_DATA = [
     {
@@ -700,29 +827,11 @@ try {
 
   function getRdvFeaturedIndex(){
     var h = new Date().getHours() + new Date().getMinutes()/60;
-    if(h >= 12 && h < 13.5) return 1; // Le 13h en cours
-    if(h >= 13.5 && h < 19) return 0; // Le 19h arrive
-    if(h >= 19 && h < 19.5) return 0; // Le 19h en cours
-    if(h >= 19.5 && h < 20.5) return 2; // Mahabari en cours
-    return 0; // défaut : Le 19h
-  }
-
-  async function fetchRdvLiveData(){
-    try {
-      // Proxy local rdv.php — kamili.yt fetche la1ere côté serveur
-      var r = await fetchSafe('./data.json', { cache:'no-store' });
-      if(!r.ok) return null;
-      var d = await r.json();
-      if(!d.title) return null;
-      var titleText = d.title;
-      var descText  = d.desc || '';
-      var imgUrl    = d.img || null;
-      return {
-        title: titleEl.textContent.trim(),
-        desc:  descEl ? firstSentence(descEl.textContent, 160) : '',
-        imgUrl: imgUrl
-      };
-    } catch(e){ return null; }
+    if(h >= 12 && h < 13.5) return 1;
+    if(h >= 13.5 && h < 19) return 0;
+    if(h >= 19 && h < 19.5) return 0;
+    if(h >= 19.5 && h < 20.5) return 2;
+    return 0;
   }
 
   function buildRdvSlide(featIdx, liveData){
@@ -734,8 +843,6 @@ try {
     if(!strip) return;
 
     var feat = RDV_DATA[featIdx];
-
-    // ── Hero image ──
     if(heroImg){
       var src = (liveData && liveData.imgUrl) ? liveData.imgUrl : feat.imgHero;
       heroImg.src = src;
@@ -745,7 +852,6 @@ try {
     if(heroDesc)  heroDesc.textContent  = (liveData && liveData.desc && liveData.desc.length > 10) ? liveData.desc : feat.desc;
     if(heroTime)  heroTime.textContent  = feat.time;
 
-    // ── Autres émissions ──
     strip.innerHTML = '';
     RDV_DATA.forEach(function(p, i){
       if(i === featIdx) return;
@@ -763,40 +869,22 @@ try {
     });
   }
 
-  // Rendu immédiat avec données statiques, enrichi si l'API répond
-  (async function(){
+  // Rendu immédiat avec données statiques
+  (function(){
     var fi = getRdvFeaturedIndex();
     buildRdvSlide(fi, null);
-    var live = await fetchRdvLiveData();
-    if(live && live.title) buildRdvSlide(fi, live);
   })();
 
 } catch(e){ console.error('RDV slide:', e); }
 
-try {
-  // ══ NEWS.JSON optionnel ══
-  (async function(){
-    try{
-      var r=await fetchSafe('./news.json'); if(!r.ok) return;
-      var data=await r.json();
-      if(data.ticker&&data.ticker.length>0){
-        var track=document.querySelector('.t-track');
-        if(track){ track.innerHTML=data.ticker.map(function(t){return'<span class="ti">'+t+'</span><span class="ts">◆</span>';}).join(''); tickerX=1080; }
-      }
-    }catch(e){}
-  })();
-}catch(e){}
 
-// ══ EMERGENCY FALLBACK ══
-// Si la rotation n'a pas démarré (erreur JS), on force #s0 visible
-// Note : #s0 a déjà class="slide active" + style inline dans le HTML
-// Ce fallback est une 3ème couche de sécurité
 try {
+  // ══ EMERGENCY FALLBACK ══
+  // Si la rotation n'a pas démarré (erreur JS), on force #s0 visible
   setTimeout(function(){
     try {
       var activeSlide = document.querySelector('#slides-wrap .slide.active');
       if(!activeSlide){
-        // Aucune slide active → forcer #s0
         var s0 = document.getElementById('s0');
         if(s0){
           s0.style.opacity = '1';

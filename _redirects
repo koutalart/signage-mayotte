@@ -1,0 +1,3 @@
+# Cloudflare Pages — Redirections
+# Redirige la racine vers la page principale du signage
+/   /01_lundi_info_sport.html   302
