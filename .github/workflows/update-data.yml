@@ -33,7 +33,7 @@ jobs:
             url = (
               "https://api.open-meteo.com/v1/forecast"
               "?latitude=-12.744&longitude=45.221"
-              "&current=temperature_2m,weathercode,windspeed_10m,relativehumidity_2m,apparent_temperature"
+              "&current=temperature_2m,weathercode,windspeed_10m,relativehumidity_2m,apparent_temperature,precipitation"
               "&hourly=temperature_2m,weathercode,precipitation_probability"
               "&timezone=Indian%2FMayotte&forecast_days=1"
             )
@@ -53,6 +53,7 @@ jobs:
               "icon":     icon,
               "wind":     round(cur.get("windspeed_10m", 0)),
               "humidity": round(cur.get("relativehumidity_2m", 0)),
+              "precipitation": round(cur.get("precipitation", 0), 1),
               "hourly_temps": data["hourly"]["temperature_2m"][:8],
               "hourly_codes": data["hourly"]["weathercode"][:8]
             }
