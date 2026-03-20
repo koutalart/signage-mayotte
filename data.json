@@ -1,8 +1,23 @@
 {
-  "updated": "2026-03-20 14:37 UTC",
+  "updated": "2026-03-20 15:32 UTC",
   "meteo": {
+    "temp": 30,
+    "feels": 36,
     "condition": "Pluie",
-    "feels": 35,
+    "icon": "🌧️",
+    "wind": 6,
+    "humidity": 78,
+    "precipitation": 0.2,
+    "hourly_temps": [
+      29.4,
+      29.4,
+      29.3,
+      29.0,
+      29.0,
+      29.1,
+      29.3,
+      29.4
+    ],
     "hourly_codes": [
       2,
       2,
@@ -11,128 +26,69 @@
       2,
       2,
       1,
-      2,
-      2,
-      2,
-      95,
-      95,
-      80,
-      3,
-      3,
-      80,
-      3,
-      80,
-      80,
-      1,
-      1,
-      2,
-      3,
       2
-    ],
-    "hourly_temps": [
-      29.2,
-      29.1,
-      29.1,
-      28.8,
-      28.8,
-      28.8,
-      29,
-      29.1,
-      29.2,
-      29.3,
-      29.2,
-      29.2,
-      29.3,
-      29.3,
-      29.2,
-      29.4,
-      29.7,
-      29.5,
-      29.5,
-      29.6,
-      29.8,
-      29.8,
-      29.8,
-      29.8
-    ],
-    "humidity": 80,
-    "icon": "ð§ï¸",
-    "precipitation": 6.1,
-    "temp": 30,
-    "wind": 9
+    ]
   },
+  "ticker": [
+    "Circulation perturbée à Tsingoni suite à des barrages et caillassages sur la route",
+    "« Il faut déposer une demande de bourse et attendre le retour du CROUS », insiste M’colo Bacar M’colo, responsable du site de Mayotte pour le CROUS",
+    "Alliances, fusions, candidats qualifiés : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
+    "La Charte sociale européenne étendue aux territoires ultramarins, une \"victoire historique\" pour les associations",
+    "Dernière ligne droite avant l’Aïd : foule et embouteillages à Majicavo Dubaï",
+    "Île Maurice : le vice Premier ministre Paul Bérenger démissionne, un séisme politique au sommet de l'Etat mauricien"
+  ],
   "actus_mayotte": [
     {
-      "desc": "La campagne de demande de bourse est ouverte depuis le 2 mars. Les futurs Ã©tudiants sont invitÃ©s Ã  constituer leur dossier social Ã©tudiant (DSE), indispensable pour bÃ©nÃ©ficier dâune aide du CROUS.",
-      "img": "https://la1ere.franceinfo.fr/image/vSO9NnBnAxReCjDWAIeZcPU5b3M/600x400/outremer/2020/12/09/5fd0cf7b643b1_0676756001534405210_1-1540474.jpg",
-      "title": "Demande de bourse : le CROUS de Mayotte invite les Ã©tudiants Ã  constituer leur dossier"
+      "title": "Circulation perturbée à Tsingoni suite à des barrages et caillassages sur la route",
+      "desc": "La circulation a été fortement perturbée ce vendredi à Tsingoni, suite à des barrages et des caillassages. Ces perturbations faisaient suite au drame survenu plus tôt près de la ca",
+      "img": "https://la1ere.franceinfo.fr/image/mgoxj9yQUPYTBKpgjOzCsEr_9B4/600x400/outremer/2022/06/14/62a81c7fbf545_capture-d-ecran-2022-06-14-a-08-27-16.png"
     },
     {
-      "desc": "La France a annoncÃ© jeudi 19 mars l'extension de la Charte sociale europÃ©enne Ã  ses territoires d'outre-mer, une dÃ©cision vÃ©cue comme une \"victoire historique\" par les associations qui rÃ©clamaient la fin de cette exclusion empÃªchant les ultramarins d",
-      "img": "https://la1ere.franceinfo.fr/image/KUtef2bC4bE7pa6y5lcb8AVpq6Y/600x400/outremer/2021/05/10/60992ecbdc\n93e_europe_parlement-1662024.jpg",
-      "title": "La Charte sociale europÃ©enne Ã©tendue aux territoires ultramarins, une \"victoire historique\" pour les associations"
+      "title": "« Il faut déposer une demande de bourse et attendre le retour du CROUS », insiste M’colo Bacar M’colo, responsable du site de Mayotte pour le CROUS",
+      "desc": "La campagne de demande de bourse est ouverte depuis le 2 mars. Les futurs étudiants sont invités à constituer leur dossier social étudiant (DSE), indispensable pour bénéficier d’un",
+      "img": "https://la1ere.franceinfo.fr/image/vSO9NnBnAxReCjDWAIeZcPU5b3M/600x400/outremer/2020/12/09/5fd0cf7b643b1_0676756001534405210_1-1540474.jpg"
     },
     {
-      "desc": "Le vice Premier Ministre et leader du Mouvement Militant Mauricien (MMM), Paul BÃ©renger, a annoncÃ© sa dÃ©mission ce vendredi 20 mars, dans un contexte de fortes tensions internes au sein de son parti. Une dÃ©cision qui rebat les cartes de l'Ã©quilibre g",
-      "img": "https://la1ere.franceinfo.fr/image/-cyajOCd_m3pvy9E2R76VC0syoc/600x400/outremer/2026/03/20/paul-69bd01fae263b032842474.png",
-      "title": "Ãle Maurice : le vice Premier ministre Paul BÃ©renger dÃ©missionne, un sÃ©isme politique au sommet de l'Etat mauricien"
+      "title": "Alliances, fusions, candidats qualifiés : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
+      "desc": "Le second tour des élections municipales se tient ce dimanche 22 mars. Après d'âpres négociations en vue de fusions, 37 candidats ont validé leurs listes dans les 14 communes mahor",
+      "img": "https://la1ere.franceinfo.fr/image/SxH8ykAVdRDHhjf2w8_EqjaFgbU/600x400/outremer/2026/03/15/whatsapp-image-2026-03-15-at-15-44-27-69b6bd9e6963c834092591.jpg"
     },
     {
-      "desc": "La justice administrative confirme une interprÃ©tation stricte du congÃ© bonifiÃ©. Saisie par plusieurs fonctionnaires ultramarins, elle valide le refus de certaines administrations de financer les trajets vers les aÃ©roports, limitant la prise en charge",
-      "img": "https://la1ere.franceinfo.fr/image/KwzQC0iUzpdzdBP9sj4amhHfyqQ/600x400/outremer/2026/03/19/ta33-585x369-69bc0b3ec0430747480873.jpg",
-      "title": "CongÃ©s bonifiÃ©s : les trajets vers lâaÃ©roport exclus de la prise en charge, confirme la justice"
+      "title": "La Charte sociale européenne étendue aux territoires ultramarins, une \"victoire historique\" pour les associations",
+      "desc": "La France a annoncé jeudi 19 mars l'extension de la Charte sociale européenne à ses territoires d'outre-mer, une décision vécue comme une \"victoire historique\" par les associations",
+      "img": "https://la1ere.franceinfo.fr/image/KUtef2bC4bE7pa6y5lcb8AVpq6Y/600x400/outremer/2021/05/10/60992ecbdc93e_europe_parlement-1662024.jpg"
     },
     {
-      "desc": "Alors que l'AÃ¯d-el-Fitr va Ãªtre cÃ©lÃ©brÃ©e ce samedi Ã  Mayotte, l'Oustadh SaÃ¯d Kambi regrette que cette journÃ©e soit parfois plus tournÃ©e vers la c",
-      "img": "https://la1ere.franceinfo.fr/image/Iv0Wi7HGZK7LL_Wu3zACjwli8Vs/600x400/outremer/2026/03/20/whatsapp-image-2026-03-20-at-07-08-07-69bcd433ccb7c252612935.jpg",
-      "title": "\"L'AÃ¯d en tant que fÃªte nous attire plus que la fin du mois de ramadan\", dÃ©plore l'Oustadh SaÃ¯d Kambi"
+      "title": "Dernière ligne droite avant l’Aïd : foule et embouteillages à Majicavo Dubaï",
+      "desc": "À la veille de l’Aïd el-Fitr, l’effervescence est bien palpable à Majicavo Dubaï, ce vendredi. Malgré une météo capricieuse, les habitants se mobilisent pour finaliser leurs dernie",
+      "img": "https://la1ere.franceinfo.fr/image/3-cu6LTqahh3YPh0dyY4aAJaZEM/600x400/outremer/2026/03/20/whatsapp-image-2026-03-20-at-12-46-22-69bd20b04bbb0899980133.jpg"
     },
     {
-      "desc": "Le 14 novembre 2025, un homme d'une vingtaine d'annÃ©es, originaire de Mayotte, a Ã©tÃ© tuÃ© par balles dans un quartier populaire de Brest. Quatre mois plus tard, un individu vient d'Ãªtre mis en examen et Ã©crouÃ© ce jeudi.",
-      "img": "https://la1ere.franceinfo.fr/image/E6bSgPt8PwONLMl5D_DQzr42Aw0/600x400/outremer/2026/03/19/000-36ry7g8-69bc6d52a8581345195264.jpg",
-      "title": "Un jeune Mahorais tuÃ© par balles Ã  Brest : le tireur prÃ©sumÃ© de 18 ans Ã©crouÃ©"
-    },
-    {
-      "desc": "Le nouveau gouvernement de Madagascar ne sera annoncÃ© que \"lundi ou mardi\" car les candidats aux postes de ministre sont soumis au polygraphe, a expliquÃ© Michael Randrianirina, ce jeudi 19 mars. Le prÃ©sident de la Refondation de la RÃ©publique de Mada",
-      "img": "https://la1ere.franceinfo.fr/image/NGNY4d4jOaEWIVJ_R_k6vILg9mA/600x400/outremer/2026/02/20/000-987w2ke-6998d29920040568904036.jpg",
-      "title": "Madagascar : le gouvernement annoncÃ© la semaine prochaine aprÃ¨s un passage au dÃ©tecteur de mensonges"
-    },
-    {
-      "desc": "DÃ©posÃ©s dans l'obscuritÃ© et sur un banc de sable, des migrants originaires d'Afrique continentale ont perdu la vie en essayant d'atteindre le rivage, Ã  Mitsamihuli, au nord de la Grande Comore, dans la soirÃ©e du mercredi 18 mars. Selon les autoritÃ©s ",
-      "img": "https://la1ere.franceinfo.fr/image/xLmDID4Cp-dUBePJMu6yioppj4k/600x400/outremer/2026/03/19/comores-migrants-69bbeda1ddf6b109725558.jpg",
-      "title": "Au moins 18 migrants pÃ©rissent au nord de la Grande Comore en tentant de gagner la rive, les passeurs leur ont fait croire qu'ils Ã©taient arrivÃ©s Ã  Mayotte"
+      "title": "Île Maurice : le vice Premier ministre Paul Bérenger démissionne, un séisme politique au sommet de l'Etat mauricien",
+      "desc": "Le vice Premier Ministre et leader du Mouvement Militant Mauricien (MMM), Paul Bérenger, a annoncé sa démission ce vendredi 20 mars, dans un contexte de fortes tensions internes au",
+      "img": "https://la1ere.franceinfo.fr/image/-cyajOCd_m3pvy9E2R76VC0syoc/600x400/outremer/2026/03/20/paul-69bd01fae263b032842474.png"
     }
   ],
   "actus_outremer": [
     {
-      "desc": "Ce jeudi 5 fÃ©vrier, trois cas supplÃ©mentaires de variole B (Mpox) ont Ã©tÃ© identifiÃ©s sur le territoire et pris en charge rapidement grÃ¢ce au systÃ¨me de veille et de surveillance accrue mis en place Ã  Mayotte en lien avec le Centre Hospitalier, lâoffr",
-      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png",
-      "title": "6 cas de variole B (Mpox) identifiÃ©s Ã  Mayotte depuis le dÃ©but de l'annÃ©e"
+      "title": "6 cas de variole B (Mpox) identifiés  depuis le début de l’année",
+      "desc": "Ce jeudi 5 février, trois cas supplémentaires de variole B (Mpox) ont été identifiés sur le territoire et pris en charge rapidement grâce au système de veille et de surveillance ac",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
     },
     {
-      "desc": "Ce lundi 26 janvier, lâAgence RÃ©gionale de SantÃ© de Mayotte, en lien avec le rectorat et lâObservatoire rÃ©gional de la santÃ© de Mayotte, lanÃ§ait la seconde Ã©dition de lâÃ©tude âSantÃ© des jeunes",
-      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png",
-      "title": "LâAgence RÃ©gionale de SantÃ©, le rectorat et lâObservatoire rÃ©gional de la santÃ© de Mayotte lancent la 2áµ Ã©dition de lâÃ©tude âSantÃ© des jeunesâ"
+      "title": "Deux cas de variole B (Mpox) identifiés",
+      "desc": "Ces mardi 27 et mercredi 28 janvier, deux cas de variole B (Mpox) ont été détectés sur le territoire. L’Agence Régionale de Santé (ARS) a été immédiatement informée et a mis en œuv",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
     },
     {
-      "desc": "AprÃ¨s lâidentification dâun cas de diphtÃ©rie, les institutions se sont mobilisÃ©es pour intervenir de maniÃ¨re coordonnÃ©e par une prise en charge rapide et sÃ©curisÃ©e, une information des familles et un accompagnement adaptÃ©.",
-      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png",
-      "title": "Une rÃ©ponse immÃ©diate et coordonnÃ©e des acteurs face Ã  un cas de diphtÃ©rie"
+      "title": "L’Agence Régionale de Santé, le rectorat et l’Observatoire régional de la santé de Mayotte lancent la 2ᵉ édition de l’étude “Santé des jeunes”",
+      "desc": "Ce lundi 26 janvier, l’Agence Régionale de Santé de Mayotte, en lien avec le rectorat et l’Observatoire régional de la santé de Mayotte, lançait la seconde édition de l’étude “Sant",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
     },
     {
-      "desc": "Sur proposition de M. Sergio Albarello, Directeur GÃ©nÃ©ral de lâARS Mayotte, et au regard de lâÃ©volution de la situation et du risque Ã©pidÃ©mique, M. FranÃ§ois-Xavier Bieuville, PrÃ©fet de Mayotte, a dÃ©cidÃ© dâactiver ce jour le niveau 3 du plan ORSEC.",
-      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png",
-      "title": "Chikungunya : face Ã  la circulation soutenue du virus, lâAgence RÃ©gionale de SantÃ© de Mayotte dÃ©clenche le niveau 3 du plan ORSEC"
-    },
-    {
-      "desc": "L'Agence RÃ©gionale de SantÃ© de Mayotte annonce que deux nouveaux cas de chikungunya ont Ã©tÃ© confirmÃ©s dont lâun autochtone. Ces personnes ont Ã©tÃ© dâores et dÃ©jÃ  prises en charge et les foyers dÃ©sinfectÃ©s. Au regard des diffÃ©rents facteurs rÃ©gionaux e",
-      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png",
-      "title": "Passage au niveau 2A du plan ORSEC : un premier cas autochtone de chikungunya confirmÃ©"
-    },
-    {
-      "desc": "L'Agence RÃ©gionale de SantÃ© de Mayotte annonce qu'un premier cas de chikungunya importÃ© a Ã©tÃ© dÃ©tectÃ© sur l'Ã®le ce mercredi 5 mars. Il concerne une habitante de Mamoudzou, rÃ©cemment revenue d'un sÃ©jour Ã  La RÃ©union. Suite Ã  cette identification, l'AR",
-      "img": "https://www.mayotte.ars\n.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png",
-      "title": "Identification dâun premier cas importÃ© de chikungunya"
+      "title": "Virus Mpox : identification d'un premier cas",
+      "desc": "Le 16 décembre, 5 cas de Mpox ont été confirmés à Madagascar et localisés dans la région côtière de Mahajanga, au Nord-Ouest du pays. Depuis, une centaine de cas suspects et une di",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
     }
   ]
 }
