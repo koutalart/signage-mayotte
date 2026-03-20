@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-20 07:38 UTC",
+  "updated": "2026-03-20 08:28 UTC",
   "meteo": {
     "temp": 29,
     "feels": 36,
@@ -29,14 +29,19 @@
     ]
   },
   "ticker": [
+    "Un gendarme blessé par arme blanche et un homme tué par arme à feu près de la cascade de Soulou ce vendredi matin",
     "\"L'Aïd en tant que fête nous attire plus que la fin du mois de ramadan\", déplore l'Oustadh Saïd Kambi",
     "Pâtisserie, décoration, les préparatifs battent leur plein pour l'Aïd-el-Fitr à Mayotte",
     "Un jeune Mahorais tué par balles à Brest : le tireur présumé de 18 ans écroué",
     "Le bagad de Lann-Bihoué fait retentir le son de la cornemuse à Mamoudzou et Dzaoudzi",
-    "Madagascar : le gouvernement annoncé la semaine prochaine après un passage au détecteur de mensonges",
-    "Élections municipales 2026 : \"on a toujours travaillé avec la population parce que notre projet vient d'elle\", affirme Hanyou Achirafi, candidat à Kani-Kéli"
+    "Madagascar : le gouvernement annoncé la semaine prochaine après un passage au détecteur de mensonges"
   ],
   "actus_mayotte": [
+    {
+      "title": "Un gendarme blessé par arme blanche et un homme tué par arme à feu près de la cascade de Soulou ce vendredi matin",
+      "desc": "Les pompiers confirment être intervenus ce vendredi matin au niveau de la cascade de Soulou. Un gendarme blessé par arme blanche a été pris en charge tandis que le décès sur place ",
+      "img": "https://la1ere.franceinfo.fr/image/QFFirKumUyQRpYlbHe-A1-GOy6I/600x400/outremer/2022/07/19/62d6eb98ca14a_securite-2-id15253-800x533.jpg"
+    },
     {
       "title": "\"L'Aïd en tant que fête nous attire plus que la fin du mois de ramadan\", déplore l'Oustadh Saïd Kambi",
       "desc": "Alors que l'Aïd-el-Fitr va être célébrée ce samedi à Mayotte, l'Oustadh Saïd Kambi regrette que cette journée soit parfois plus tournée vers la consommation que la spiritualité.",
@@ -61,11 +66,6 @@
       "title": "Madagascar : le gouvernement annoncé la semaine prochaine après un passage au détecteur de mensonges",
       "desc": "Le nouveau gouvernement de Madagascar ne sera annoncé que \"lundi ou mardi\" car les candidats aux postes de ministre sont soumis au polygraphe, a expliqué Michael Randrianirina, ce ",
       "img": "https://la1ere.franceinfo.fr/image/NGNY4d4jOaEWIVJ_R_k6vILg9mA/600x400/outremer/2026/02/20/000-987w2ke-6998d29920040568904036.jpg"
-    },
-    {
-      "title": "Élections municipales 2026 : \"on a toujours travaillé avec la population parce que notre projet vient d'elle\", affirme Hanyou Achirafi, candidat à Kani-Kéli",
-      "desc": "À trois jours du second tour des élections municipales, Hanyou Achirafi était l'invité de l'émission Zakweli, ce jeudi 19 mars. Le conseiller municipal sortant de Kani-Kéli, deuxiè",
-      "img": "https://la1ere.franceinfo.fr/image/0VtxErtsOG162jizMO1Q1uWmkt0/600x400/outremer/2026/03/19/whatsapp-image-2026-03-19-at-13-30-05-69bc01be5eb78086572672.jpg"
     }
   ],
   "actus_outremer": [
