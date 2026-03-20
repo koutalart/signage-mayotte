@@ -1,8 +1,8 @@
 {
-  "updated": "2026-03-20 05:43 UTC",
+  "updated": "2026-03-20 06:39 UTC",
   "meteo": {
     "temp": 29,
-    "feels": 34,
+    "feels": 35,
     "condition": "Partiellement nuageux",
     "icon": "⛅",
     "wind": 15,
@@ -29,14 +29,19 @@
     ]
   },
   "ticker": [
+    "\"L'Aïd en tant que fête nous attire plus que la fin du mois de ramadan\", déplore l'Oustadh Saïd Kambi",
     "Pâtisserie, décoration, les préparatifs battent leur plein pour l'Aïd-el-Fitr à Mayotte",
     "Un jeune Mahorais tué par balles à Brest : le tireur présumé de 18 ans écroué",
     "Le bagad de Lann-Bihoué fait retentir le son de la cornemuse à Mamoudzou et Dzaoudzi",
     "Madagascar : le gouvernement annoncé la semaine prochaine après un passage au détecteur de mensonges",
-    "Élections municipales 2026 : \"on a toujours travaillé avec la population parce que notre projet vient d'elle\", affirme Hanyou Achirafi, candidat à Kani-Kéli",
-    "Au moins 18 migrants périssent au nord de la Grande Comore en tentant de gagner la rive, les passeurs leur ont fait croire qu'ils étaient arrivés à Mayotte"
+    "Élections municipales 2026 : \"on a toujours travaillé avec la population parce que notre projet vient d'elle\", affirme Hanyou Achirafi, candidat à Kani-Kéli"
   ],
   "actus_mayotte": [
+    {
+      "title": "\"L'Aïd en tant que fête nous attire plus que la fin du mois de ramadan\", déplore l'Oustadh Saïd Kambi",
+      "desc": "Alors que l'Aïd-el-Fitr va être célébrée ce samedi à Mayotte, l'Oustadh Saïd Kambi regrette que cette journée soit parfois plus tournée vers la consommation que la spiritualité.",
+      "img": "https://la1ere.franceinfo.fr/image/Iv0Wi7HGZK7LL_Wu3zACjwli8Vs/600x400/outremer/2026/03/20/whatsapp-image-2026-03-20-at-07-08-07-69bcd433ccb7c252612935.jpg"
+    },
     {
       "title": "Pâtisserie, décoration, les préparatifs battent leur plein pour l'Aïd-el-Fitr à Mayotte",
       "desc": "Comme chaque année, les professionnels à Mayotte sont particulièrement sollicités pour l'Aïd-el-Fitr. A l'approche de cette fête religieuse, de nombreux Mahorais ont déjà commencé ",
@@ -61,11 +66,6 @@
       "title": "Élections municipales 2026 : \"on a toujours travaillé avec la population parce que notre projet vient d'elle\", affirme Hanyou Achirafi, candidat à Kani-Kéli",
       "desc": "À trois jours du second tour des élections municipales, Hanyou Achirafi était l'invité de l'émission Zakweli, ce jeudi 19 mars. Le conseiller municipal sortant de Kani-Kéli, deuxiè",
       "img": "https://la1ere.franceinfo.fr/image/0VtxErtsOG162jizMO1Q1uWmkt0/600x400/outremer/2026/03/19/whatsapp-image-2026-03-19-at-13-30-05-69bc01be5eb78086572672.jpg"
-    },
-    {
-      "title": "Au moins 18 migrants périssent au nord de la Grande Comore en tentant de gagner la rive, les passeurs leur ont fait croire qu'ils étaient arrivés à Mayotte",
-      "desc": "Déposés dans l'obscurité et sur un banc de sable, des migrants originaires d'Afrique continentale ont perdu la vie en essayant d'atteindre le rivage, à Mitsamihuli, au nord de la G",
-      "img": "https://la1ere.franceinfo.fr/image/xLmDID4Cp-dUBePJMu6yioppj4k/600x400/outremer/2026/03/19/comores-migrants-69bbeda1ddf6b109725558.jpg"
     }
   ],
   "actus_outremer": [
