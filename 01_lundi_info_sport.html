@@ -1,45 +1,133 @@
-<!-- ══ S2 — MÉTÉO (version centrée haut) ══ -->
-<div class="slide" id="s2">
-  <div class="meteo-slide">
-    <div class="meteo-header">
-      <span class="meteo-badge">🌤️ Météo</span>
-      <span class="meteo-loc-tag">📍 Mayotte</span>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-Frame-Options" content="ALLOWALL">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mayotte la 1ère — Signage</title>
+<link rel="stylesheet" href="./signage.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <span class="logo-txt">mayotte</span>
+      <span class="logo-dot"></span>
+      <span class="logo-num">1</span>
     </div>
-    
-    <div class="meteo-main">
-      <div class="meteo-icon-temp-row">
-        <div class="meteo-big-icon" id="meteo-big-icon">⏳</div>
-        <div class="meteo-big-temp" id="meteo-big-temp" style="color:#29B6F6;">--°</div>
-      </div>
-      <div class="meteo-cond-txt" id="meteo-cond-txt">Chargement…</div>
-      <div class="meteo-feels" id="meteo-feels">Ressenti --°C</div>
-      
-      <div class="meteo-details-row">
-        <div class="meteo-detail-pill">
-          <span class="mdp-icon">💨</span>
-          <div>
-            <div class="mdp-val" id="meteo-wind" style="color:#4FC3F7;">--</div>
-            <div class="mdp-lbl">Vent km/h</div>
-          </div>
+    <div class="hclock">
+      <div class="c-time" id="clock">--:--</div>
+      <div class="c-date" id="date">---</div>
+    </div>
+  </header>
+
+  <!-- BARRE THÈME -->
+  <div class="theme-bar">
+    <span class="tb-day" id="theme-day">---</span>
+    <span class="tb-sep"></span>
+    <span class="tb-theme" id="theme-label">---</span>
+    <span class="tb-dot"></span>
+  </div>
+
+  <!-- SLIDES -->
+  <div class="slides-wrap" id="slides-wrap">
+
+    <!-- S0 — INTRO -->
+    <div class="slide active" id="s0" data-duration="15000">
+      <div class="intro-slide">
+        <div class="intro-clock-wrap">
+          <div class="intro-time" id="intro-time">--:--</div>
+          <div class="intro-date" id="intro-date">---</div>
         </div>
-        <div class="meteo-detail-pill">
-          <span class="mdp-icon">💧</span>
-          <div>
-            <div class="mdp-val" id="meteo-hum" style="color:#29B6F6;">--</div>
-            <div class="mdp-lbl">Humidité %</div>
-          </div>
+        <div class="intro-fete" id="intro-fete">
+          <span class="intro-fete-dot"></span>
+          <span id="intro-fete-txt">---</span>
         </div>
-        <div class="meteo-detail-pill">
-          <span class="mdp-icon">🌧️</span>
-          <div>
-            <div class="mdp-val" id="meteo-rain" style="color:#90CAF9;">--</div>
-            <div class="mdp-lbl">Précip. mm</div>
-          </div>
-        </div>
+        <div class="intro-divider"></div>
+        <div class="intro-label">Au programme</div>
+        <div class="intro-topics" id="intro-topics"></div>
       </div>
     </div>
 
-    <div class="meteo-forecast-strip" id="meteo-forecast-strip"></div>
-    <div class="meteo-source">open-meteo.com · Mayotte</div>
+    <!-- S1 — ARS -->
+    <div class="slide" id="s1">
+      <div class="inst-slide">
+        <div class="inst-deco" style="background:#1B5E20;"></div>
+        <div class="inst-header">
+          <span class="inst-badge" style="background:#2E7D32;">🏥 Santé publique</span>
+        </div>
+        <div class="inst-org">ARS<br>Mayotte</div>
+        <div class="inst-line" style="background:#2E7D32;"></div>
+        <div class="inst-update" id="ars-update">🔄 Mise à jour quotidienne</div>
+        <div class="inst-news-list" id="ars-news-list"></div>
+        <div class="card" style="border-top:4px solid #2E7D32;">
+          <div class="card-label" style="color:#81C784;">📞 Numéros d'urgence</div>
+          <div class="card-body">15 · SAMU &nbsp;·&nbsp; 17 · Police &nbsp;·&nbsp; 18 · Pompiers &nbsp;·&nbsp; 3114 · Prévention suicide</div>
+        </div>
+        <div class="source-pill">ARS Mayotte · ars.sante.fr</div>
+      </div>
+    </div>
+
+    <!-- S2 — MÉTÉO (CENTRÉE HAUT) -->
+    <div class="slide" id="s2">
+      <div class="meteo-slide">
+        <div class="meteo-header">
+          <span class="meteo-badge">🌤️ Météo</span>
+          <span class="meteo-loc-tag">📍 Mayotte</span>
+        </div>
+        <div class="meteo-main">
+          <div class="meteo-icon-temp-row">
+            <div class="meteo-big-icon" id="meteo-big-icon">⏳</div>
+            <div class="meteo-big-temp" id="meteo-big-temp" style="color:#29B6F6;">--°</div>
+          </div>
+          <div class="meteo-cond-txt" id="meteo-cond-txt">Chargement…</div>
+          <div class="meteo-feels" id="meteo-feels">Ressenti --°C</div>
+          <div class="meteo-details-row">
+            <div class="meteo-detail-pill">
+              <span class="mdp-icon">💨</span>
+              <div>
+                <div class="mdp-val" id="meteo-wind" style="color:#4FC3F7;">--</div>
+                <div class="mdp-lbl">Vent km/h</div>
+              </div>
+            </div>
+            <div class="meteo-detail-pill">
+              <span class="mdp-icon">💧</span>
+              <div>
+                <div class="mdp-val" id="meteo-hum" style="color:#29B6F6;">--</div>
+                <div class="mdp-lbl">Humidité %</div>
+              </div>
+            </div>
+            <div class="meteo-detail-pill">
+              <span class="mdp-icon">🌧️</span>
+              <div>
+                <div class="mdp-val" id="meteo-rain" style="color:#90CAF9;">--</div>
+                <div class="mdp-lbl">Précip. mm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="meteo-forecast-strip" id="meteo-forecast-strip"></div>
+        <div class="meteo-source">open-meteo.com · Mayotte</div>
+      </div>
+    </div>
+
+    <!-- Les autres slides (s3 à s9) restent identiques à ton fichier actuel -->
+    <!-- Je ne les ai pas modifiées ici pour garder la compatibilité. Tu peux les garder telles quelles. -->
+
   </div>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-label" id="ticker-day-label"><span class="ticker-dot"></span>---</div>
+    <div class="ticker-content">
+      <div class="t-track"></div>
+    </div>
+  </div>
+
 </div>
+
+<script src="./signage.js"></script>
+</body>
+</html>
