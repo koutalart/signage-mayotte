@@ -1,11 +1,11 @@
 {
-  "updated": "2026-03-20 09:29 UTC",
+  "updated": "2026-03-20 10:26 UTC",
   "meteo": {
-    "temp": 29,
+    "temp": 30,
     "feels": 36,
-    "condition": "Pluie",
-    "icon": "🌧️",
-    "wind": 13,
+    "condition": "Nuageux",
+    "icon": "☁️",
+    "wind": 15,
     "humidity": 81,
     "hourly_temps": [
       29.4,
@@ -29,14 +29,29 @@
     ]
   },
   "ticker": [
+    "Île Maurice : le vice Premier ministre Paul Bérenger démissionne, un séisme politique au sommet de l'Etat mauricien",
+    "Congés bonifiés : les trajets vers l’aéroport exclus de la prise en charge, confirme la justice",
+    "Alliances, fusions, résultats au premier tour : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
     "Un gendarme blessé par arme blanche et un homme tué par arme à feu près de la cascade de Soulou ce vendredi matin",
     "\"L'Aïd en tant que fête nous attire plus que la fin du mois de ramadan\", déplore l'Oustadh Saïd Kambi",
-    "Pâtisserie, décoration, les préparatifs battent leur plein pour l'Aïd-el-Fitr à Mayotte",
-    "Un jeune Mahorais tué par balles à Brest : le tireur présumé de 18 ans écroué",
-    "Le bagad de Lann-Bihoué fait retentir le son de la cornemuse à Mamoudzou et Dzaoudzi",
-    "Madagascar : le gouvernement annoncé la semaine prochaine après un passage au détecteur de mensonges"
+    "Pâtisserie, décoration, les préparatifs battent leur plein pour l'Aïd-el-Fitr à Mayotte"
   ],
   "actus_mayotte": [
+    {
+      "title": "Île Maurice : le vice Premier ministre Paul Bérenger démissionne, un séisme politique au sommet de l'Etat mauricien",
+      "desc": "Le vice Premier Ministre et leader du Mouvement Militant Mauricien (MMM), Paul Bérenger, a annoncé sa démission ce vendredi 20 mars, dans un contexte de fortes tensions internes au",
+      "img": "https://la1ere.franceinfo.fr/image/-cyajOCd_m3pvy9E2R76VC0syoc/600x400/outremer/2026/03/20/paul-69bd01fae263b032842474.png"
+    },
+    {
+      "title": "Congés bonifiés : les trajets vers l’aéroport exclus de la prise en charge, confirme la justice",
+      "desc": "La justice administrative confirme une interprétation stricte du congé bonifié. Saisie par plusieurs fonctionnaires ultramarins, elle valide le refus de certaines administrations d",
+      "img": "https://la1ere.franceinfo.fr/image/KwzQC0iUzpdzdBP9sj4amhHfyqQ/600x400/outremer/2026/03/19/ta33-585x369-69bc0b3ec0430747480873.jpg"
+    },
+    {
+      "title": "Alliances, fusions, résultats au premier tour : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
+      "desc": "Le second tour des élections municipales se tient ce dimanche 22 mars. Après d'âpres négociations en vue de fusions, 37 candidats ont validé leurs listes dans les 15 communes mahor",
+      "img": "https://la1ere.franceinfo.fr/image/SxH8ykAVdRDHhjf2w8_EqjaFgbU/600x400/outremer/2026/03/15/whatsapp-image-2026-03-15-at-15-44-27-69b6bd9e6963c834092591.jpg"
+    },
     {
       "title": "Un gendarme blessé par arme blanche et un homme tué par arme à feu près de la cascade de Soulou ce vendredi matin",
       "desc": "Les pompiers confirment être intervenus ce vendredi matin au niveau de la cascade de Soulou. Un gendarme blessé par arme blanche a été pris en charge tandis que le décès sur place ",
@@ -51,21 +66,6 @@
       "title": "Pâtisserie, décoration, les préparatifs battent leur plein pour l'Aïd-el-Fitr à Mayotte",
       "desc": "Comme chaque année, les professionnels à Mayotte sont particulièrement sollicités pour l'Aïd-el-Fitr. A l'approche de cette fête religieuse, de nombreux Mahorais ont déjà commencé ",
       "img": "https://la1ere.franceinfo.fr/image/PoP9lliSM9bbkerhYibPUiP6JW0/600x400/outremer/2026/03/20/qkdz6927-frame-0-69bcad2d15a10154783480.png"
-    },
-    {
-      "title": "Un jeune Mahorais tué par balles à Brest : le tireur présumé de 18 ans écroué",
-      "desc": "Le 14 novembre 2025, un homme d'une vingtaine d'années, originaire de Mayotte, a été tué par balles dans un quartier populaire de Brest. Quatre mois plus tard, un individu vient d'",
-      "img": "https://la1ere.franceinfo.fr/image/E6bSgPt8PwONLMl5D_DQzr42Aw0/600x400/outremer/2026/03/19/000-36ry7g8-69bc6d52a8581345195264.jpg"
-    },
-    {
-      "title": "Le bagad de Lann-Bihoué fait retentir le son de la cornemuse à Mamoudzou et Dzaoudzi",
-      "desc": "En marge de l'escale du porte-hélicoptères Dixmude à Mayotte, le bagad de Lann Bihoué a donné plusieurs représentations, ce jeudi 19 mars. La formation musicale bretonne, composée ",
-      "img": "https://la1ere.franceinfo.fr/image/RMkqFB9FUBrTQOvLPBGk52r0FFs/600x400/outremer/2026/03/19/whatsapp-image-2026-03-19-at-10-34-18-69bc11cebbe01638990795.jpg"
-    },
-    {
-      "title": "Madagascar : le gouvernement annoncé la semaine prochaine après un passage au détecteur de mensonges",
-      "desc": "Le nouveau gouvernement de Madagascar ne sera annoncé que \"lundi ou mardi\" car les candidats aux postes de ministre sont soumis au polygraphe, a expliqué Michael Randrianirina, ce ",
-      "img": "https://la1ere.franceinfo.fr/image/NGNY4d4jOaEWIVJ_R_k6vILg9mA/600x400/outremer/2026/02/20/000-987w2ke-6998d29920040568904036.jpg"
     }
   ],
   "actus_outremer": [
