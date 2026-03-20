@@ -243,42 +243,60 @@ body.w-stormy #app {
 /* ══════════════════════════════════════
    MÉTÉO SLIDE — épuré
 ══════════════════════════════════════ */
+/* MÉTÉO SLIDE — VERSION CENTRÉE HAUT */
 .meteo-slide {
-  overflow:hidden; height:1640px;
-  display:flex; flex-direction:column;
-  background:linear-gradient(160deg, #081428 0%, #0d1e3a 55%, #0a1828 100%);
+  height: 1640px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(160deg, #081428 0%, #0d1e3a 55%, #0a1828 100%);
+  overflow: hidden;
 }
+
 .meteo-header {
-  display:flex; align-items:center; justify-content:space-between;
-  padding:50px 50px 0; flex-shrink:0;
+  padding: 60px 50px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.meteo-badge {
-  background:rgba(1,87,155,0.5); border:1.5px solid rgba(41,182,246,0.35);
-  font-size:22px; font-weight:900; padding:10px 24px; letter-spacing:3px;
-  text-transform:uppercase; border-radius:6px;
-  display:inline-flex; align-items:center; gap:10px;
-}
-.meteo-loc-tag { font-size:22px; font-weight:300; color:rgba(255,255,255,0.4); letter-spacing:1px; }
+
 .meteo-main {
-  flex:1; display:flex; flex-direction:column;
-  align-items:center; justify-content:flex-start;
-  gap:36px; padding:60px 44px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;   /* CENTRAGE VERS LE HAUT */
+  gap: 40px;
+  padding: 0 44px;
 }
-.meteo-icon-temp-row { display:flex; align-items:center; gap:24px; }
-.meteo-big-icon { font-size:170px; line-height:1; }
-.meteo-big-temp { font-size:210px; font-weight:900; line-height:0.88; letter-spacing:-8px; }
-.meteo-cond-txt { font-size:46px; font-weight:700; text-align:center; }
-.meteo-feels { font-size:30px; font-weight:300; color:rgba(255,255,255,0.42); text-align:center; margin-top:-16px; }
-.meteo-details-row { display:flex; gap:16px; width:100%; }
+
+.meteo-icon-temp-row { gap: 30px; }
+.meteo-big-icon { font-size: 180px; line-height: 1; }
+.meteo-big-temp { font-size: 220px; font-weight: 900; line-height: 0.85; letter-spacing: -10px; }
+.meteo-cond-txt { font-size: 48px; font-weight: 700; text-align: center; margin-top: -10px; }
+.meteo-feels { font-size: 32px; font-weight: 300; color: rgba(255,255,255,0.45); }
+
+.meteo-details-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 820px;
+}
+
 .meteo-detail-pill {
-  flex:1; display:flex; align-items:center; gap:14px;
-  background:rgba(255,255,255,0.05); border-radius:14px;
-  padding:22px; border:1px solid rgba(255,255,255,0.08);
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 24px 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
 }
-.mdp-icon { font-size:32px; }
-.mdp-val  { font-size:38px; font-weight:900; line-height:1; }
-.mdp-lbl  { font-size:16px; font-weight:300; color:rgba(255,255,255,0.38); letter-spacing:1px; text-transform:uppercase; margin-top:3px; }
-.meteo-source { font-size:14px; font-weight:300; color:rgba(255,255,255,0.18); letter-spacing:2px; text-transform:uppercase; text-align:center; padding:18px; flex-shrink:0; }
+
+.meteo-source {
+  padding: 40px 44px 50px;
+  font-size: 15px;
+  color: rgba(255,255,255,0.22);
+  text-align: center;
+}
 
 /* ══════════════════════════════════════
    STD SLIDE
