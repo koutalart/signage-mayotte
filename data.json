@@ -1,12 +1,12 @@
 {
-  "updated": "2026-03-20 10:26 UTC",
+  "updated": "2026-03-20 11:22 UTC",
   "meteo": {
     "temp": 30,
     "feels": 36,
     "condition": "Nuageux",
     "icon": "☁️",
-    "wind": 15,
-    "humidity": 81,
+    "wind": 14,
+    "humidity": 82,
     "hourly_temps": [
       29.4,
       29.4,
@@ -29,14 +29,19 @@
     ]
   },
   "ticker": [
+    "Alliances, fusions, résultats au premier tour : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
     "Île Maurice : le vice Premier ministre Paul Bérenger démissionne, un séisme politique au sommet de l'Etat mauricien",
     "Congés bonifiés : les trajets vers l’aéroport exclus de la prise en charge, confirme la justice",
-    "Alliances, fusions, résultats au premier tour : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
     "Un gendarme blessé par arme blanche et un homme tué par arme à feu près de la cascade de Soulou ce vendredi matin",
     "\"L'Aïd en tant que fête nous attire plus que la fin du mois de ramadan\", déplore l'Oustadh Saïd Kambi",
     "Pâtisserie, décoration, les préparatifs battent leur plein pour l'Aïd-el-Fitr à Mayotte"
   ],
   "actus_mayotte": [
+    {
+      "title": "Alliances, fusions, résultats au premier tour : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
+      "desc": "Le second tour des élections municipales se tient ce dimanche 22 mars. Après d'âpres négociations en vue de fusions, 37 candidats ont validé leurs listes dans les 14 communes mahor",
+      "img": "https://la1ere.franceinfo.fr/image/SxH8ykAVdRDHhjf2w8_EqjaFgbU/600x400/outremer/2026/03/15/whatsapp-image-2026-03-15-at-15-44-27-69b6bd9e6963c834092591.jpg"
+    },
     {
       "title": "Île Maurice : le vice Premier ministre Paul Bérenger démissionne, un séisme politique au sommet de l'Etat mauricien",
       "desc": "Le vice Premier Ministre et leader du Mouvement Militant Mauricien (MMM), Paul Bérenger, a annoncé sa démission ce vendredi 20 mars, dans un contexte de fortes tensions internes au",
@@ -46,11 +51,6 @@
       "title": "Congés bonifiés : les trajets vers l’aéroport exclus de la prise en charge, confirme la justice",
       "desc": "La justice administrative confirme une interprétation stricte du congé bonifié. Saisie par plusieurs fonctionnaires ultramarins, elle valide le refus de certaines administrations d",
       "img": "https://la1ere.franceinfo.fr/image/KwzQC0iUzpdzdBP9sj4amhHfyqQ/600x400/outremer/2026/03/19/ta33-585x369-69bc0b3ec0430747480873.jpg"
-    },
-    {
-      "title": "Alliances, fusions, résultats au premier tour : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
-      "desc": "Le second tour des élections municipales se tient ce dimanche 22 mars. Après d'âpres négociations en vue de fusions, 37 candidats ont validé leurs listes dans les 15 communes mahor",
-      "img": "https://la1ere.franceinfo.fr/image/SxH8ykAVdRDHhjf2w8_EqjaFgbU/600x400/outremer/2026/03/15/whatsapp-image-2026-03-15-at-15-44-27-69b6bd9e6963c834092591.jpg"
     },
     {
       "title": "Un gendarme blessé par arme blanche et un homme tué par arme à feu près de la cascade de Soulou ce vendredi matin",
