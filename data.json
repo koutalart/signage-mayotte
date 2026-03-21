@@ -1,11 +1,11 @@
 {
-  "updated": "2026-03-21 07:25 UTC",
+  "updated": "2026-03-21 08:18 UTC",
   "meteo": {
     "temp": 30,
-    "feels": 36,
+    "feels": 37,
     "condition": "Partiellement nuageux",
     "icon": "⛅",
-    "wind": 14,
+    "wind": 12,
     "humidity": 77,
     "precipitation": 0.0,
     "hourly_temps": [
@@ -30,14 +30,19 @@
     ]
   },
   "ticker": [
+    "M'tsangamouji en effervescence pour l'Aïd el-Fitr",
     "Mpox : un nouveau cas confirmé, l'ARS appelle à la vigilance",
     "Journée portes ouvertes à l’occasion de l’Aïd à Mtsangadoua avec l'association Tarehi Tsika",
     "DIRECT: L’Aïd el-Fitr est célébré aujourd’hui à Mayotte.",
     "Circulation perturbée à Tsingoni suite à des barrages et caillassages sur la route",
-    "« Il faut déposer une demande de bourse et attendre le retour du CROUS », insiste M’colo Bacar M’colo, responsable du site de Mayotte pour le CROUS",
-    "Alliances, fusions, candidats qualifiés : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte"
+    "« Il faut déposer une demande de bourse et attendre le retour du CROUS », insiste M’colo Bacar M’colo, responsable du site de Mayotte pour le CROUS"
   ],
   "actus_mayotte": [
+    {
+      "title": "M'tsangamouji en effervescence pour l'Aïd el-Fitr",
+      "desc": "Au matin de ce samedi 21 mars 2026, la commune de M'tsangamouji était en effervescence. Alors que les premiers rayons de soleil éclairaient le gymnase de Chembenyoumba, des centain",
+      "img": "https://la1ere.franceinfo.fr/image/GydBtdkyU_k74Y7EFERPVl3hVNA/600x400/outremer/2026/03/21/8757ad44-45e5-4787-ad85-3ad7630f52f6-69be41e2cb95a052399773.jpg"
+    },
     {
       "title": "Mpox : un nouveau cas confirmé, l'ARS appelle à la vigilance",
       "desc": "L'ARS Mayotte a annoncé la détection d'un nouveau cas de variole B (Mpox), plus d'un mois après le recensement du dernier cas.",
@@ -62,11 +67,6 @@
       "title": "« Il faut déposer une demande de bourse et attendre le retour du CROUS », insiste M’colo Bacar M’colo, responsable du site de Mayotte pour le CROUS",
       "desc": "La campagne de demande de bourse est ouverte depuis le 2 mars. Les futurs étudiants sont invités à constituer leur dossier social étudiant (DSE), indispensable pour bénéficier d’un",
       "img": "https://la1ere.franceinfo.fr/image/vSO9NnBnAxReCjDWAIeZcPU5b3M/600x400/outremer/2020/12/09/5fd0cf7b643b1_0676756001534405210_1-1540474.jpg"
-    },
-    {
-      "title": "Alliances, fusions, candidats qualifiés : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
-      "desc": "Le second tour des élections municipales se tient ce dimanche 22 mars. Après d'âpres négociations en vue de fusions, 37 candidats ont validé leurs listes dans les 14 communes mahor",
-      "img": "https://la1ere.franceinfo.fr/image/SxH8ykAVdRDHhjf2w8_EqjaFgbU/600x400/outremer/2026/03/15/whatsapp-image-2026-03-15-at-15-44-27-69b6bd9e6963c834092591.jpg"
     }
   ],
   "actus_outremer": [
