@@ -1,115 +1,80 @@
 {
   "_aide": "Ãditer chaque matin sur GitHub (bouton crayon). 'compteur_debut' calcule Jour X automatiquement. Mettre 'actif': false pour masquer une story. data_expires masque la slide aprÃ¨s la date.",
-  "jour": "VENDREDI",
-  "theme": "Second tour des municipales en vue, guerre au Moyen-Orient s'intensifie",
+  "jour": "SAMEDI",
+  "theme": "AÃ¯d",
   "agenda": [
     {
-      "emoji": "ð³ï¸",
-      "label": "Municipales 2026 : entre-deux-tours"
+      "emoji": "ð",
+      "label": "AÃ¯d El-Fitr â FÃªte de fin du Ramadan Ã  Mayotte"
     },
     {
-      "emoji": "ð£",
-      "label": "Guerre Iran : Netanyahu â l'Iran dÃ©cimÃ©"
+      "emoji": "ð³ï¸",
+      "label": "Second tour municipales Mayotte â Dimanche 22 mars"
     },
     {
       "emoji": "â",
-      "label": "Charles-de-Gaulle trahi par Strava"
+      "label": "Escale du porte-hÃ©licoptÃ¨res Dixmude Ã  Mayotte"
+    },
+    {
+      "emoji": "ð¸",
+      "label": "Ãquinoxe de printemps â 21 mars 2026"
     },
     {
       "emoji": "ð",
-      "label": "Norouz : Nouvel An persan sous les bombes"
-    },
-    {
-      "emoji": "ð«ð·",
-      "label": "Barrot Ã  Tel-Aviv, appel Ã  l'Iran"
+      "label": "PriÃ¨res et cÃ©lÃ©brations communautaires pour l'AÃ¯d"
     }
   ],
   "stories": {
     "iran": {
       "actif": true,
-      "card_body": "Trois semaines aprÃ¨s le dÃ©but des hostilitÃ©s, Benjamin Netanyahu affirme que l'Iran est 'en train d'Ãªtre dÃ©cimÃ©' et n'est plus capable d'enrichir de l'uranium ni de produire des missiles balistiques. Le porte-parole des Gardiens de la RÃ©volution a Ã©tÃ© tuÃ© dans des frappes conjointes amÃ©ricano-israÃ©liennes. Le ministre franÃ§ais Jean-NoÃ«l Barrot s'est rendu Ã  Tel-Aviv et appelle l'Iran Ã  des concessions majeures pour mettre fin au conflit.",
-      "card_label": "GUERRE MOYEN-ORIENT",
-      "compteur_debut": "2026-03-01",
-      "data_expires": "2026-04-03T00:00:00Z",
+      "card_body": "La situation au Moyen-Orient reste explosive : selon Benjamin Netanyahu, l'Iran ne serait plus en mesure d'enrichir l'uranium. Le porte-parole des Gardiens de la RÃ©volution iranienne a Ã©tÃ© assassinÃ©. La France appelle TÃ©hÃ©ran Ã  faire des concessions dans le cadre des nÃ©gociations nuclÃ©aires.",
+      "card_label": "Crise Iran-IsraÃ«l",
+      "compteur_debut": "2026-03-10",
+      "data_expires": "2026-03-28",
       "flash": [
-        {
-          "desc": "Le porte-parole des Gardiens de la RÃ©volution a Ã©tÃ© tuÃ© lors de frappes amÃ©ricano-israÃ©liennes.",
-          "icon": "ð¥",
-          "titre": "Porte-parole tuÃ©"
-        },
-        {
-          "desc": "AprÃ¨s 3 semaines de guerre, l'Iran ne peut plus produire de missiles balistiques ni enrichir l'uranium, assure Netanyahu.",
-          "icon": "â¡",
-          "titre": "Netanyahu : 'Iran dÃ©cimÃ©'"
-        },
-        {
-          "desc": "La France appelle l'Iran Ã  des 'concessions majeures' pour mettre fin au conflit.",
-          "icon": "ð´",
-          "titre": "Barrot Ã  Tel-Aviv"
-        }
+        "Iran affaibli, incapable d'enrichir l'uranium selon IsraÃ«l",
+        "Porte-parole des Gardiens de la RÃ©volution assassinÃ©",
+        "La France presse l'Iran de faire des concessions"
       ],
-      "source": "France Info â 20/03/2026",
-      "ticker": "ð´ IRAN : Netanyahu â 'L'Iran est en passe d'Ãªtre dÃ©cimÃ©' â porte-parole des Gardiens de la RÃ©volution tuÃ©",
-      "titre": "Iran : 3 semaines de guerre, Netanyahu annonce l'Iran 'dÃ©cimÃ©'"
+      "source": "France TV Info / AFP",
+      "ticker": "ð MOYEN-ORIENT â L'Iran affaibli, la France appelle Ã  des concessions sur le nuclÃ©aire",
+      "titre": "Iran : IsraÃ«l annonce l'Iran dÃ©cimÃ©"
     },
     "soudan": {
       "actif": true,
-      "card_body": "La position confidentielle du porte-avions franÃ§ais Charles-de-Gaulle a Ã©tÃ© rÃ©vÃ©lÃ©e par l'application de sport connectÃ© Strava. Des membres de l'Ã©quipage utilisant l'application auraient involontairement exposÃ© la localisation stratÃ©gique du navire de guerre. Cet incident soulÃ¨ve de sÃ©rieuses questions sur la sÃ©curitÃ© numÃ©rique au sein des forces armÃ©es franÃ§aises et l'usage des applications grand public par les militaires en opÃ©ration.",
-      "card_label": "SÃCURITÃ / DÃFENSE",
-      "compteur_debut": "2026-03-20",
-      "data_expires": "2026-04-03T00:00:00Z",
+      "card_body": "Dix-huit migrants ont perdu la vie en tentant de rejoindre Mayotte depuis Grande Comore, selon les autoritÃ©s. Ces drames rÃ©pÃ©tÃ©s soulignent la dangerositÃ© des traversÃ©es clandestines dans le canal du Mozambique. Par ailleurs, des violences Ã  Tsingoni ont fait un mort et blessÃ© un gendarme.",
+      "card_label": "Migrants & SÃ©curitÃ©",
+      "compteur_debut": "2026-03-19",
+      "data_expires": "2026-03-25",
       "flash": [
-        {
-          "desc": "La position confidentielle du porte-avions Charles-de-Gaulle a Ã©tÃ© rÃ©vÃ©lÃ©e par les donnÃ©es de l'application sportive Strava.",
-          "icon": "ð±",
-          "titre": "Position rÃ©vÃ©lÃ©e"
-        },
-        {
-          "desc": "Des membres d'Ã©quipage utilisant Strava ont involontairement exposÃ© la localisation du bÃ¢timent de guerre.",
-          "icon": "ð¨",
-          "titre": "Faille sÃ©curitaire"
-        },
-        {
-          "desc": "L'incident soulÃ¨ve de graves questions sur l'usage des applications numÃ©riques par les militaires en opÃ©ration.",
-          "icon": "â",
-          "titre": "Marine nationale alertÃ©e"
-        }
+        "18 migrants morts en route vers Mayotte",
+        "Barrages et caillassages Ã  Tsingoni, un mort",
+        "Un gendarme blessÃ© lors des incidents"
       ],
-      "source": "France Info â 20/03/2026",
-      "ticker": "ð± SÃCURITÃ : La position du porte-avions Charles-de-Gaulle rÃ©vÃ©lÃ©e par l'appli Strava",
-      "titre": "Le porte-avions Charles-de-Gaulle trahi par l'application Strava"
+      "source": "Mayotte la 1Ã¨re / France Info",
+      "ticker": "â ï¸ MAYOTTE â 18 migrants morts en mer, violences Ã  Tsingoni : un mort, un gendarme blessÃ©",
+      "titre": "Migrants et violences endeuillent Mayotte"
     },
     "elections": {
       "actif": true,
-      "card_body": "Le second tour des Ã©lections municipales 2026 se tiendra dimanche 22 mars. Plus de 1 500 maires restent Ã  Ã©lire Ã  travers la France. PrÃ¨s de 300 alliances ont Ã©tÃ© nouÃ©es entre les deux tours, donnant lieu Ã  561 duels, 821 triangulaires et 171 quadrangulaires. Ã Nice, l'affrontement entre Eric Ciotti et Christian Estrosi est dÃ©crit comme un vÃ©ritable 'divorce'. Ã Toulouse, LFI tente de convaincre les Ã©lecteurs de gauche hÃ©sitants. Les estimations seront communiquÃ©es Ã  20h dimanche.",
-      "card_label": "ÃLECTIONS MUNICIPALES",
+      "card_body": "Le second tour des Ã©lections municipales de Mayotte se tient ce dimanche 22 mars 2026. Trente-sept candidats s'affrontent dans 14 communes de l'Ã®le. Les alliances de derniÃ¨re minute et les fusions de listes ont reconfigurÃ© le paysage politique local.",
+      "card_label": "Municipales Mayotte",
       "compteur_debut": "2026-03-15",
-      "data_expires": "2026-03-24T00:00:00Z",
+      "data_expires": "2026-03-23",
       "flash": [
-        {
-          "desc": "Plus de 1 500 maires restent Ã  Ã©lire lors du second tour des Ã©lections municipales dimanche.",
-          "icon": "ð³ï¸",
-          "titre": "2e tour dimanche 22 mars"
-        },
-        {
-          "desc": "561 duels, 821 triangulaires, 171 quadrangulaires : les configurations sont multiples pour ce second tour.",
-          "icon": "ð¤",
-          "titre": "300 alliances nouÃ©es"
-        },
-        {
-          "desc": "Ã Nice, Eric Ciotti et Christian Estrosi s'affrontent dans un entre-deux-tours dÃ©lÃ©tÃ¨re qualifiÃ© de 'divorce'.",
-          "icon": "âï¸",
-          "titre": "Nice : Ciotti vs Estrosi"
-        }
+        "37 candidats en lice dans 14 communes",
+        "Second tour ce dimanche 22 mars",
+        "Alliances et fusions ont rebattu les cartes"
       ],
-      "source": "France Info â 20/03/2026",
-      "ticker": "ð³ï¸ MUNICIPALES 2026 : Second tour dimanche 22 mars â Plus de 1 500 maires Ã  Ã©lire partout en France",
-      "titre": "Municipales 2026 : le second tour dimanche, plus de 1 500 maires Ã  Ã©lire"
+      "source": "Mayotte la 1Ã¨re / France Info",
+      "ticker": "ð³ï¸ MUNICIPALES MAYOTTE â Second tour dimanche 22 mars, 37 candidats dans 14 communes",
+      "titre": "Second tour municipales Mayotte demain"
     }
   },
   "ticker_extra": [
-    "ðº Le 19h â Ce soir Ã  19h00 sur Mayotte la 1Ã¨re",
-    "ð» Mayotte la 1Ã¨re Radio â 100.0 FM",
-    "ð la1ere.franceinfo.fr/mayotte"
+    "ð AÃD EL-FITR â Bonne fÃªte Ã  toute la communautÃ© musulmane de Mayotte",
+    "ð¸ ÃQUINOXE DE PRINTEMPS â Ce samedi 21 mars, premier jour du printemps",
+    "â DIXMUDE Ã MAYOTTE â Le porte-hÃ©licoptÃ¨res de la Marine nationale en escale",
+    "ðº Mayotte la 1Ã¨re â Restez informÃ©s toute la journÃ©e"
   ]
 }
