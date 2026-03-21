@@ -1,31 +1,31 @@
 {
-  "updated": "2026-03-21 21:14 UTC",
+  "updated": "2026-03-21 22:12 UTC",
   "meteo": {
     "temp": 30,
-    "feels": 36,
-    "condition": "Nuageux",
-    "icon": "☁️",
-    "wind": 8,
+    "feels": 35,
+    "condition": "Pluie",
+    "icon": "🌧️",
+    "wind": 10,
     "humidity": 80,
-    "precipitation": 0.0,
+    "precipitation": 0.1,
     "hourly_temps": [
-      29.7,
-      29.6,
+      29.5,
+      29.5,
       29.4,
-      29.1,
       28.9,
       28.7,
-      28.7,
-      28.6
+      28.5,
+      28.4,
+      28.7
     ],
     "hourly_codes": [
-      3,
+      95,
       80,
       3,
       95,
       95,
       95,
-      95,
+      80,
       80
     ]
   },
