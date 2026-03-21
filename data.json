@@ -1,11 +1,11 @@
 {
-  "updated": "2026-03-21 09:21 UTC",
+  "updated": "2026-03-21 10:15 UTC",
   "meteo": {
     "temp": 30,
     "feels": 38,
     "condition": "Partiellement nuageux",
     "icon": "⛅",
-    "wind": 9,
+    "wind": 10,
     "humidity": 77,
     "precipitation": 0.0,
     "hourly_temps": [
@@ -30,14 +30,24 @@
     ]
   },
   "ticker": [
+    "À Acoua, Tarehi Tsika ouvre ses portes : préparations culinaires, peintures et broderies pour l'Aïd",
+    "\"Un duel au sommet\" : à Mtsamboro, la pression monte avant la finale du tournoi de beach-foot",
     "\"Un vrai soulagement\" : à Mtsamboro, l’Aïd el-Fitr entre prières, partage et mémoire des absents",
     "\"Cela fait longtemps qu’on n’avait pas été réunis comme cela\" : à Chembenyoumba, l'Aïd el-Fitr ravive des retrouvailles",
     "Mpox : un nouveau cas confirmé, l'ARS appelle à la vigilance",
-    "Journée portes ouvertes à l’occasion de l’Aïd à Mtsangadoua avec l'association Tarehi Tsika",
-    "DIRECT: L’Aïd el-Fitr est célébré aujourd’hui à Mayotte.",
-    "Circulation perturbée à Tsingoni suite à des barrages et caillassages sur la route"
+    "Journée portes ouvertes à l’occasion de l’Aïd à Mtsangadoua avec l'association Tarehi Tsika"
   ],
   "actus_mayotte": [
+    {
+      "title": "À Acoua, Tarehi Tsika ouvre ses portes : préparations culinaires, peintures et broderies pour l'Aïd",
+      "desc": "Dès 8h ce samedi, l’association Tarehi Tsika a ouvert ses portes à Acoua pour faire découvrir au public les traditions et les préparatifs de l’Aïd el-Fitr. Entre ateliers culinaire",
+      "img": "https://la1ere.franceinfo.fr/image/HPu2yGvoHqEkGtEFLUXnw6Evj2Y/600x400/outremer/2026/03/21/6b9fad51-cb6d-45b9-acee-efc8e3f5baab-69be6619a928d950506208.jpg"
+    },
+    {
+      "title": "\"Un duel au sommet\" : à Mtsamboro, la pression monte avant la finale du tournoi de beach-foot",
+      "desc": "En cette fin de matinée, l'ambiance monte d'un cran ce samedi 21 mars. Après la finale des cadets, tous les regards se tournent désormais vers l'affiche très attendue chez les seni",
+      "img": "https://la1ere.franceinfo.fr/image/WrtXM0LKw9YM2zKCePiXDXlUaYI/600x400/outremer/2026/03/21/8032b5ab-ac94-457d-97d5-25cac4866513-69be5b8dbf33b157107318.jpg"
+    },
     {
       "title": "\"Un vrai soulagement\" : à Mtsamboro, l’Aïd el-Fitr entre prières, partage et mémoire des absents",
       "desc": "À Mtsamboro, la journée de l’Aïd el-Fitr se vit comme un moment intense de spiritualité et de retrouvailles. Entre prière, gestes de solidarité et liens familiaux, les fidèles célè",
@@ -57,16 +67,6 @@
       "title": "Journée portes ouvertes à l’occasion de l’Aïd à Mtsangadoua avec l'association Tarehi Tsika",
       "desc": "Dans les locaux de l’association Tarehi Tsika, à Mtsangadoua, une journée portes ouvertes est organisée ce samedi 21 mars à l’occasion de l’Aïd el-Fitr. L’objectif affiché est de p",
       "img": "https://la1ere.franceinfo.fr/image/EdqygMVgvEf1xXNGaDpwvlNAFYE/600x400/outremer/2023/03/22/641b102e6b3fa_marc-dsc-1397-dxo-id16395-800x533.jpg"
-    },
-    {
-      "title": "DIRECT: L’Aïd el-Fitr est célébré aujourd’hui à Mayotte.",
-      "desc": "Après des semaines de jeûne, l’Aïd el-Fitr est fêté aujourd’hui à Mayotte. Cette fête marque la fin du mois sacré de Ramadan pour les musulmans de l’île.",
-      "img": "https://la1ere.franceinfo.fr/image/J_HNjrfGK4leAUJo7lEu1J4VcsI/600x400/outremer/2025/04/03/whatsapp-image-2025-04-03-at-13-17-01-67ee602eaad96479973918.jpg"
-    },
-    {
-      "title": "Circulation perturbée à Tsingoni suite à des barrages et caillassages sur la route",
-      "desc": "La circulation a été fortement perturbée ce vendredi à Tsingoni, suite à des barrages et des caillassages. Ces perturbations faisaient suite au drame survenu plus tôt près de la ca",
-      "img": "https://la1ere.franceinfo.fr/image/mgoxj9yQUPYTBKpgjOzCsEr_9B4/600x400/outremer/2022/06/14/62a81c7fbf545_capture-d-ecran-2022-06-14-a-08-27-16.png"
     }
   ],
   "actus_outremer": [
