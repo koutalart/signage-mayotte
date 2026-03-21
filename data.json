@@ -1,11 +1,11 @@
 {
-  "updated": "2026-03-21 17:16 UTC",
+  "updated": "2026-03-21 18:20 UTC",
   "meteo": {
     "temp": 30,
-    "feels": 36,
+    "feels": 37,
     "condition": "Partiellement nuageux",
     "icon": "⛅",
-    "wind": 5,
+    "wind": 4,
     "humidity": 78,
     "precipitation": 0.0,
     "hourly_temps": [
@@ -29,66 +29,7 @@
       3
     ]
   },
-  "ticker": [
-    "Madagascar : des centaines de millions d'euros détournés, la Cour des comptes révèle une gestion opaque",
-    "Mgourou géant, course de sacs de riz et de pneus : à Mtsamoudou l'Aïd se fête en mouvement",
-    "À Mtsangadoua : que représente l'Aïd pour les jeunes ?",
-    "À Mtsangadoua, Tarehi Tsika s'active pour l'Aïd entre préparations culinaires, peintures et broderies",
-    "\"Un duel au sommet\" : à Mtsamboro, la pression monte avant la finale du tournoi de beach-foot",
-    "\"Un vrai soulagement\" : à Mtsamboro, l’Aïd el-Fitr entre prières, partage et mémoire des absents"
-  ],
-  "actus_mayotte": [
-    {
-      "title": "Madagascar : des centaines de millions d'euros détournés, la Cour des comptes révèle une gestion opaque",
-      "desc": "Les quarante magistrats de la Cour des comptes pointent des dérives massives dans la gestion des finances publiques sous la présidence d’Andry Rajoelina, déchu au mois d'octobre 20",
-      "img": "https://la1ere.franceinfo.fr/image/NgHxbr2WyuJSnaDg8xT60P_9Lb4/600x400/outremer/2026/03/21/cour-des-comptes-mada-69be9a422964d233780753.jpeg"
-    },
-    {
-      "title": "Mgourou géant, course de sacs de riz et de pneus : à Mtsamoudou l'Aïd se fête en mouvement",
-      "desc": "Tout au long de cette journée, Mtsamoudou s’est transformé en terrain de fête : tir à la corde géant, courses de pneus, mini-miss et fitness collectif animent ce jour. Une célébrat",
-      "img": "https://la1ere.franceinfo.fr/image/WBbo9FD4MzQ0Y6Yp1GYCvBR_3c8/600x400/outremer/2026/03/21/photo-2026-03-21-13-45-04-69be8a367a5a2689971079.jpg"
-    },
-    {
-      "title": "À Mtsangadoua : que représente l'Aïd pour les jeunes ?",
-      "desc": "Sur la plage de Mtsangadoua, la finale du tournoi de Ramadan a rassemblé de nombreux jeunes. L'occasion de découvrir ce que la fête de l'Aïd el-Fitr signifie vraiment pour eux.",
-      "img": "https://la1ere.franceinfo.fr/image/UYPp78NUpj4Zv9Sy4jKidLI4PlU/600x400/outremer/2026/03/21/5452de5d-4d3e-4478-ad06-230adcc75c96-69be7012eaee8087911553.jpg"
-    },
-    {
-      "title": "À Mtsangadoua, Tarehi Tsika s'active pour l'Aïd entre préparations culinaires, peintures et broderies",
-      "desc": "Dès 8h ce samedi, l’association Tarehi Tsika a ouvert ses portes à Mtsangadoua pour faire découvrir au public les traditions et les préparatifs de l’Aïd el-Fitr. Entre ateliers cul",
-      "img": "https://la1ere.franceinfo.fr/image/TPeagH7uVrOKTHSTibk1hfflCqc/600x400/outremer/2026/03/21/72a5c20b-2e93-467e-a8b2-d1ae55c6edee-69be83a061b48556468569.jpg"
-    },
-    {
-      "title": "\"Un duel au sommet\" : à Mtsamboro, la pression monte avant la finale du tournoi de beach-foot",
-      "desc": "En cette fin de matinée, l'ambiance monte d'un cran ce samedi 21 mars. Après la finale des cadets, tous les regards se tournent désormais vers l'affiche très attendue chez les seni",
-      "img": "https://la1ere.franceinfo.fr/image/WrtXM0LKw9YM2zKCePiXDXlUaYI/600x400/outremer/2026/03/21/8032b5ab-ac94-457d-97d5-25cac4866513-69be5b8dbf33b157107318.jpg"
-    },
-    {
-      "title": "\"Un vrai soulagement\" : à Mtsamboro, l’Aïd el-Fitr entre prières, partage et mémoire des absents",
-      "desc": "À Mtsamboro, la journée de l’Aïd el-Fitr se vit comme un moment intense de spiritualité et de retrouvailles. Entre prière, gestes de solidarité et liens familiaux, les fidèles célè",
-      "img": "https://la1ere.franceinfo.fr/image/mwuOhjv4vjo8MSGYa2Yigl4kFDs/600x400/outremer/2026/03/21/cf6848d7-4666-469b-9a4e-99eeab1a7b84-69be5031b3865135962908.jpg"
-    }
-  ],
-  "actus_outremer": [
-    {
-      "title": "6 cas de variole B (Mpox) identifiés  depuis le début de l’année",
-      "desc": "Ce jeudi 5 février, trois cas supplémentaires de variole B (Mpox) ont été identifiés sur le territoire et pris en charge rapidement grâce au système de veille et de surveillance ac",
-      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
-    },
-    {
-      "title": "Deux cas de variole B (Mpox) identifiés",
-      "desc": "Ces mardi 27 et mercredi 28 janvier, deux cas de variole B (Mpox) ont été détectés sur le territoire. L’Agence Régionale de Santé (ARS) a été immédiatement informée et a mis en œuv",
-      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
-    },
-    {
-      "title": "L’Agence Régionale de Santé, le rectorat et l’Observatoire régional de la santé de Mayotte lancent la 2ᵉ édition de l’étude “Santé des jeunes”",
-      "desc": "Ce lundi 26 janvier, l’Agence Régionale de Santé de Mayotte, en lien avec le rectorat et l’Observatoire régional de la santé de Mayotte, lançait la seconde édition de l’étude “Sant",
-      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
-    },
-    {
-      "title": "Virus Mpox : identification d'un premier cas",
-      "desc": "Le 16 décembre, 5 cas de Mpox ont été confirmés à Madagascar et localisés dans la région côtière de Mahajanga, au Nord-Ouest du pays. Depuis, une centaine de cas suspects et une di",
-      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
-    }
-  ]
+  "ticker": [],
+  "actus_mayotte": [],
+  "actus_outremer": []
 }
