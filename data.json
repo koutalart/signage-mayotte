@@ -1,11 +1,11 @@
 {
-  "updated": "2026-03-21 06:29 UTC",
+  "updated": "2026-03-21 07:25 UTC",
   "meteo": {
     "temp": 30,
-    "feels": 35,
+    "feels": 36,
     "condition": "Partiellement nuageux",
     "icon": "⛅",
-    "wind": 15,
+    "wind": 14,
     "humidity": 77,
     "precipitation": 0.0,
     "hourly_temps": [
@@ -30,14 +30,19 @@
     ]
   },
   "ticker": [
+    "Mpox : un nouveau cas confirmé, l'ARS appelle à la vigilance",
     "Journée portes ouvertes à l’occasion de l’Aïd à Mtsangadoua avec l'association Tarehi Tsika",
     "DIRECT: L’Aïd el-Fitr est célébré aujourd’hui à Mayotte.",
     "Circulation perturbée à Tsingoni suite à des barrages et caillassages sur la route",
     "« Il faut déposer une demande de bourse et attendre le retour du CROUS », insiste M’colo Bacar M’colo, responsable du site de Mayotte pour le CROUS",
-    "Alliances, fusions, candidats qualifiés : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
-    "La Charte sociale européenne étendue aux territoires ultramarins, une \"victoire historique\" pour les associations"
+    "Alliances, fusions, candidats qualifiés : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte"
   ],
   "actus_mayotte": [
+    {
+      "title": "Mpox : un nouveau cas confirmé, l'ARS appelle à la vigilance",
+      "desc": "L'ARS Mayotte a annoncé la détection d'un nouveau cas de variole B (Mpox), plus d'un mois après le recensement du dernier cas.",
+      "img": "https://la1ere.franceinfo.fr/image/K_Umtkq_s66RcVD3tH_gpTByR4o/600x400/outremer/2026/01/18/variole-du-singe-mada-2-696cf20036b90371009488.png"
+    },
     {
       "title": "Journée portes ouvertes à l’occasion de l’Aïd à Mtsangadoua avec l'association Tarehi Tsika",
       "desc": "Dans les locaux de l’association Tarehi Tsika, à Mtsangadoua, une journée portes ouvertes est organisée ce samedi 21 mars à l’occasion de l’Aïd el-Fitr. L’objectif affiché est de p",
@@ -62,11 +67,6 @@
       "title": "Alliances, fusions, candidats qualifiés : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
       "desc": "Le second tour des élections municipales se tient ce dimanche 22 mars. Après d'âpres négociations en vue de fusions, 37 candidats ont validé leurs listes dans les 14 communes mahor",
       "img": "https://la1ere.franceinfo.fr/image/SxH8ykAVdRDHhjf2w8_EqjaFgbU/600x400/outremer/2026/03/15/whatsapp-image-2026-03-15-at-15-44-27-69b6bd9e6963c834092591.jpg"
-    },
-    {
-      "title": "La Charte sociale européenne étendue aux territoires ultramarins, une \"victoire historique\" pour les associations",
-      "desc": "La France a annoncé jeudi 19 mars l'extension de la Charte sociale européenne à ses territoires d'outre-mer, une décision vécue comme une \"victoire historique\" par les associations",
-      "img": "https://la1ere.franceinfo.fr/image/KUtef2bC4bE7pa6y5lcb8AVpq6Y/600x400/outremer/2021/05/10/60992ecbdc93e_europe_parlement-1662024.jpg"
     }
   ],
   "actus_outremer": [
