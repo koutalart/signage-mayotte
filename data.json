@@ -1,46 +1,51 @@
 {
-  "updated": "2026-03-21 03:53 UTC",
+  "updated": "2026-03-21 05:00 UTC",
   "meteo": {
     "temp": 30,
     "feels": 34,
-    "condition": "Pluie",
-    "icon": "🌧️",
-    "wind": 17,
-    "humidity": 78,
-    "precipitation": 0.1,
+    "condition": "Nuageux",
+    "icon": "☁️",
+    "wind": 15,
+    "humidity": 77,
+    "precipitation": 0.0,
     "hourly_temps": [
       30.0,
       29.9,
       29.6,
-      29.5,
-      29.3,
-      29.3,
-      29.4,
-      29.6
+      28.7,
+      28.8,
+      28.8,
+      29.2,
+      29.4
     ],
     "hourly_codes": [
       2,
       3,
       3,
       80,
-      80,
       3,
-      80,
+      3,
+      3,
       3
     ]
   },
   "ticker": [
-    "L’Aïd El-Fitr sera célébré ce samedi 21 mars à Mayotte",
+    "Journée portes ouvertes à l’occasion de l’Aïd à Mtsangadoua avec l'association Tarehi Tsika",
+    "DIRECT: L’Aïd el-Fitr est célébré aujourd’hui à Mayotte.",
     "Circulation perturbée à Tsingoni suite à des barrages et caillassages sur la route",
     "« Il faut déposer une demande de bourse et attendre le retour du CROUS », insiste M’colo Bacar M’colo, responsable du site de Mayotte pour le CROUS",
     "Alliances, fusions, candidats qualifiés : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
-    "La Charte sociale européenne étendue aux territoires ultramarins, une \"victoire historique\" pour les associations",
-    "Dernière ligne droite avant l’Aïd : foule et embouteillages à Majicavo Dubaï"
+    "La Charte sociale européenne étendue aux territoires ultramarins, une \"victoire historique\" pour les associations"
   ],
   "actus_mayotte": [
     {
-      "title": "L’Aïd El-Fitr sera célébré ce samedi 21 mars à Mayotte",
-      "desc": "Après des semaines de jeûne, l’Aïd el-Fitr sera fêté ce samedi à Mayotte. Cette fête marque la fin du mois sacré de Ramadan pour les musulmans de l’île.",
+      "title": "Journée portes ouvertes à l’occasion de l’Aïd à Mtsangadoua avec l'association Tarehi Tsika",
+      "desc": "Dans les locaux de l’association Tarehi Tsika, à Mtsangadoua, une journée portes ouvertes est organisée ce samedi 21 mars à l’occasion de l’Aïd el-Fitr. L’objectif affiché est de p",
+      "img": "https://la1ere.franceinfo.fr/image/EdqygMVgvEf1xXNGaDpwvlNAFYE/600x400/outremer/2023/03/22/641b102e6b3fa_marc-dsc-1397-dxo-id16395-800x533.jpg"
+    },
+    {
+      "title": "DIRECT: L’Aïd el-Fitr est célébré aujourd’hui à Mayotte.",
+      "desc": "Après des semaines de jeûne, l’Aïd el-Fitr est fêté aujourd’hui à Mayotte. Cette fête marque la fin du mois sacré de Ramadan pour les musulmans de l’île.",
       "img": "https://la1ere.franceinfo.fr/image/J_HNjrfGK4leAUJo7lEu1J4VcsI/600x400/outremer/2025/04/03/whatsapp-image-2025-04-03-at-13-17-01-67ee602eaad96479973918.jpg"
     },
     {
@@ -62,11 +67,6 @@
       "title": "La Charte sociale européenne étendue aux territoires ultramarins, une \"victoire historique\" pour les associations",
       "desc": "La France a annoncé jeudi 19 mars l'extension de la Charte sociale européenne à ses territoires d'outre-mer, une décision vécue comme une \"victoire historique\" par les associations",
       "img": "https://la1ere.franceinfo.fr/image/KUtef2bC4bE7pa6y5lcb8AVpq6Y/600x400/outremer/2021/05/10/60992ecbdc93e_europe_parlement-1662024.jpg"
-    },
-    {
-      "title": "Dernière ligne droite avant l’Aïd : foule et embouteillages à Majicavo Dubaï",
-      "desc": "À la veille de l’Aïd el-Fitr, l’effervescence est bien palpable à Majicavo Dubaï, ce vendredi. Malgré une météo capricieuse, les habitants se mobilisent pour finaliser leurs dernie",
-      "img": "https://la1ere.franceinfo.fr/image/3-cu6LTqahh3YPh0dyY4aAJaZEM/600x400/outremer/2026/03/20/whatsapp-image-2026-03-20-at-12-46-22-69bd20b04bbb0899980133.jpg"
     }
   ],
   "actus_outremer": [
