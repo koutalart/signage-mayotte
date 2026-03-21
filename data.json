@@ -1,12 +1,12 @@
 {
-  "updated": "2026-03-21 13:35 UTC",
+  "updated": "2026-03-21 14:16 UTC",
   "meteo": {
     "temp": 30,
     "feels": 36,
     "condition": "Partiellement nuageux",
     "icon": "⛅",
-    "wind": 8,
-    "humidity": 77,
+    "wind": 7,
+    "humidity": 75,
     "precipitation": 0.0,
     "hourly_temps": [
       30.0,
@@ -30,14 +30,19 @@
     ]
   },
   "ticker": [
+    "Madagascar : des centaines de millions d'euros détournés, la Cour des comptes révèle une gestion opaque",
     "Mgourou géant, course de sacs de riz et de pneus : à Mtsamoudou l'Aïd se fête en mouvement",
     "À Mtsangadoua : que représente l'Aïd pour les jeunes ?",
     "À Mtsangadoua, Tarehi Tsika s'active pour l'Aïd entre préparations culinaires, peintures et broderies",
     "\"Un duel au sommet\" : à Mtsamboro, la pression monte avant la finale du tournoi de beach-foot",
-    "\"Un vrai soulagement\" : à Mtsamboro, l’Aïd el-Fitr entre prières, partage et mémoire des absents",
-    "\"Cela fait longtemps qu’on n’avait pas été réunis comme cela\" : à Chembenyoumba, l'Aïd el-Fitr ravive des retrouvailles"
+    "\"Un vrai soulagement\" : à Mtsamboro, l’Aïd el-Fitr entre prières, partage et mémoire des absents"
   ],
   "actus_mayotte": [
+    {
+      "title": "Madagascar : des centaines de millions d'euros détournés, la Cour des comptes révèle une gestion opaque",
+      "desc": "Les quarante magistrats de la Cour des comptes pointent des dérives massives dans la gestion des finances publiques sous la présidence d’Andry Rajoelina, déchu au mois d'octobre 20",
+      "img": "https://la1ere.franceinfo.fr/image/NgHxbr2WyuJSnaDg8xT60P_9Lb4/600x400/outremer/2026/03/21/cour-des-comptes-mada-69be9a422964d233780753.jpeg"
+    },
     {
       "title": "Mgourou géant, course de sacs de riz et de pneus : à Mtsamoudou l'Aïd se fête en mouvement",
       "desc": "Tout au long de cette journée, Mtsamoudou s’est transformé en terrain de fête : tir à la corde géant, courses de pneus, mini-miss et fitness collectif animent ce jour. Une célébrat",
@@ -62,11 +67,6 @@
       "title": "\"Un vrai soulagement\" : à Mtsamboro, l’Aïd el-Fitr entre prières, partage et mémoire des absents",
       "desc": "À Mtsamboro, la journée de l’Aïd el-Fitr se vit comme un moment intense de spiritualité et de retrouvailles. Entre prière, gestes de solidarité et liens familiaux, les fidèles célè",
       "img": "https://la1ere.franceinfo.fr/image/mwuOhjv4vjo8MSGYa2Yigl4kFDs/600x400/outremer/2026/03/21/cf6848d7-4666-469b-9a4e-99eeab1a7b84-69be5031b3865135962908.jpg"
-    },
-    {
-      "title": "\"Cela fait longtemps qu’on n’avait pas été réunis comme cela\" : à Chembenyoumba, l'Aïd el-Fitr ravive des retrouvailles",
-      "desc": "Au matin de ce samedi 21 mars 2026, la commune de M'tsangamouji était en effervescence. Alors que les premiers rayons de soleil éclairaient le gymnase de Chembenyoumba, des centain",
-      "img": "https://la1ere.franceinfo.fr/image/GydBtdkyU_k74Y7EFERPVl3hVNA/600x400/outremer/2026/03/21/8757ad44-45e5-4787-ad85-3ad7630f52f6-69be41e2cb95a052399773.jpg"
     }
   ],
   "actus_outremer": [
