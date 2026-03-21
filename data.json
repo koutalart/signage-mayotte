@@ -1,22 +1,38 @@
 {
-  "updated": "2026-03-21 01:00 UTC",
+  "updated": "2026-03-21 02:01 UTC",
   "meteo": {
     "temp": 29,
-    "feels": 35,
-    "condition": "Pluie",
-    "icon": "🌧️",
+    "feels": 34,
+    "condition": "Nuageux",
+    "icon": "âï¸",
     "wind": 12,
     "humidity": 80,
     "precipitation": 0.1,
     "hourly_temps": [
-      30.0,
-      29.9,
+      29.7,
       29.6,
-      29.5,
+      29.4,
       29.3,
+      29.1,
+      29.1,
+      29.2,
       29.3,
       29.4,
-      29.6
+      29.6,
+      29.7,
+      29.9,
+      29.9,
+      30.1,
+      30,
+      29.7,
+      29.7,
+      29.6,
+      29.9,
+      30,
+      29.9,
+      29.9,
+      29.9,
+      29.8
     ],
     "hourly_codes": [
       2,
@@ -26,69 +42,97 @@
       80,
       3,
       80,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      3,
+      3,
+      80,
+      80,
+      80,
+      80,
+      1,
+      1,
+      2,
+      3,
       3
     ]
   },
-  "ticker": [
-    "L’Aïd El-Fitr sera célébré ce samedi 21 mars à Mayotte",
-    "Circulation perturbée à Tsingoni suite à des barrages et caillassages sur la route",
-    "« Il faut déposer une demande de bourse et attendre le retour du CROUS », insiste M’colo Bacar M’colo, responsable du site de Mayotte pour le CROUS",
-    "Alliances, fusions, candidats qualifiés : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
-    "La Charte sociale européenne étendue aux territoires ultramarins, une \"victoire historique\" pour les associations",
-    "Dernière ligne droite avant l’Aïd : foule et embouteillages à Majicavo Dubaï"
-  ],
   "actus_mayotte": [
     {
-      "title": "L’Aïd El-Fitr sera célébré ce samedi 21 mars à Mayotte",
-      "desc": "Après des semaines de jeûne, l’Aïd el-Fitr sera fêté ce samedi à Mayotte. Cette fête marque la fin du mois sacré de Ramadan pour les musulmans de l’île.",
-      "img": "https://la1ere.franceinfo.fr/image/J_HNjrfGK4leAUJo7lEu1J4VcsI/600x400/outremer/2025/04/03/whatsapp-image-2025-04-03-at-13-17-01-67ee602eaad96479973918.jpg"
+      "desc": "AprÃ¨s des semaines de jeÃ»ne, l'AÃ¯d el-Fitr sera fÃªtÃ© ce samedi Ã  Mayotte. Cette fÃªte marque la fin du mois sacrÃ© de Ramadan pour les musulmans de l'Ã®le.",
+      "img": "https://la1ere.franceinfo.fr/image/J_HNjrfGK4leAUJo7lEu1J4VcsI/600x400/outremer/2025/04/03/whatsapp-image-2025-04-03-at-13-17-01-67ee602eaad96479973918.jpg",
+      "title": "L'AÃ¯d El-Fitr sera cÃ©lÃ©brÃ© ce samedi 21 mars Ã  Mayotte"
     },
     {
-      "title": "Circulation perturbée à Tsingoni suite à des barrages et caillassages sur la route",
-      "desc": "La circulation a été fortement perturbée ce vendredi à Tsingoni, suite à des barrages et des caillassages. Ces perturbations faisaient suite au drame survenu plus tôt près de la ca",
-      "img": "https://la1ere.franceinfo.fr/image/mgoxj9yQUPYTBKpgjOzCsEr_9B4/600x400/outremer/2022/06/14/62a81c7fbf545_capture-d-ecran-2022-06-14-a-08-27-16.png"
+      "desc": "La circulation a Ã©tÃ© fortement perturbÃ©e ce vendredi Ã  Tsingoni, suite Ã  des barrages et des caillassages. Ces perturbations faisaient suite au drame survenu plus tÃ´t prÃ¨s de la cascade de Soulou, oÃ¹ un gendarme avait Ã©tÃ© blessÃ© par arme blanche et un homme tuÃ© par arme Ã  feu.",
+      "img": "https://la1ere.franceinfo.fr/image/mgoxj9yQUPYTBKpgjOzCsEr_9B4/600x400/outremer/2022/06/14/62a81c7fbf545_capture-d-ecran-2022-06-14-a-08-27-16.png",
+      "title": "Circulation perturbÃ©e Ã  Tsingoni suite Ã  des barrages et caillassages sur la route"
     },
     {
-      "title": "« Il faut déposer une demande de bourse et attendre le retour du CROUS », insiste M’colo Bacar M’colo, responsable du site de Mayotte pour le CROUS",
-      "desc": "La campagne de demande de bourse est ouverte depuis le 2 mars. Les futurs étudiants sont invités à constituer leur dossier social étudiant (DSE), indispensable pour bénéficier d’un",
-      "img": "https://la1ere.franceinfo.fr/image/vSO9NnBnAxReCjDWAIeZcPU5b3M/600x400/outremer/2020/12/09/5fd0cf7b643b1_0676756001534405210_1-1540474.jpg"
+      "desc": "La campagne de demande de bourse est ouverte depuis le 2 mars. Les futurs Ã©tudiants sont invitÃ©s Ã  constituer leur dossier social Ã©tudiant (DSE), indispensable pour bÃ©nÃ©ficier d'une aide du CROUS.",
+      "img": "https://la1ere.franceinfo.fr/image/vSO9NnBnAxReCjDWAIeZcPU5b3M/600x400/outremer/2020/12/09/5fd0cf7b643b1_0676756001534405210_1-1540474.jpg",
+      "title": "Â« Il faut dÃ©poser une demande de bourse et attendre le retour du CROUS Â», insiste M'colo Bacar M'colo, responsable du site de Mayotte pour le CROUS"
     },
     {
-      "title": "Alliances, fusions, candidats qualifiés : ce qu'il faut savoir avant le second tour des municipales 2026 à Mayotte",
-      "desc": "Le second tour des élections municipales se tient ce dimanche 22 mars. Après d'âpres négociations en vue de fusions, 37 candidats ont validé leurs listes dans les 14 communes mahor",
-      "img": "https://la1ere.franceinfo.fr/image/SxH8ykAVdRDHhjf2w8_EqjaFgbU/600x400/outremer/2026/03/15/whatsapp-image-2026-03-15-at-15-44-27-69b6bd9e6963c834092591.jpg"
+      "desc": "Le second tour des Ã©lections municipales se tient ce dimanche 22 mars. AprÃ¨s d'Ã¢pres nÃ©gociations en vue de fusions, 37 candidats ont validÃ© leurs listes dans les 14 communes mahoraises restantes. On fait le point sur les forces en prÃ©sence.",
+      "img": "https://la1ere.franceinfo.fr/image/SxH8ykAVdRDHhjf2w8_EqjaFgbU/600x400/outremer/2026/03/15/whatsapp-image-2026-03-15-at-15-44-27-69b6bd9e6963c834092591.jpg",
+      "title": "Alliances, fusions, candidats qualifiÃ©s : ce qu'il faut savoir avant le second tour des municipales 2026 Ã  Mayotte"
     },
     {
-      "title": "La Charte sociale européenne étendue aux territoires ultramarins, une \"victoire historique\" pour les associations",
-      "desc": "La France a annoncé jeudi 19 mars l'extension de la Charte sociale européenne à ses territoires d'outre-mer, une décision vécue comme une \"victoire historique\" par les associations",
-      "img": "https://la1ere.franceinfo.fr/image/KUtef2bC4bE7pa6y5lcb8AVpq6Y/600x400/outremer/2021/05/10/60992ecbdc93e_europe_parlement-1662024.jpg"
+      "desc": "Ã la veille de l'AÃ¯d el-Fitr, l'effervescence est bien palpable Ã  Majicavo DubaÃ¯, ce vendredi. MalgrÃ© une mÃ©tÃ©o capricieuse, les habitants se mobilisent pour finaliser leurs derniers achats avant une fÃªte trÃ¨s attendue Ã  Mayotte.",
+      "img": "https://la1ere.franceinfo.fr/image/3-cu6LTqahh3YPh0dyY4aAJaZEM/600x400/outremer/2026/03/20/whatsapp-image-2026-03-20-at-12-46-22-69bd20b04bbb0899980133.jpg",
+      "title": "DerniÃ¨re ligne droite avant l'AÃ¯d : foule et embouteillages Ã  Majicavo DubaÃ¯"
     },
     {
-      "title": "Dernière ligne droite avant l’Aïd : foule et embouteillages à Majicavo Dubaï",
-      "desc": "À la veille de l’Aïd el-Fitr, l’effervescence est bien palpable à Majicavo Dubaï, ce vendredi. Malgré une météo capricieuse, les habitants se mobilisent pour finaliser leurs dernie",
-      "img": "https://la1ere.franceinfo.fr/image/3-cu6LTqahh3YPh0dyY4aAJaZEM/600x400/outremer/2026/03/20/whatsapp-image-2026-03-20-at-12-46-22-69bd20b04bbb0899980133.jpg"
+      "desc": "Les pompiers confirment Ãªtre intervenus ce vendredi matin au niveau de la cascade de Soulou. Un gendarme blessÃ© par arme blanche a Ã©tÃ© pris en charge tandis que le dÃ©cÃ¨s sur place d'un homme par arme Ã  feu a Ã©tÃ© constatÃ©.",
+      "img": "https://la1ere.franceinfo.fr/image/QFFirKumUyQRpYlbHe-A1-GOy6I/600x400/outremer/2022/07/19/62d6eb98ca14a_securite-2-id15253-800x533.jpg",
+      "title": "Un gendarme blessÃ© par arme blanche et un homme tuÃ© par arme Ã  feu prÃ¨s de la cascade de Soulou ce vendredi matin"
+    },
+    {
+      "desc": "Au moins 18 migrants pÃ©rissent au nord de la Grande Comore en tentant de gagner la rive. DÃ©posÃ©s dans l'obscuritÃ© et sur un banc de sable, des migrants originaires d'Afrique continentale ont perdu la vie en essayant d'atteindre le rivage, Ã  Mitsamihuli. Selon les autoritÃ©s comoriennes, le bilan est de 18 dÃ©cÃ¨s, trois disparus et une trentaine de rescapÃ©s.",
+      "img": "https://la1ere.franceinfo.fr/image/xLmDID4Cp-dUBePJMu6yioppj4k/600x400/outremer/2026/03/19/comores-migrants-69bbeda1ddf6b109725558.jpg",
+      "title": "Au moins 18 migrants pÃ©rissent au nord de la Grande Comore en tentant de gagner la rive, les passeurs leur ont fait croire qu'ils Ã©taient arrivÃ©s Ã  Mayotte"
+    },
+    {
+      "desc": "Quatre collÃ©giens, trois filles et un garÃ§on, du collÃ¨ge Ouvoimoja Ã  Passamainty, sont les laurÃ©ats du concours rÃ©servÃ© aux collÃ©giens Science Factor 2026, pour leur invention \"Sac I Mahorais\". Ils se sont vus remettre leur rÃ©compense, ce mercredi 18 mars, prÃ¨s de Paris.",
+      "img": "https://la1ere.franceinfo.fr/image/jexUfxY_DsVXhLn5hiAHLFREsrA/600x400/outremer/2026/03/19/whatsapp-image-2026-03-19-at-09-13-52-69bbdaaa579ce739610772.jpg",
+      "title": "Le sac intelligent de quatre collÃ©giens mahorais remporte un concours national d'innovation"
     }
   ],
   "actus_outremer": [
     {
-      "title": "6 cas de variole B (Mpox) identifiés  depuis le début de l’année",
-      "desc": "Ce jeudi 5 février, trois cas supplémentaires de variole B (Mpox) ont été identifiés sur le territoire et pris en charge rapidement grâce au système de veille et de surveillance ac",
-      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
+      "desc": "Ce jeudi 5 fÃ©vrier, trois cas supplÃ©mentaires de variole B (Mpox) ont Ã©tÃ© identifiÃ©s sur le territoire et pris en charge rapidement grÃ¢ce au systÃ¨me de veille et de surveillance accrue mis en place Ã  Mayotte en lien avec le Centre Hospitalier, l'offre de ville et les diffÃ©rents acteurs en santÃ© de l'Ã®le. Au total, 6 cas de variole B ont Ã©tÃ© confirmÃ©s Ã  Mayotte.",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png",
+      "title": "6 cas de variole B (Mpox) identifiÃ©s depuis le dÃ©but de l'annÃ©e"
     },
     {
-      "title": "Deux cas de variole B (Mpox) identifiés",
-      "desc": "Ces mardi 27 et mercredi 28 janvier, deux cas de variole B (Mpox) ont été détectés sur le territoire. L’Agence Régionale de Santé (ARS) a été immédiatement informée et a mis en œuv",
-      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
+      "desc": "Ces mardi 27 et mercredi 28 janvier, deux cas de variole B (Mpox) ont Ã©tÃ© dÃ©tectÃ©s sur le territoire. L'Agence RÃ©gionale de SantÃ© (ARS) a Ã©tÃ© immÃ©diatement informÃ©e et a mis en Åuvre sans dÃ©lai l'ensemble des mesures de gestion sanitaire appropriÃ©es.",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png",
+      "title": "Deux cas de variole B (Mpox) identifiÃ©s"
     },
     {
-      "title": "L’Agence Régionale de Santé, le rectorat et l’Observatoire régional de la santé de Mayotte lancent la 2ᵉ édition de l’étude “Santé des jeunes”",
-      "desc": "Ce lundi 26 janvier, l’Agence Régionale de Santé de Mayotte, en lien avec le rectorat et l’Observatoire régional de la santé de Mayotte, lançait la seconde édition de l’étude “Sant",
-      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
+      "desc": "Ce lundi 26 janvier, l'Agence RÃ©gionale de SantÃ© de Mayotte, en lien avec le rectorat et l'Observatoire rÃ©gional de la santÃ© de Mayotte, lanÃ§ait la seconde Ã©dition de l'Ã©tude \"SantÃ© des jeunes\", aprÃ¨s une premiÃ¨re enquÃªte menÃ©e en 2019. Cette nouvelle Ã©dition permettra d'actualiser les donnÃ©es de santÃ© relatives Ã  la jeunesse locale, afin d'adapter au mieux les politiques publiques et les actions.",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png",
+      "title": "L'Agence RÃ©gionale de SantÃ©, le rectorat et l'Observatoire rÃ©gional de la santÃ© de Mayotte lancent la 2áµ Ã©dition de l'Ã©tude \"SantÃ© des jeunes\""
     },
     {
-      "title": "Virus Mpox : identification d'un premier cas",
-      "desc": "Le 16 décembre, 5 cas de Mpox ont été confirmés à Madagascar et localisés dans la région côtière de Mahajanga, au Nord-Ouest du pays. Depuis, une centaine de cas suspects et une di",
-      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png"
+      "desc": "Le 16 dÃ©cembre, 5 cas de Mpox ont Ã©tÃ© confirmÃ©s Ã  Madagascar et localisÃ©s dans la rÃ©gion cÃ´tiÃ¨re de Mahajanga, au Nord-Ouest du pays. Depuis, une centaine de cas suspects et une dizaine de cas confirmÃ©s sont observÃ©s Ã  Madagascar. La rÃ©gion cÃ´tiÃ¨re de Mahajanga reste, Ã  date, l'Ã©picentre de l'Ã©pidÃ©mie. Ce jeudi 8 janvier, un cas de Mpox, en provenance de Madagascar a Ã©tÃ© confirmÃ© Ã  Mayotte.",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png",
+      "title": "Virus Mpox : identification d'un premier cas"
+    },
+    {
+      "desc": "AprÃ¨s l'identification d'un cas de diphtÃ©rie, les institutions se sont mobilisÃ©es pour intervenir de maniÃ¨re coordonnÃ©e par une prise en charge rapide et sÃ©curisÃ©e, une information des familles et un accompagnement adaptÃ©.",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png",
+      "title": "Une rÃ©ponse immÃ©diate et coordonnÃ©e des acteurs face Ã  un cas de diphtÃ©rie"
+    },
+    {
+      "desc": "La Caisse de SÃ©curitÃ© Sociale de Mayotte (CSSM) a ouvert ce lundi 28 juillet 2025 un guichet dÃ©diÃ© aux Ã©vacuations sanitaires programmÃ©es (Evasan) pour les assurÃ©s sociaux. Ce nouveau service, situÃ© au centre Kinga Ã  KawÃ©ni, a pour objectif de faciliter les dÃ©marches administratives, de mieux accompagner les patients et de fluidifier la gestion des soins hors territoire.",
+      "img": "https://www.mayotte.ars.sante.fr/system/files/2023-11/Vignettes%20ARS%20Mayotte.pdf_.png",
+      "title": "CP - Un nouveau guichet pour simplifier les Ã©vacuations sanitaires programmÃ©es"
     }
   ]
 }
