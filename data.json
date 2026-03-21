@@ -1,11 +1,11 @@
 {
-  "updated": "2026-03-21 11:14 UTC",
+  "updated": "2026-03-21 12:23 UTC",
   "meteo": {
     "temp": 30,
-    "feels": 37,
+    "feels": 36,
     "condition": "Nuageux",
     "icon": "☁️",
-    "wind": 10,
+    "wind": 9,
     "humidity": 78,
     "precipitation": 0.0,
     "hourly_temps": [
@@ -30,17 +30,22 @@
     ]
   },
   "ticker": [
-    "À Acoua, Tarehi Tsika ouvre ses portes : préparations culinaires, peintures et broderies pour l'Aïd",
+    "À Mtsangadoua : que représente l'Aïd pour les jeunes ?",
+    "À Mtsangadoua, Tarehi Tsika s'active pour l'Aïd entre préparations culinaires, peintures et broderies",
     "\"Un duel au sommet\" : à Mtsamboro, la pression monte avant la finale du tournoi de beach-foot",
     "\"Un vrai soulagement\" : à Mtsamboro, l’Aïd el-Fitr entre prières, partage et mémoire des absents",
     "\"Cela fait longtemps qu’on n’avait pas été réunis comme cela\" : à Chembenyoumba, l'Aïd el-Fitr ravive des retrouvailles",
-    "Mpox : un nouveau cas confirmé, l'ARS appelle à la vigilance",
-    "Journée portes ouvertes à l’occasion de l’Aïd à Mtsangadoua avec l'association Tarehi Tsika"
+    "Mpox : un nouveau cas confirmé, l'ARS appelle à la vigilance"
   ],
   "actus_mayotte": [
     {
-      "title": "À Acoua, Tarehi Tsika ouvre ses portes : préparations culinaires, peintures et broderies pour l'Aïd",
-      "desc": "Dès 8h ce samedi, l’association Tarehi Tsika a ouvert ses portes à Acoua pour faire découvrir au public les traditions et les préparatifs de l’Aïd el-Fitr. Entre ateliers culinaire",
+      "title": "À Mtsangadoua : que représente l'Aïd pour les jeunes ?",
+      "desc": "Sur la plage de Mtsangadoua, la finale du tournoi de Ramadan a rassemblé de nombreux jeunes. L'occasion de découvrir ce que la fête de l'Aïd el-Fitr signifie vraiment pour eux.",
+      "img": "https://la1ere.franceinfo.fr/image/UYPp78NUpj4Zv9Sy4jKidLI4PlU/600x400/outremer/2026/03/21/5452de5d-4d3e-4478-ad06-230adcc75c96-69be7012eaee8087911553.jpg"
+    },
+    {
+      "title": "À Mtsangadoua, Tarehi Tsika s'active pour l'Aïd entre préparations culinaires, peintures et broderies",
+      "desc": "Dès 8h ce samedi, l’association Tarehi Tsika a ouvert ses portes à Mtsangadoua pour faire découvrir au public les traditions et les préparatifs de l’Aïd el-Fitr. Entre ateliers cul",
       "img": "https://la1ere.franceinfo.fr/image/HPu2yGvoHqEkGtEFLUXnw6Evj2Y/600x400/outremer/2026/03/21/6b9fad51-cb6d-45b9-acee-efc8e3f5baab-69be6619a928d950506208.jpg"
     },
     {
@@ -62,11 +67,6 @@
       "title": "Mpox : un nouveau cas confirmé, l'ARS appelle à la vigilance",
       "desc": "L'ARS Mayotte a annoncé la détection d'un nouveau cas de variole B (Mpox), plus d'un mois après le recensement du dernier cas.",
       "img": "https://la1ere.franceinfo.fr/image/K_Umtkq_s66RcVD3tH_gpTByR4o/600x400/outremer/2026/01/18/variole-du-singe-mada-2-696cf20036b90371009488.png"
-    },
-    {
-      "title": "Journée portes ouvertes à l’occasion de l’Aïd à Mtsangadoua avec l'association Tarehi Tsika",
-      "desc": "Dans les locaux de l’association Tarehi Tsika, à Mtsangadoua, une journée portes ouvertes est organisée ce samedi 21 mars à l’occasion de l’Aïd el-Fitr. L’objectif affiché est de p",
-      "img": "https://la1ere.franceinfo.fr/image/EdqygMVgvEf1xXNGaDpwvlNAFYE/600x400/outremer/2023/03/22/641b102e6b3fa_marc-dsc-1397-dxo-id16395-800x533.jpg"
     }
   ],
   "actus_outremer": [
