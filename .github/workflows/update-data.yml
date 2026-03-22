@@ -28,7 +28,7 @@ jobs:
             "actus_outremer": []
           }
 
-          # ── MÉTÉO ──
+          # ── MÉTÉO (open-meteo.com — gratuit, sans clé) ──
           try:
             url = (
               "https://api.open-meteo.com/v1/forecast"
@@ -47,56 +47,98 @@ jobs:
             elif code <= 82: cond, icon = "Pluie",                  "🌧️"
             else:            cond, icon = "Orageux",                "⛈️"
             result["meteo"] = {
-              "temp":     round(cur["temperature_2m"]),
-              "feels":    round(cur.get("apparent_temperature", cur["temperature_2m"])),
-              "condition": cond,
-              "icon":     icon,
-              "wind":     round(cur.get("windspeed_10m", 0)),
-              "humidity": round(cur.get("relativehumidity_2m", 0)),
+              "temp":          round(cur["temperature_2m"]),
+              "feels":         round(cur.get("apparent_temperature", cur["temperature_2m"])),
+              "condition":     cond,
+              "icon":          icon,
+              "wind":          round(cur.get("windspeed_10m", 0)),
+              "humidity":      round(cur.get("relativehumidity_2m", 0)),
               "precipitation": round(cur.get("precipitation", 0), 1),
-              "hourly_temps": data["hourly"]["temperature_2m"][:8],
-              "hourly_codes": data["hourly"]["weathercode"][:8]
+              "hourly_temps":  data["hourly"]["temperature_2m"][:8],
+              "hourly_codes":  data["hourly"]["weathercode"][:8]
             }
-            print(f"Météo OK : {result['meteo']['temp']}°C {cond}")
+            print(f"Météo OK : {result['meteo']['temp']}°C {cond} · pluie {result['meteo']['precipitation']}mm")
           except Exception as e:
             print(f"Météo ERREUR : {e}", file=sys.stderr)
 
-          # ── PARSE RSS ──
+          # ── PARSE RSS / ATOM ──
+          def clean_html(s):
+            s = re.sub(r'<[^>]+>', '', s)
+            for ent, rep in [('&amp;','&'),('&lt;','<'),('&gt;','>'),('&quot;','"'),('&#39;',"'"),('&nbsp;',' ')]:
+              s = s.replace(ent, rep)
+            return s.strip()
+
           def parse_rss(xml, max_items=6):
             items = []
-            for m in re.finditer(r'<item>(.*?)</item>', xml, re.DOTALL):
+            # Support RSS <item> et Atom <entry>
+            for m in re.finditer(r'<(?:item|entry)(?:\s[^>]*)?>(.+?)</(?:item|entry)>', xml, re.DOTALL):
               b = m.group(1)
               def get(tag):
-                t = re.search(rf'<{tag}[^>]*>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</{tag}>', b, re.DOTALL)
-                return re.sub(r'<[^>]+>', '', t.group(1)).strip() if t else ''
-              img_m = re.search(r'url="([^"]+\.(?:jpg|jpeg|png|webp))"', b, re.I) \
-                   or re.search(r'<enclosure[^>]+url="([^"]+)"', b)
-              items.append({
-                "title": get('title').replace('&amp;','&').replace('&lt;','<').replace('&gt;','>'),
-                "desc":  get('description')[:180],
-                "img":   img_m.group(1) if img_m else ''
-              })
+                t = re.search(rf'<{tag}(?:\s[^>]*)?>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</{tag}>', b, re.DOTALL)
+                return clean_html(t.group(1)) if t else ''
+              title = get('title') or ''
+              desc  = get('description') or get('summary') or get('content') or ''
+              # Cherche image : plusieurs patterns courants
+              img = ''
+              for pat in [
+                r'<enclosure[^>]+url=["\']([^"\']+\.(?:jpg|jpeg|png|webp)[^"\']*)["\']',
+                r'<media:content[^>]+url=["\']([^"\']+\.(?:jpg|jpeg|png|webp)[^"\']*)["\']',
+                r'<media:thumbnail[^>]+url=["\']([^"\']+)["\']',
+                r'url=["\']([^"\']+\.(?:jpg|jpeg|png|webp))["\']',
+                r'<img[^>]+src=["\']([^"\']+\.(?:jpg|jpeg|png|webp))["\']',
+              ]:
+                img_m = re.search(pat, b, re.I)
+                if img_m:
+                  img = img_m.group(1)
+                  break
+              if title:
+                items.append({"title": title, "desc": desc[:200], "img": img})
               if len(items) >= max_items: break
             return items
 
-          # ── ACTUS MAYOTTE ──
-          try:
-            with urllib.request.urlopen('https://rss.app/feeds/GcKEWQW6TsvCtxKv.xml', timeout=10) as r:
-              xml = r.read().decode('utf-8', errors='replace')
-            result["actus_mayotte"] = parse_rss(xml, 6)
-            result["ticker"] = [it["title"] for it in result["actus_mayotte"]]
-            print(f"Actus Mayotte OK : {len(result['actus_mayotte'])} items")
-          except Exception as e:
-            print(f"Actus Mayotte ERREUR : {e}", file=sys.stderr)
+          # ── ACTUS MAYOTTE (rss.app + fallback la1ere) ──
+          FEEDS_MAYOTTE = [
+            'https://rss.app/feeds/GcKEWQW6TsvCtxKv.xml',
+            'https://la1ere.franceinfo.fr/mayotte/rss',
+            'https://la1ere.franceinfo.fr/rss?slug=mayotte',
+          ]
+          for feed_url in FEEDS_MAYOTTE:
+            try:
+              req = urllib.request.Request(feed_url, headers={'User-Agent':'Mozilla/5.0'})
+              with urllib.request.urlopen(req, timeout=12) as r:
+                xml = r.read().decode('utf-8', errors='replace')
+              items = parse_rss(xml, 6)
+              if items:
+                result["actus_mayotte"] = items
+                result["ticker"] = [it["title"] for it in items]
+                print(f"Actus Mayotte OK ({feed_url}) : {len(items)} items")
+                break
+              else:
+                print(f"Actus Mayotte vide ({feed_url}), essai suivant…")
+            except Exception as e:
+              print(f"Actus Mayotte ERREUR ({feed_url}) : {e}", file=sys.stderr)
+          if not result["actus_mayotte"]:
+            print("Actus Mayotte : aucune source disponible", file=sys.stderr)
 
-          # ── ACTUS OUTREMER ──
-          try:
-            with urllib.request.urlopen('https://rss.app/feeds/vaBBXsAOb8cXY80B.xml', timeout=10) as r:
-              xml = r.read().decode('utf-8', errors='replace')
-            result["actus_outremer"] = parse_rss(xml, 4)
-            print(f"Actus Outremer OK : {len(result['actus_outremer'])} items")
-          except Exception as e:
-            print(f"Actus Outremer ERREUR : {e}", file=sys.stderr)
+          # ── ACTUS OUTREMER (rss.app + fallback la1ere) ──
+          FEEDS_OUTREMER = [
+            'https://rss.app/feeds/vaBBXsAOb8cXY80B.xml',
+            'https://la1ere.franceinfo.fr/rss',
+          ]
+          for feed_url in FEEDS_OUTREMER:
+            try:
+              req = urllib.request.Request(feed_url, headers={'User-Agent':'Mozilla/5.0'})
+              with urllib.request.urlopen(req, timeout=12) as r:
+                xml = r.read().decode('utf-8', errors='replace')
+              items = parse_rss(xml, 4)
+              if items:
+                result["actus_outremer"] = items
+                print(f"Actus Outremer OK ({feed_url}) : {len(items)} items")
+                break
+              else:
+                print(f"Actus Outremer vide ({feed_url}), essai suivant…")
+            except Exception as e:
+              print(f"Actus Outremer ERREUR ({feed_url}) : {e}", file=sys.stderr)
 
           with open('data.json', 'w', encoding='utf-8') as f:
             json.dump(result, f, ensure_ascii=False, indent=2)
