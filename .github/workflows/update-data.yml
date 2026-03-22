@@ -96,11 +96,58 @@ jobs:
               if len(items) >= max_items: break
             return items
 
-          # ── ACTUS MAYOTTE (rss.app + fallback la1ere) ──
+          # ── SCRAPING HTML direct la1ere.franceinfo.fr/mayotte ──
+          def scrape_la1ere_mayotte(max_items=6):
+            """Extrait les articles depuis la page HTML de Mayotte la 1ère."""
+            items = []
+            try:
+              req = urllib.request.Request(
+                'https://la1ere.franceinfo.fr/mayotte',
+                headers={'User-Agent':'Mozilla/5.0 (compatible; SignageBot/1.0)','Accept-Language':'fr-FR,fr;q=0.9'}
+              )
+              with urllib.request.urlopen(req, timeout=15) as r:
+                html = r.read().decode('utf-8', errors='replace')
+              # Cherche les blocs article : title + image + lien
+              # Pattern : data-testid="article-card" ou class contenant article
+              for m in re.finditer(
+                r'<article[^>]*>(.*?)</article>',
+                html, re.DOTALL | re.IGNORECASE
+              ):
+                block = m.group(1)
+                # Titre (h2, h3, aria-label, ou alt d'image principale)
+                t = re.search(r'<h[23][^>]*>(.*?)</h[23]>', block, re.DOTALL | re.IGNORECASE)
+                if not t:
+                  t = re.search(r'aria-label=["\']([^"\']{10,})["\']', block, re.IGNORECASE)
+                title = clean_html(t.group(1)) if t else ''
+                # Image (og:image dans block ou src d'img)
+                img = ''
+                for ipat in [
+                  r'<img[^>]+src=["\']([^"\']+(?:jpg|jpeg|png|webp)[^"\']*)["\']',
+                  r'data-src=["\']([^"\']+(?:jpg|jpeg|png|webp)[^"\']*)["\']',
+                ]:
+                  im = re.search(ipat, block, re.IGNORECASE)
+                  if im:
+                    img = im.group(1)
+                    # Filtre les petites icônes ou logos (souvent < 100 px dans le nom)
+                    if '24x24' in img or '32x32' in img or 'logo' in img.lower(): img = ''
+                    else: break
+                # Description (p ou span)
+                d = re.search(r'<p[^>]*>(.*?)</p>', block, re.DOTALL | re.IGNORECASE)
+                desc = clean_html(d.group(1))[:200] if d else ''
+                if title and len(title) > 10:
+                  items.append({'title': title, 'desc': desc, 'img': img})
+                if len(items) >= max_items: break
+              print(f"Scrape la1ere Mayotte : {len(items)} articles")
+            except Exception as e:
+              print(f"Scrape la1ere ERREUR : {e}", file=sys.stderr)
+            return items
+
+          # ── ACTUS MAYOTTE (rss.app → la1ere RSS → scrape HTML) ──
           FEEDS_MAYOTTE = [
             'https://rss.app/feeds/GcKEWQW6TsvCtxKv.xml',
             'https://la1ere.franceinfo.fr/mayotte/rss',
             'https://la1ere.franceinfo.fr/rss?slug=mayotte',
+            'https://la1ere.franceinfo.fr/rss/mayotte.xml',
           ]
           for feed_url in FEEDS_MAYOTTE:
             try:
@@ -117,13 +164,20 @@ jobs:
                 print(f"Actus Mayotte vide ({feed_url}), essai suivant…")
             except Exception as e:
               print(f"Actus Mayotte ERREUR ({feed_url}) : {e}", file=sys.stderr)
+          # Fallback : scraping HTML direct
           if not result["actus_mayotte"]:
-            print("Actus Mayotte : aucune source disponible", file=sys.stderr)
+            items = scrape_la1ere_mayotte(6)
+            if items:
+              result["actus_mayotte"] = items
+              result["ticker"] = [it["title"] for it in items]
+            else:
+              print("Actus Mayotte : aucune source disponible", file=sys.stderr)
 
           # ── ACTUS OUTREMER (rss.app + fallback la1ere) ──
           FEEDS_OUTREMER = [
             'https://rss.app/feeds/vaBBXsAOb8cXY80B.xml',
             'https://la1ere.franceinfo.fr/rss',
+            'https://la1ere.franceinfo.fr/outre-mer/rss',
           ]
           for feed_url in FEEDS_OUTREMER:
             try:
@@ -139,6 +193,8 @@ jobs:
                 print(f"Actus Outremer vide ({feed_url}), essai suivant…")
             except Exception as e:
               print(f"Actus Outremer ERREUR ({feed_url}) : {e}", file=sys.stderr)
+          if not result["actus_outremer"]:
+            print("Actus Outremer : aucune source disponible", file=sys.stderr)
 
           with open('data.json', 'w', encoding='utf-8') as f:
             json.dump(result, f, ensure_ascii=False, indent=2)
@@ -151,4 +207,4 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data.json
           git diff --cached --quiet || git commit -m "data: mise à jour automatique $(date -u '+%Y-%m-%d %H:%M UTC')"
-          git push 
+          git push
