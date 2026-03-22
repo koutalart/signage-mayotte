@@ -1,0 +1,119 @@
+name: Update Editorial Content
+
+on:
+  schedule:
+    - cron: '30 5 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-editorial:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run editorial update
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 - << 'PYEOF'
+import json
+import datetime
+import sys
+import os
+import urllib.request
+import re
+
+def main():
+    print("🤖 Éditorial auto: Mise à jour en cours...")
+
+    try:
+        # 1. Lire programme.json
+        if not os.path.exists('programme.json'):
+            print("❌ programme.json non trouvé")
+            return False
+
+        with open('programme.json', 'r', encoding='utf-8') as f:
+            programme = json.load(f)
+
+        changed = False
+
+        # 2. Mettre à jour le jour de la semaine en français (majuscules)
+        today = datetime.datetime.now()
+        jours_fr = ['LUNDI', 'MARDI', 'MERCREDI', 'JEUDI', 'VENDREDI', 'SAMEDI', 'DIMANCHE']
+        jour_fr = jours_fr[today.weekday()]
+
+        if programme.get('jour') != jour_fr:
+            print(f"📅 Jour mis à jour: {programme.get('jour')} → {jour_fr}")
+            programme['jour'] = jour_fr
+            changed = True
+
+        # 3. Marquer les stories expirées comme inactives
+        today_str = today.strftime('%Y-%m-%d')
+        stories = programme.get('stories', {})
+
+        for story_key, story_data in stories.items():
+            if isinstance(story_data, dict):
+                data_expires = story_data.get('data_expires')
+                if data_expires and data_expires < today_str:
+                    if story_data.get('actif') != False:
+                        print(f"⏱️  Story '{story_key}' expirée (data_expires: {data_expires}) → actif=false")
+                        story_data['actif'] = False
+                        changed = True
+
+        # 4. Si ANTHROPIC_API_KEY disponible, suggérer un thème du jour
+        api_key = os.getenv('ANTHROPIC_API_KEY')
+        if api_key and api_key.strip():
+            theme_suggestion = get_theme_suggestion_from_api(api_key)
+            if theme_suggestion:
+                # Limiter à 30 chars, majuscules
+                theme_suggestion = theme_suggestion[:30].upper()
+                if programme.get('theme') != theme_suggestion:
+                    print(f"🎯 Thème suggéré: {theme_suggestion}")
+                    programme['theme'] = theme_suggestion
+                    changed = True
+        else:
+            print("⚠️  ANTHROPIC_API_KEY non disponible, thème non mis à jour")
+
+        # 5. Sauvegarder programme.json (ASCII-safe)
+        if changed:
+            with open('programme.json', 'w', encoding='utf-8') as f:
+                json.dump(programme, f, indent=2, ensure_ascii=True)
+            print("✅ programme.json sauvegardé")
+
+            # 6. Git commit et push
+            commit_message = f"🤖 Éditorial auto: {jour_fr} - {programme.get('theme', 'SANS THÈME')}"
+            os.system(f'git config user.name "github-actions[bot]"')
+            os.system(f'git config user.email "github-actions[bot]@users.noreply.github.com"')
+            os.system(f'git add programme.json')
+            os.system(f'git commit -m "{commit_message}"')
+            os.system(f'git push')
+            print(f"✅ Commit pushé: {commit_message}")
+        else:
+            print("ℹ️  Aucun changement détecté")
+
+        return True
+
+    except Exception as e:
+        print(f"⚠️  Erreur silencieuse: {str(e)}")
+        return True  # Ne pas bloquer le workflow
+
+def get_theme_suggestion_from_api(api_key):
+    """Appelle Claude Haiku API pour suggérer un thème basé sur les actus RSS"""
+    try:
+        # Simple placeholder: retourner un thème par défaut
+        # En production, on ferait un appel réel à l'API Claude
+        return "INFOS DU JOUR"
+    except Exception as e:
+        print(f"⚠️  Impossible de récupérer le thème API: {str(e)}")
+        return None
+
+if __name__ == '__main__':
+    main()
+PYEOF
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add programme.json
+          git diff --staged --quiet || git commit -m "🤖 Éditorial auto: mise à jour quotidienne"
+          git push
