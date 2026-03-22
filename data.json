@@ -1,12 +1,12 @@
 {
-  "updated": "2026-03-22 14:17 UTC",
+  "updated": "2026-03-22 15:15 UTC",
   "meteo": {
     "temp": 30,
     "feels": 35,
     "condition": "Partiellement nuageux",
     "icon": "⛅",
-    "wind": 16,
-    "humidity": 77,
+    "wind": 15,
+    "humidity": 78,
     "precipitation": 0.0,
     "hourly_temps": [
       29.5,
