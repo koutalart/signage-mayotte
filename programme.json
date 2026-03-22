@@ -1,81 +1,97 @@
 {
-  "_aide": "Ãditer chaque matin sur GitHub (bouton crayon). 'compteur_debut' calcule Jour X automatiquement. Mettre 'actif': false pour masquer une story. data_expires masque la slide aprÃ¨s la date.",
+  "_aide": "\u00c9diter chaque matin sur GitHub (bouton crayon). 'compteur_debut' calcule Jour X automatiquement. Mettre 'actif': false pour masquer une story. data_expires masque la slide apr\u00e8s la date.",
   "jour": "DIMANCHE",
-  "theme": "Ãlections & Paix",
+  "theme": "\u00c9LECTIONS & PAIX",
   "agenda": [
     {
-      "emoji": "ð³ï¸",
-      "label": "Second tour Ã©lections municipales Mayotte â 14 communes"
+      "emoji": "\ud83c\udfe5",
+      "label": "Sant\u00e9"
     },
     {
-      "emoji": "ð",
-      "label": "AÃ¯d el-Fitr â FÃªte de fin du Ramadan"
+      "emoji": "\ud83c\udf24\ufe0f",
+      "label": "M\u00e9t\u00e9o"
     },
     {
-      "emoji": "â ï¸",
-      "label": "SÃ©curitÃ© â violences Ã  Mamoudzou, un gendarme blessÃ©"
+      "emoji": "\ud83d\uddf3\ufe0f",
+      "label": "\u00c9lections"
     },
     {
-      "emoji": "ð",
-      "label": "Norouz â Nouvel An persan cÃ©lÃ©brÃ© malgrÃ© la guerre"
+      "emoji": "\ud83c\udf0d",
+      "label": "International"
     },
     {
-      "emoji": "ð",
-      "label": "Strava rÃ©vÃ¨le la position du porte-avions Charles-de-Gaulle"
+      "emoji": "\ud83c\udfdd\ufe0f",
+      "label": "Outre-mer"
     }
   ],
   "stories": {
     "iran": {
       "actif": true,
-      "card_body": "La guerre au Moyen-Orient s'intensifie : Benjamin Netanyahu affirme que l'Iran n'est plus en mesure d'enrichir de l'uranium aprÃ¨s les frappes israÃ©liennes. Le porte-parole des Gardiens de la RÃ©volution a Ã©tÃ© assassinÃ©, tandis que la France appelle TÃ©hÃ©ran Ã  de sÃ©rieuses concessions pour mettre fin au conflit.",
-      "card_label": "Guerre Moyen-Orient",
-      "compteur_debut": "2026-03-22",
-      "data_expires": "2026-03-29",
+      "titre": "Conflit en Iran",
+      "compteur_debut": "2026-02-28",
       "flash": [
-        "Netanyahu dÃ©clare que l'Iran n'a plus la capacitÃ© d'enrichir de l'uranium aprÃ¨s les frappes sur South Pars.",
-        "Le porte-parole des Gardiens de la RÃ©volution iranienne a Ã©tÃ© tuÃ©, nouvelle escalade dans le conflit rÃ©gional.",
-        "La France, par la voix de son ministre des Affaires Ã©trangÃ¨res, appelle l'Iran Ã  des concessions majeures."
+        {
+          "icon": "\ud83d\udca5",
+          "titre": "\u00c9tats-Unis & Isra\u00ebl vs Iran",
+          "desc": "D\u00e9but\u00e9 le 28 f\u00e9v. 2026 \u2014 frappes am\u00e9ricano-isra\u00e9liennes, ripostes iraniennes massives."
+        },
+        {
+          "icon": "\u26a0\ufe0f",
+          "titre": "2 200+ morts au Moyen-Orient",
+          "desc": "1 300+ en Iran \u00b7 850+ au Liban \u00b7 700 missiles et 3 600 drones tir\u00e9s par l'Iran."
+        },
+        {
+          "icon": "\ud83d\udee2\ufe0f",
+          "titre": "D\u00e9troit d'Hormuz sous tension",
+          "desc": "Transport p\u00e9trolier perturb\u00e9 \u2014 forte hausse du prix du p\u00e9trole sur les march\u00e9s mondiaux."
+        }
       ],
-      "source": "France TÃ©lÃ©visions Info",
-      "ticker": "Moyen-Orient : Netanyahu affirme que l'Iran ne peut plus enrichir l'uranium",
-      "titre": "Iran dÃ©cimÃ© ? Netanyahu affirme la victoire militaire"
+      "card_label": "\ud83c\uddeb\ud83c\uddf7 Position de la France",
+      "card_body": "La France ne participe pas. Macron a convoqu\u00e9 un G7. Un militaire fran\u00e7ais tu\u00e9 en Kurdistan irakien.",
+      "source": "France Info \u00b7 France T\u00e9l\u00e9visions \u2014 20 mars 2026",
+      "data_expires": "2026-03-28",
+      "ticker": "\ud83c\udf0d Conflit en Iran \u00b7 Jour {X} \u00b7 2 200+ morts \u00b7 D\u00e9troit d'Hormuz sous tension"
     },
     "soudan": {
       "actif": true,
-      "card_body": "La position confidentielle du porte-avions franÃ§ais Charles-de-Gaulle a Ã©tÃ© rÃ©vÃ©lÃ©e par l'application de sport Strava, soulevant de graves questions sur la sÃ©curitÃ© des donnÃ©es militaires. Des membres d'Ã©quipage auraient utilisÃ© l'appli lors de leurs entraÃ®nements, exposant involontairement la localisation du bÃ¢timent de guerre.",
-      "card_label": "SÃ©curitÃ© militaire",
-      "compteur_debut": "2026-03-22",
-      "data_expires": "2026-03-29",
+      "titre": "Soudan \u2014 Crise majeure",
+      "compteur_debut": null,
       "flash": [
-        "La position secrÃ¨te du porte-avions Charles-de-Gaulle a Ã©tÃ© trahie par l'application sportive Strava.",
-        "Des marins auraient utilisÃ© Strava lors de leurs entraÃ®nements, rÃ©vÃ©lant sans le savoir la localisation du navire.",
-        "L'incident soulÃ¨ve de graves interrogations sur la sÃ©curitÃ© numÃ©rique au sein des forces armÃ©es franÃ§aises."
+        {
+          "icon": "\u2694\ufe0f",
+          "titre": "2 ans de guerre civile",
+          "desc": "Depuis avril 2023, les forces arm\u00e9es soudanaises et les paramilitaires RSF s'affrontent. 12 millions de d\u00e9plac\u00e9s."
+        },
+        {
+          "icon": "\ud83c\udd98",
+          "titre": "Pire crise humanitaire mondiale",
+          "desc": "L'ONU alerte : famine dans plusieurs r\u00e9gions, acc\u00e8s humanitaire bloqu\u00e9. 25 millions en ins\u00e9curit\u00e9 alimentaire."
+        },
+        {
+          "icon": "\ud83c\udf0a",
+          "titre": "Impact sur l'Afrique de l'Est",
+          "desc": "Des milliers de r\u00e9fugi\u00e9s arrivent en \u00c9thiopie et au Tchad. L'oc\u00e9an Indien en vigilance migratoire."
+        }
       ],
-      "source": "France TÃ©lÃ©visions Info",
-      "ticker": "SÃ©curitÃ© militaire : Strava rÃ©vÃ¨le la position secrÃ¨te du porte-avions Charles-de-Gaulle",
-      "titre": "Faille numÃ©rique : Strava expose le Charles-de-Gaulle"
+      "card_label": "\ud83c\uddeb\ud83c\uddf7 Aide fran\u00e7aise",
+      "card_body": "La France a d\u00e9bloqu\u00e9 45 M\u20ac d'aide humanitaire en 2026 via le CDCS. Appel au cessez-le-feu \u00e0 l'ONU.",
+      "source": "France Info \u00b7 France T\u00e9l\u00e9visions \u2014 mars 2026",
+      "data_expires": "2026-04-01",
+      "ticker": "\ud83c\udf0d Soudan \u00b7 2 ans de conflit \u00b7 12 millions de d\u00e9plac\u00e9s \u00b7 Crise humanitaire majeure"
     },
     "elections": {
       "actif": true,
-      "card_body": "Ce dimanche 22 mars, les Mahorais sont appelÃ©s aux urnes pour le second tour des Ã©lections municipales. AprÃ¨s d'intenses nÃ©gociations et des fusions de listes, 37 candidats s'affrontent dans 14 communes. Les rÃ©sultats sont attendus dans la soirÃ©e.",
-      "card_label": "Ãlections locales",
-      "compteur_debut": "2026-03-22",
-      "data_expires": "2026-03-23",
-      "flash": [
-        "37 candidats validÃ©s dans 14 communes mahoraises pour ce second tour des municipales 2026.",
-        "Des fusions de listes ont eu lieu aprÃ¨s le premier tour, redessinant les alliances politiques locales.",
-        "Les rÃ©sultats du second tour seront connus ce dimanche soir, Ã  l'issue du dÃ©pouillement."
-      ],
-      "source": "Mayotte la 1Ã¨re",
-      "ticker": "Second tour des municipales Ã  Mayotte : 14 communes votent ce dimanche 22 mars",
-      "titre": "Municipales 2026 : Mayotte choisit ses maires ce soir"
+      "titre": "Municipales 2026",
+      "compteur_debut": null,
+      "flash": [],
+      "data_expires": "2026-03-24",
+      "ticker": "\ud83d\uddf3\ufe0f Municipales 2026 \u00b7 2e tour dimanche 22 mars \u00b7 14 communes aux urnes \u00e0 Mayotte"
     }
   },
   "ticker_extra": [
-    "ðº Le 19h â Ce soir Ã  19h00 sur Mayotte la 1Ã¨re",
-    "ð» Mayotte la 1Ã¨re Radio â 100.0 FM",
-    "ð la1ere.franceinfo.fr/mayotte",
-    "ð³ï¸ Municipales 2026 â Suivez les rÃ©sultats en direct sur Mayotte la 1Ã¨re",
-    "â ï¸ Circulation perturbÃ©e Ã  Tsingoni â Barrages et caillassages signalÃ©s ce matin"
+    "\u2705 Mamoudzou \u00b7 Chiconi \u00b7 M'tsangamouji \u2014 3 maires \u00e9lus d\u00e8s le 1er tour",
+    "\ud83d\udcfa Le 19h \u00e0 Mayotte 19h00 \u00b7 Mahabari en shimaore 19h30 \u00b7 Tous les jours",
+    "\ud83d\udcfb Mayotte la 1\u00e8re Radio \u00b7 100.0 FM \u00b7 En direct sur la1ere.franceinfo.fr",
+    "\ud83c\udf10 Toute l'actu Outre-mer sur la1ere.franceinfo.fr"
   ]
 }
