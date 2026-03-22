@@ -1,34 +1,6 @@
 {
-  "updated": "2026-03-22 15:15 UTC",
-  "meteo": {
-    "temp": 30,
-    "feels": 35,
-    "condition": "Partiellement nuageux",
-    "icon": "⛅",
-    "wind": 15,
-    "humidity": 78,
-    "precipitation": 0.0,
-    "hourly_temps": [
-      29.5,
-      29.5,
-      29.4,
-      28.8,
-      28.6,
-      28.5,
-      28.4,
-      28.8
-    ],
-    "hourly_codes": [
-      95,
-      80,
-      3,
-      95,
-      95,
-      95,
-      95,
-      80
-    ]
-  },
+  "updated": "2026-03-22 16:16 UTC",
+  "meteo": {},
   "ticker": [],
   "actus_mayotte": [],
   "actus_outremer": []
