@@ -240,12 +240,12 @@ try {
 
 
 try {
-  // ══ ACTUS RSS — slides injectées avant s3 ══
+  // ══ ACTUS RSS — slides story/hero injectées avant s3 ══
   async function initActusSlides() {
     try {
       var r=await fetchSafe('./data.json');
       if(!r.ok) return;
-      var payload=await r.json(); // ← JSON, pas XML
+      var payload=await r.json();
       var items=(payload.actus_mayotte||[]).slice(0,5);
       if(items.length===0) return;
 
@@ -268,17 +268,31 @@ try {
         var slide=document.createElement('div');
         slide.className='slide actu-slide';
         slide.dataset.duration='15000';
-        var mediaHtml=imgSrc
-          ? '<div class="actu-img-wrap"><img class="actu-img" src="'+imgSrc+'" alt="" onerror="this.parentNode.remove()"></div>'
-          : '<div class="actu-icon">'+icon+'</div>';
+
+        // Hero : image plein format ou icône de fallback
+        var heroHtml=imgSrc
+          ? '<div class="actu-hero">'
+              +'<img class="actu-hero-img" src="'+imgSrc+'" alt="" '
+              +'onerror="this.style.display=\'none\';this.parentNode.querySelector(\'.actu-hero-icon\').style.display=\'block\'">'
+              +'<div class="actu-hero-icon" style="display:none">'+icon+'</div>'
+              +'<div class="actu-hero-overlay"></div>'
+            +'</div>'
+          : '<div class="actu-hero">'
+              +'<div class="actu-hero-icon">'+icon+'</div>'
+              +'<div class="actu-hero-overlay"></div>'
+            +'</div>';
+
         slide.innerHTML=
           '<div class="actu-progress"><div class="actu-progress-fill"></div></div>'
-          +'<span class="actu-badge">📰 Actualité Mayotte</span>'
-          +mediaHtml
-          +'<h3 class="actu-title">'+title+'</h3>'
-          +'<div class="actu-line"></div>'
-          +'<div class="actu-body">'+cleanDesc+'</div>'
-          +'<div class="actu-source">France Info · Mayotte la 1ère · la1ere.franceinfo.fr</div>';
+          +heroHtml
+          +'<div class="actu-content">'
+            +'<span class="actu-badge">📰 Actualité Mayotte</span>'
+            +'<h3 class="actu-title">'+title+'</h3>'
+            +'<div class="actu-line"></div>'
+            +'<div class="actu-body">'+cleanDesc+'</div>'
+            +'<div class="actu-source">France Info · Mayotte la 1ère · la1ere.franceinfo.fr</div>'
+          +'</div>';
+
         wrap.insertBefore(slide, s3El);
       });
     } catch(e){ console.error('Actus fetch:',e); }
