@@ -1,23 +1,8 @@
 {
-  "updated": "2026-03-23 01:44 UTC",
+  "updated": "2026-03-23 02:00 UTC",
   "meteo": {
-    "temp": 29,
-    "feels": 36,
-    "condition": "Pluie",
-    "icon": "🌧️",
-    "wind": 3,
-    "humidity": 80,
-    "precipitation": 0.2,
-    "hourly_temps": [
-      29.5,
-      29.5,
-      29.6,
-      29.5,
-      29.1,
-      29.0,
-      29.0,
-      29.1
-    ],
+    "condition": "Orageux",
+    "feels": 34.8,
     "hourly_codes": [
       1,
       2,
@@ -26,10 +11,108 @@
       80,
       95,
       80,
+      3,
+      95,
+      95,
+      95,
+      80,
+      80,
+      95,
+      80,
+      80,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
       3
-    ]
+    ],
+    "hourly_temps": [
+      29.2,
+      29.3,
+      29.4,
+      29.2,
+      28.9,
+      28.7,
+      28.8,
+      28.8,
+      28.8,
+      28.8,
+      28.7,
+      28.7,
+      28.8,
+      28.8,
+      28.9,
+      28.9,
+      29,
+      29.1,
+      29.1,
+      29.2,
+      29.3,
+      29.4,
+      29.4,
+      29.5
+    ],
+    "humidity": 80,
+    "icon": "âï¸",
+    "precipitation": 1,
+    "temp": 28.7,
+    "wind": 3.8
   },
-  "ticker": [],
-  "actus_mayotte": [],
-  "actus_outremer": []
+  "actus_mayotte": [
+    {
+      "desc": "Les Ã©lecteurs ont rendu leur verdict pour le second tour des Ã©lections municipales 2026. Les maires des 14 communes restantes ont Ã©tÃ© Ã©lus, marquant notamment le retour d'anciens maires, des succÃ¨s pour les LR et de nombreux maires sortants non reconduits.",
+      "img": "https://la1ere.franceinfo.fr/image/WPE7-u8V-neKus9gha70gAj8i4M/200x0:1400x1200/320x320/filters:quality(80)/outremer%2F2026%2F03%2F22%2Fwhatsapp-image-2026-03-22-at-09-25-12-69bffab82e233858049897.jpg",
+      "title": "RÃ©sultats, rÃ©actions, revivez la soirÃ©e Ã©lectorale du second tour des municipales 2026 Ã  Mayotte"
+    },
+    {
+      "desc": "Retrouvez les rÃ©sultats du second tour des Ã©lections municipales 2026 Ã  Mayotte commune par commune, avec les maires Ã©lus et les scores obtenus.",
+      "img": "",
+      "title": "CARTE. RÃ©sultats municipales 2026 Ã  Mayotte par commune : dÃ©couvrez les maires Ã©lus et les scores de ce second tour"
+    },
+    {
+      "desc": "Houssamoudine Abdallah remporte le second tour des Ã©lections municipales 2026 Ã  Sada et restera Ã  la tÃªte de la mairie pour six annÃ©es supplÃ©mentaires.",
+      "img": "https://la1ere.franceinfo.fr/image/u3N2wWBuEUJfBpGg2pCChGjReK0/280x0:1000x720/320x320/filters:quality(80)/outremer%2F2026%2F03%2F22%2Fminiature-kalaoidala-youtube-4-69c00ef7cbd87632970613.png",
+      "title": "RESULTATS. 2nd tour des Municipales 2026 Ã  Sada : Houssamoudine Abdallah sera six ans de plus Ã  la tÃªte de la mairie"
+    },
+    {
+      "desc": "Issoufi Maandhui remporte le second tour des Ã©lections municipales 2026 Ã  Pamandzi selon les rÃ©sultats annoncÃ©s.",
+      "img": "",
+      "title": "RESULTATS. 2nd tour des Municipales 2026 Ã  Pamandzi : Issoufi Maandhui sort vainqueur"
+    }
+  ],
+  "actus_outremer": [
+    {
+      "desc": "L'armÃ©e israÃ©lienne avertit qu'IsraÃ«l doit s'attendre Ã  \"encore plusieurs semaines de combats\" contre le Hezbollah et l'Iran. \"Chaque jour qui passe, nous affaiblissons davantage le rÃ©gime terroriste [iranien]\", a dÃ©clarÃ© le porte-parole de l'armÃ©e israÃ©lienne Effie Defrin.",
+      "img": "https://www.franceinfo.fr/pictures/eW4ULzbySFSmQs42hcfS3u1gS1g/0x0:992x682/432x297/filters:format(jpg)/2026/03/22/000-a49p2kg-69c0435f0d080016852796.jpg",
+      "title": "Guerre au Moyen-Orient : IsraÃ«l doit s'attendre Ã  \"encore plusieurs semaines de combats\" contre le Hezbollah et l'Iran, prÃ©vient l'armÃ©e israÃ©lienne"
+    },
+    {
+      "desc": "Plusieurs pays du Golfe alimentent les carnets de commandes de la France en matiÃ¨re d'armement. Un reportage du journal de 20h de France 2.",
+      "img": "https://www.franceinfo.fr/pictures/8_2h9K56XbG2VT-Asrib8xh_vHM/0x0:1920x1080/432x243/filters:format(jpg)/2026/03/22/20h-armement-69c03e5852585191923890.jpg",
+      "title": "Armement : plusieurs pays du Golfe alimentent les carnets de commandes de la France"
+    },
+    {
+      "desc": "Deux missiles iraniens ont rÃ©ussi Ã  Ã©chapper Ã  la dÃ©fense anti-aÃ©rienne israÃ©lienne. Un reportage du journal de 20h de France 2.",
+      "img": "https://www.franceinfo.fr/pictures/x5mgVneex3FbAlrvgx5o02xxmNo/0x0:1920x1080/432x243/filters:format(jpg)/2026/03/22/20h-frappes-sur-israel-69c03a9deb8d0169392914.jpg",
+      "title": "Deux missiles iraniens Ã©chappent Ã  la dÃ©fense anti-aÃ©rienne israÃ©lienne"
+    },
+    {
+      "desc": "TÃ©hÃ©ran menace de viser les infrastructures Ã©nergÃ©tiques du Golfe en rÃ©ponse Ã  l'ultimatum lancÃ© par Donald Trump. Un reportage du journal de 20h de France 2.",
+      "img": "https://www.franceinfo.fr/pictures/O_oLZRlMKE3g32L4UBXUJOpndb8/0x0:1920x1080/432x243/filters:format(jpg)/2026/03/22/20h-ultimatum-trump-69c037228a21c005073268.jpg",
+      "title": "TÃ©hÃ©ran menace de viser les infrastructures Ã©nergÃ©tiques du Golfe aprÃ¨s l'ultimatum de Donald Trump"
+    },
+    {
+      "desc": "Le parti du chancelier allemand Friedrich Merz arrive en tÃªte des Ã©lections rÃ©gionales en RhÃ©nanie-Palatinat, tandis que l'AfD enregistre une forte progression.",
+      "img": "",
+      "title": "Le parti du chancelier allemand Friedrich Merz en tÃªte des Ã©lections rÃ©gionales en RhÃ©nanie-Palatinat, l'AfD en forte progression"
+    },
+    {
+      "desc": "L'Iran menace de fermer entiÃ¨rement le dÃ©troit d'Ormuz tandis qu'IsraÃ«l annonce vouloir intensifier ses opÃ©rations terrestres ciblÃ©es au Liban. Un rÃ©capitulatif des Ã©vÃ©nements de la journÃ©e du dimanche 22 mars.",
+      "img": "",
+      "title": "Guerre au Moyen-Orient : l'Iran menace de fermer entiÃ¨rement le dÃ©troit d'Ormuz, IsraÃ«l va \"intensifier ses opÃ©rations terrestres ciblÃ©es\" au Liban... Ce qu'il faut retenir de la journÃ©e du dimanche 22 mars"
+    }
+  ]
 }
