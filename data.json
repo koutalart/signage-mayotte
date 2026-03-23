@@ -1,11 +1,11 @@
 {
-  "updated": "2026-03-23 11:36 UTC",
+  "updated": "2026-03-23 12:38 UTC",
   "meteo": {
     "temp": 29,
     "feels": 35,
     "condition": "Nuageux",
     "icon": "☁️",
-    "wind": 8,
+    "wind": 9,
     "humidity": 77,
     "precipitation": 0.0,
     "hourly_temps": [
@@ -71,6 +71,12 @@
   ],
   "actus_outremer": [
     {
+      "title": "Mort de Lionel Jospin : les réactions se multiplient après la disparition de l’artisan de l’accord de Nouméa",
+      "desc": "",
+      "img": "https://la1ere.franceinfo.fr/image/w-6mgBG1-SQqALF4JX7SihDHMHI/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F23%2F000-a4cq3kf-69c1179e05c4b396861533.jpg",
+      "link": "https://la1ere.franceinfo.fr/mort-de-lionel-jospin-les-reactions-se-multiplient-apres-la-disparition-de-l-artisan-de-l-accord-de-noumea-1684284.html"
+    },
+    {
       "title": "Qui sont les nouveaux maires élus en outre-mer ? Ce qu'il faut retenir des résultats des municipales, territoire par territoire",
       "desc": "",
       "img": "https://la1ere.franceinfo.fr/image/gU_Xpt9UrffbxfSh68r8HfbfNh0/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F22%2Fenveloppe-depouillement-hermione-69bffda78977a005540706.jpg",
@@ -87,12 +93,6 @@
       "desc": "",
       "img": "https://la1ere.franceinfo.fr/image/_hVvF32L3fosddTxnAdaAQ8vq3A/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F23%2Fimg-2293-69c10119c9e50827012498.jpg",
       "link": "https://la1ere.franceinfo.fr/municipales-en-guyane-lenaick-adam-met-fin-a-quatre-decennies-de-continuite-politique-a-saint-laurent-du-maroni-1684275.html"
-    },
-    {
-      "title": "DIRECT. Suivez les résultats des élections municipales 2026 en Polynésie française",
-      "desc": "",
-      "img": "https://la1ere.franceinfo.fr/image/QWskcXgY1Krnaw5IRvI9KNFtmfc/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F23%2Fchapo-articles-1600-x-1100-px-23-69c0b090e802a640996200.png",
-      "link": "https://la1ere.franceinfo.fr/direct-suivez-les-resultats-des-elections-municipales-2026-en-polynesie-francaise-1684200.html"
     }
   ]
 }
