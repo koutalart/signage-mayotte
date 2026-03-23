@@ -15,10 +15,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Installer BeautifulSoup
+        run: pip install beautifulsoup4 --quiet
+
       - name: Récupérer météo + actus et générer data.json
         run: |
           python3 << 'PYEOF'
           import urllib.request, json, re, datetime, sys
+          from bs4 import BeautifulSoup
 
           result = {
             "updated": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
@@ -96,19 +100,103 @@ jobs:
               if len(items) >= max_items: break
             return items
 
-          # ── ACTUS MAYOTTE (rss.app + fallback la1ere) ──
+          # ── SCRAPING HTML direct la1ere.franceinfo.fr/mayotte (BeautifulSoup) ──
+          def scrape_la1ere_mayotte(max_items=6):
+            """Extrait les articles depuis la page HTML SSR de Mayotte la 1ère.
+            La page utilise SvelteKit SSR : tous les articles sont dans le HTML initial.
+            Classes CSS identifiées par inspection : card-article-container, title-label, title-link."""
+            items = []
+            try:
+              req = urllib.request.Request(
+                'https://la1ere.franceinfo.fr/mayotte/',
+                headers={
+                  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                  'Accept': 'text/html,application/xhtml+xml',
+                  'Accept-Language': 'fr-FR,fr;q=0.9',
+                }
+              )
+              with urllib.request.urlopen(req, timeout=15) as r:
+                html = r.read().decode('utf-8', errors='replace')
+
+              soup = BeautifulSoup(html, 'html.parser')
+              seen = set()
+
+              # Sélecteur principal : cartes articles (68 présentes sur la page)
+              for card in soup.find_all(class_=re.compile(r'card-article-container')):
+                title_el = card.find(class_=re.compile(r'title-label'))
+                link_el  = card.find(class_=re.compile(r'title-link'))
+                img_el   = card.find('img')
+
+                title = title_el.get_text(strip=True) if title_el else ''
+                href  = link_el.get('href', '') if link_el else ''
+                img   = img_el.get('src', '') if img_el else ''
+
+                if not title or len(title) < 15 or title in seen:
+                  continue
+                seen.add(title)
+
+                # URL absolue
+                if href and not href.startswith('http'):
+                  href = 'https://la1ere.franceinfo.fr' + href
+                # Image en meilleure résolution (remplace le format miniature)
+                if img and '/image/' in img:
+                  img = re.sub(r'/\d+x\d+:\d+x\d+/\d+x\d+/', '/560x0:1120x630/800x450/', img)
+
+                items.append({'title': title, 'desc': '', 'img': img, 'link': href})
+                if len(items) >= max_items:
+                  break
+
+              print(f"Scrape la1ere Mayotte : {len(items)} articles trouvés")
+            except Exception as e:
+              print(f"Scrape la1ere ERREUR : {e}", file=sys.stderr)
+            return items
+
+          # ── ACTUS MAYOTTE — ordre de priorité des sources ──
           FEEDS_MAYOTTE = [
+            # 1. Google News RSS — public, fiable, inclut images
+            'https://news.google.com/rss/search?q=Mayotte+actualit%C3%A9&hl=fr&gl=FR&ceid=FR:fr',
+            # 2. rss.app aggregator
             'https://rss.app/feeds/GcKEWQW6TsvCtxKv.xml',
+            # 3. la1ere RSS direct
             'https://la1ere.franceinfo.fr/mayotte/rss',
             'https://la1ere.franceinfo.fr/rss?slug=mayotte',
           ]
+
+          def fetch_google_news_images(items):
+            """Pour Google News, les items n'ont pas d'image directe.
+            On extrait l'URL source et on cherche l'image og dans la page."""
+            enriched = []
+            for it in items:
+              if it.get('img'):
+                enriched.append(it)
+                continue
+              # Cherche og:image dans la page source (timeout court)
+              link = it.get('link', '')
+              if link:
+                try:
+                  req2 = urllib.request.Request(link, headers={'User-Agent':'Mozilla/5.0'})
+                  with urllib.request.urlopen(req2, timeout=6) as r2:
+                    head_html = r2.read(8192).decode('utf-8', errors='replace')
+                  og = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']', head_html, re.I)
+                  if not og:
+                    og = re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']', head_html, re.I)
+                  if og:
+                    it['img'] = og.group(1)
+                except:
+                  pass
+              enriched.append(it)
+            return enriched
+
           for feed_url in FEEDS_MAYOTTE:
             try:
-              req = urllib.request.Request(feed_url, headers={'User-Agent':'Mozilla/5.0'})
+              req = urllib.request.Request(feed_url, headers={'User-Agent':'Mozilla/5.0 (compatible; SignageBot/1.0)'})
               with urllib.request.urlopen(req, timeout=12) as r:
                 xml = r.read().decode('utf-8', errors='replace')
               items = parse_rss(xml, 6)
               if items:
+                # Pour Google News : enrichir avec og:image
+                if 'news.google.com' in feed_url:
+                  items = fetch_google_news_images(items)
                 result["actus_mayotte"] = items
                 result["ticker"] = [it["title"] for it in items]
                 print(f"Actus Mayotte OK ({feed_url}) : {len(items)} items")
@@ -117,13 +205,20 @@ jobs:
                 print(f"Actus Mayotte vide ({feed_url}), essai suivant…")
             except Exception as e:
               print(f"Actus Mayotte ERREUR ({feed_url}) : {e}", file=sys.stderr)
+          # Fallback : scraping HTML direct la1ere
           if not result["actus_mayotte"]:
-            print("Actus Mayotte : aucune source disponible", file=sys.stderr)
+            items = scrape_la1ere_mayotte(6)
+            if items:
+              result["actus_mayotte"] = items
+              result["ticker"] = [it["title"] for it in items]
+            else:
+              print("Actus Mayotte : aucune source disponible", file=sys.stderr)
 
           # ── ACTUS OUTREMER (rss.app + fallback la1ere) ──
           FEEDS_OUTREMER = [
             'https://rss.app/feeds/vaBBXsAOb8cXY80B.xml',
             'https://la1ere.franceinfo.fr/rss',
+            'https://la1ere.franceinfo.fr/outre-mer/rss',
           ]
           for feed_url in FEEDS_OUTREMER:
             try:
@@ -139,6 +234,38 @@ jobs:
                 print(f"Actus Outremer vide ({feed_url}), essai suivant…")
             except Exception as e:
               print(f"Actus Outremer ERREUR ({feed_url}) : {e}", file=sys.stderr)
+          if not result["actus_outremer"]:
+            # Fallback : scrape la1ere page outremer
+            try:
+              req = urllib.request.Request(
+                'https://la1ere.franceinfo.fr/',
+                headers={'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36','Accept':'text/html','Accept-Language':'fr-FR,fr;q=0.9'}
+              )
+              with urllib.request.urlopen(req, timeout=15) as r:
+                html_om = r.read().decode('utf-8', errors='replace')
+              soup_om = BeautifulSoup(html_om, 'html.parser')
+              om_items = []
+              seen_om = set()
+              for card in soup_om.find_all(class_=re.compile(r'card-article-container')):
+                title_el = card.find(class_=re.compile(r'title-label'))
+                link_el  = card.find(class_=re.compile(r'title-link'))
+                img_el   = card.find('img')
+                title = title_el.get_text(strip=True) if title_el else ''
+                href  = link_el.get('href','') if link_el else ''
+                img   = img_el.get('src','') if img_el else ''
+                if not title or len(title)<15 or title in seen_om: continue
+                seen_om.add(title)
+                if href and not href.startswith('http'): href='https://la1ere.franceinfo.fr'+href
+                if img and '/image/' in img: img=re.sub(r'/\d+x\d+:\d+x\d+/\d+x\d+/','/560x0:1120x630/800x450/',img)
+                om_items.append({'title':title,'desc':'','img':img,'link':href})
+                if len(om_items)>=4: break
+              if om_items:
+                result["actus_outremer"] = om_items
+                print(f"Scrape outremer : {len(om_items)} articles")
+              else:
+                print("Actus Outremer : aucune source disponible", file=sys.stderr)
+            except Exception as e:
+              print(f"Scrape outremer ERREUR : {e}", file=sys.stderr)
 
           with open('data.json', 'w', encoding='utf-8') as f:
             json.dump(result, f, ensure_ascii=False, indent=2)
