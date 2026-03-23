@@ -15,7 +15,8 @@ jobs:
       - name: Run editorial update
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python3 - << 'PYEOF'
+        run: |
+          python3 << 'PYEOF'
 import json
 import datetime
 import sys
