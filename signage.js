@@ -679,7 +679,6 @@ try {
     { id:'s5',      icon:'🗳️', label:'Sud Mayotte' },
     { id:'s6',      icon:'📋', label:'Après le vote' },
     { id:'s7',      icon:'🌍', label:'International' },
-    { id:'s7b',     icon:'🌍', label:'Soudan' },
     { id:'s7c',     icon:'🏝️', label:'Outre-mer' },
     { id:'s-radio', icon:'📻', label:'Radio' },
     { id:'s-radio2',icon:'📻', label:'Grille Radio' },
