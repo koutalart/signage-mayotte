@@ -1,13 +1,13 @@
 {
-  "updated": "2026-03-23 08:41 UTC",
+  "updated": "2026-03-23 09:52 UTC",
   "meteo": {
     "temp": 29,
-    "feels": 35,
-    "condition": "Pluie",
-    "icon": "🌧️",
-    "wind": 7,
-    "humidity": 81,
-    "precipitation": 0.1,
+    "feels": 36,
+    "condition": "Nuageux",
+    "icon": "☁️",
+    "wind": 8,
+    "humidity": 79,
+    "precipitation": 0.0,
     "hourly_temps": [
       29.5,
       29.5,
@@ -30,14 +30,19 @@
     ]
   },
   "ticker": [
+    "Lionel Jospin, ancien Premier ministre socialiste et architecte de la \"gauche plurielle\", est mort à l&#039;âge de 88 ans",
     "Après le 2nd tour des municipales, place aux élections des adjoints et des présidents des intercommunalités",
     "\"Jamais de mémoire de Mahorais on a eu droit à un tel spectacle\", affirme Said Issouf, consultant politique, après le 2nd tour des municipales",
     "Les cinq points à retenir des résultats à Mayotte du 2nd tour des élections municipales 2026",
     "RESULTATS. 2nd tour des Municipales 2026 à Sada : Houssamoudine Abdallah sera six ans de plus à la tête de la mairie",
-    "RESULTATS. 2nd tour des Municipales 2026 à Pamandzi : Issoufi Maandhui sort vainqueur de la seule quadrangulaire de Mayotte",
-    "RESULTATS. 2nd tour des Municipales 2026 à Koungou : Saïd \"Raos\" Ahamadi revient à la mairie 18 ans après"
+    "RESULTATS. 2nd tour des Municipales 2026 à Pamandzi : Issoufi Maandhui sort vainqueur de la seule quadrangulaire de Mayotte"
   ],
   "actus_mayotte": [
+    {
+      "title": "Lionel Jospin, ancien Premier ministre socialiste et architecte de la \"gauche plurielle\", est mort à l&#039;âge de 88 ans",
+      "desc": "Premier ministre d'un gouvernement d'union de la gauche de 1997 à 2002, Lionel Jospin avait choisi de quitter la vie politique après son élimination au premier tour de l'élection présidentielle de 200",
+      "img": "https://la1ere.franceinfo.fr/image/Xi--Blg_6cdgqYwIQW3m2NDXkMs/600x400/outremer/2022/04/07/624e960559bc1_838-gettyimages-111019528.jpg"
+    },
     {
       "title": "Après le 2nd tour des municipales, place aux élections des adjoints et des présidents des intercommunalités",
       "desc": "Les élections municipales sont terminées, mais il reste encore des bulletins à placer dans les urnes. Les conseils municipaux vont se réunir pour désigner les maires et leurs adjoints, tout comme les ",
@@ -62,11 +67,6 @@
       "title": "RESULTATS. 2nd tour des Municipales 2026 à Pamandzi : Issoufi Maandhui sort vainqueur de la seule quadrangulaire de Mayotte",
       "desc": "Conseiller municipal d'opposition, Issoufi Maandhui devrait être élu au prochain conseil municipal de Pamandzi. Ce dimanche 22 mars, il remporte la quadrangulaire face à Arbabiddini Chanfi, Siti Ali M",
       "img": "https://la1ere.franceinfo.fr/image/usx31Wr54BebIXfxtECrbf97TvU/600x400/outremer/2026/03/22/whatsapp-image-2026-03-22-at-21-04-57-69c0314d7b540211088234.jpg"
-    },
-    {
-      "title": "RESULTATS. 2nd tour des Municipales 2026 à Koungou : Saïd \"Raos\" Ahamadi revient à la mairie 18 ans après",
-      "desc": "Des trois listes restantes à Koungou, ce dimanche 22 mars, celle de Saïd \"Raos\" Ahamadi arrive finalement en tête avec 52,13% des suffrages exprimés au second tour des élections municipales, devant ce",
-      "img": "https://la1ere.franceinfo.fr/image/Wh9qBWJpZrpSJyfmCYj4DbEyJwg/600x400/outremer/2026/03/22/whatsapp-image-2026-03-22-at-21-20-37-69c0355ae87db503831001.jpg"
     }
   ],
   "actus_outremer": [
