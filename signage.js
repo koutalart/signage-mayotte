@@ -309,7 +309,12 @@ try {
       if(!r.ok) return;
       var parsed=await r.json();
       var rawItems=parsed.actus_outremer||[]; // ← champ correct (pas parsed.items)
-      if(rawItems.length===0) return;
+      if(rawItems.length===0) {
+        // Masquer la slide Outre-mer et la retirer du menu intro
+        var omSlide=document.getElementById('s7c');
+        if(omSlide){ omSlide.style.display='none'; omSlide.dataset.expired='true'; }
+        return;
+      }
 
       var omList=document.getElementById('om-items');
       if(!omList) return;
