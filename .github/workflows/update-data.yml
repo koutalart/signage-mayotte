@@ -153,11 +153,13 @@ jobs:
 
           # ── ACTUS MAYOTTE — ordre de priorité des sources ──
           FEEDS_MAYOTTE = [
-            # 1. Google News RSS — public, fiable, inclut images
+            # 1. La 1ère Mayotte RSS officiel (francetvinfo.fr)
+            'https://la1ere.francetvinfo.fr/mayotte/actu/rss',
+            # 2. Google News RSS — public, fiable
             'https://news.google.com/rss/search?q=Mayotte+actualit%C3%A9&hl=fr&gl=FR&ceid=FR:fr',
-            # 2. rss.app aggregator
+            # 3. rss.app aggregator
             'https://rss.app/feeds/GcKEWQW6TsvCtxKv.xml',
-            # 3. la1ere RSS direct
+            # 4. la1ere RSS direct
             'https://la1ere.franceinfo.fr/mayotte/rss',
             'https://la1ere.franceinfo.fr/rss?slug=mayotte',
           ]
