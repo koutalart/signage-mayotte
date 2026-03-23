@@ -1,12 +1,12 @@
 {
-  "updated": "2026-03-23 06:03 UTC",
+  "updated": "2026-03-23 06:32 UTC",
   "meteo": {
     "temp": 29,
     "feels": 35,
     "condition": "Pluie",
     "icon": "🌧️",
-    "wind": 6,
-    "humidity": 81,
+    "wind": 7,
+    "humidity": 80,
     "precipitation": 0.1,
     "hourly_temps": [
       29.5,
