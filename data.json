@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-23 04:52 UTC",
+  "updated": "2026-03-23 04:54 UTC",
   "meteo": {
     "temp": 29,
     "feels": 35,
@@ -29,70 +29,7 @@
       3
     ]
   },
-  "ticker": [
-    "\"Jamais de mémoire de Mahorais on a eu droit à un tel spectacle\", affirme Said Issouf, consultant politique, après le 2nd tour des municipales - Outre-mer La 1ère",
-    "Les cinq points à retenir des résultats à Mayotte du 2nd tour des élections municipales 2026 - Outre-mer La 1ère",
-    "Municipales 2026 à Mayotte : une participation en légère hausse au second tour - Outre-mer La 1ère",
-    "RESULTATS. 2nd tour des Municipales 2026 à Pamandzi : Issoufi Maandhui sort vainqueur de la seule quadrangulaire de Mayotte - Outre-mer La 1ère",
-    "PHOTOS. Municipales 2026 à Mayotte : des inondations perturbent le vote mais la participation des habitants est plus forte qu'au 1er tour - Outre-mer La 1ère",
-    "RESULTATS. 2nd tour des Municipales 2026 dans le nord de Mayotte : Nourdine Chafion en tête à M'tsamboro, Abdou-Lahiriti \"Maradona\" Antoissi vainqueur à Bandraboua et le grand retour d'Ahmed Darouechi à Acoua - Outre-mer La 1ère"
-  ],
-  "actus_mayotte": [
-    {
-      "title": "\"Jamais de mémoire de Mahorais on a eu droit à un tel spectacle\", affirme Said Issouf, consultant politique, après le 2nd tour des municipales - Outre-mer La 1ère",
-      "desc": "<a href=\"https://news.google.com/rss/articles/CBMilgJBVV95cUxPYmREaXZRbmUyWU5ON0JIaTRGVTF3azB4SzBRUUtHc1ktbEpUdU5maXVZSDZNTzRBZ0xzR2FKVFZDSmRZLUtOOTJ3eDNoaUZESWw1ZzNGNkNheld1WkxaY0NDcWg1VWpuaWhoV1d1Sn",
-      "img": ""
-    },
-    {
-      "title": "Les cinq points à retenir des résultats à Mayotte du 2nd tour des élections municipales 2026 - Outre-mer La 1ère",
-      "desc": "<a href=\"https://news.google.com/rss/articles/CBMi2gFBVV95cUxNN2o5UFJqRXhra1ViY2pWWllidXZfR0NjUjRCUmJEVkdfU0dEUFpiQ3M4LVI4OXpwZTBvSks4NTgtRW1FWndzU2RPRW1sTmlyWnNuSmNHNzJtY2N4WHdlZmlHczVkbGNaZDFaY291cE",
-      "img": ""
-    },
-    {
-      "title": "Municipales 2026 à Mayotte : une participation en légère hausse au second tour - Outre-mer La 1ère",
-      "desc": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxOYl9OeC15UzJaanEzSGJJMDlmYlhJeUZzakM3aEFjYUFZZ3hYT1BIZnVEWF84Y1EwX29pb1U5ZjBtSElzbHVsVDR3RmxibU1pWGFxdWtnSWVrMGpLMVQ2VkRuREFaWXNXekFLSDlMNl",
-      "img": ""
-    },
-    {
-      "title": "RESULTATS. 2nd tour des Municipales 2026 à Pamandzi : Issoufi Maandhui sort vainqueur de la seule quadrangulaire de Mayotte - Outre-mer La 1ère",
-      "desc": "<a href=\"https://news.google.com/rss/articles/CBMi_wFBVV95cUxNQ0VHSE1nUEVVMW9MYlNBUHRMWUtzXzZuOHlsbkloWURSYmRpTEl0TUFOa1dCb3U1RXdOLXU1R2hVWVNHa2VCa3hYNGNBZzNxUjk0cW5iS1hFZWxWcFRndnprYmxKQmJJd1RmckpFdD",
-      "img": ""
-    },
-    {
-      "title": "PHOTOS. Municipales 2026 à Mayotte : des inondations perturbent le vote mais la participation des habitants est plus forte qu'au 1er tour - Outre-mer La 1ère",
-      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiwwFBVV95cUxPcm9SMHAwak81cVpFeTdwVnNQZHotLWlNcTdJV0E1OG02VDZkMG9Gc2hBUy1EaVk3RG5JYWJzWDgyY05FZkwtZzZSMjBaQV9MZmEyU2VVdjhENGtzUzVyZGF4TmFWaEpKRXBQUC1OZ0",
-      "img": ""
-    },
-    {
-      "title": "RESULTATS. 2nd tour des Municipales 2026 dans le nord de Mayotte : Nourdine Chafion en tête à M'tsamboro, Abdou-Lahiriti \"Maradona\" Antoissi vainqueur à Bandraboua et le grand retour d'Ahmed Darouechi à Acoua - Outre-mer La 1ère",
-      "desc": "<a href=\"https://news.google.com/rss/articles/CBMiugJBVV95cUxNQVV1RnJ5cWpfclg0dHRaNFJGWGF5QTlQR1VuUVlZVkhXSTNyYVFtUnJvTUo0UDJzZ1ZIY05NVkVHRDBKWEI2REhuM25ZY05zMHBYenVobF9OVGpaeHNVQWVfeURQUVU4WUdMSlMxQm",
-      "img": ""
-    }
-  ],
-  "actus_outremer": [
-    {
-      "title": "DIRECT. Municipales 2026 en Guadeloupe : dépouillement, résultats, réactions... suivez la soirée électorale du 2nd tour",
-      "desc": "",
-      "img": "https://la1ere.franceinfo.fr/image/gXNyPXOqHkeW3FcKPP4eiEyafmM/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F22%2Fwhatsapp-image-2026-03-22-at-10-46-51-69c05d4ad43c6785827623.jpg",
-      "link": "https://la1ere.franceinfo.fr/direct-municipales-2026-en-guadeloupe-depouillement-resultats-reactions-suivez-la-soiree-electorale-du-2nd-tour-1684092.html"
-    },
-    {
-      "title": "DIRECT. Résultats 2nd tour Municipales 2026 en Martinique suivez la soirée électorale dès 18h",
-      "desc": "",
-      "img": "https://la1ere.franceinfo.fr/image/xmKsgZdSTntS_g-5OKU69fzqnmM/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F22%2Foperation-de-vote-au-gros-morne-69c0551d1ff48450735355.jpg",
-      "link": "https://la1ere.franceinfo.fr/direct-resultats-2nd-tour-municipales-2026-en-martinique-suivez-la-soiree-electorale-des-18h-1684089.html"
-    },
-    {
-      "title": "Participation au 2ᵉ tour des municipales 2026 en Martinique : dernière ligne droite avant la clôture des bureaux de vote",
-      "desc": "",
-      "img": "https://la1ere.franceinfo.fr/image/XoVzY5egC61uB3qVUMtUTA3OlSU/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F22%2Fcopie-de-copie-de-martinique-la-1ere-2026-03-22t165835-310-69c0584573d0f704493266.png",
-      "link": "https://la1ere.franceinfo.fr/participation-au-2-tour-des-municipales-2026-en-martinique-derniere-ligne-droite-avant-la-cloture-des-bureaux-de-vote-1684086.html"
-    },
-    {
-      "title": "Municipales 2026 en Guadeloupe : une participation en hausse (+3,5 points) à 17h, pour ce second tour",
-      "desc": "",
-      "img": "https://la1ere.franceinfo.fr/image/vv3FO5LiNWppzFP4EWaSc-bTQA8/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F22%2Fwhatsapp-image-2026-03-22-at-11-19-40-69c04f0c54ad6826388912.jpg",
-      "link": "https://la1ere.franceinfo.fr/guadeloupe/municipales-2026-en-guadeloupe-une-participation-en-hausse-3-points-a-17h-pour-ce-second-tour-1684056.html"
-    }
-  ]
+  "ticker": [],
+  "actus_mayotte": [],
+  "actus_outremer": []
 }
