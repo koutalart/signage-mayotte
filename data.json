@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-23 09:52 UTC",
+  "updated": "2026-03-23 10:41 UTC",
   "meteo": {
     "temp": 29,
     "feels": 36,
@@ -71,6 +71,12 @@
   ],
   "actus_outremer": [
     {
+      "title": "Qui sont les nouveaux maires élus en outre-mer ? Ce qu'il faut retenir des résultats des municipales, territoire par territoire",
+      "desc": "",
+      "img": "https://la1ere.franceinfo.fr/image/gU_Xpt9UrffbxfSh68r8HfbfNh0/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F22%2Fenveloppe-depouillement-hermione-69bffda78977a005540706.jpg",
+      "link": "https://la1ere.franceinfo.fr/qui-sont-les-nouveaux-maires-elus-en-outre-mer-les-resultats-deja-connus-en-nouvelle-caledonie-a-la-reunion-et-mayotte-1683945.html"
+    },
+    {
       "title": "DIRECT. Suivez les résultats des élections municipales 2026 en Polynésie française",
       "desc": "",
       "img": "https://la1ere.franceinfo.fr/image/QWskcXgY1Krnaw5IRvI9KNFtmfc/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F23%2Fchapo-articles-1600-x-1100-px-23-69c0b090e802a640996200.png",
@@ -87,12 +93,6 @@
       "desc": "",
       "img": "https://la1ere.franceinfo.fr/image/_2foVEFQ7AUl5O-rjw_UdBRvoLE/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F22%2Fwhatsapp-image-2026-03-22-at-08-26-53-69bf7e108cd5c651728556.jpg",
       "link": "https://la1ere.franceinfo.fr/municipales-a-mayotte-ce-qu-il-faut-retenir-des-resultats-du-second-tour-1684212.html"
-    },
-    {
-      "title": "Municipales à Saint-Pierre et Miquelon : absent lors du conseil d'installation, Yannick Cambray réélu maire de Saint-Pierre",
-      "desc": "",
-      "img": "https://la1ere.franceinfo.fr/image/Pz6Rx3_V2iEdp9QCZlV0VdkfOh4/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F22%2Fjts-conseil-municipal-2026-03-22-bab-frame-4374-69c068597f05d329898926.png",
-      "link": "https://la1ere.franceinfo.fr/municipales-a-saint-pierre-et-miquelon-absent-lors-du-conseil-d-installation-yannick-cambray-reelu-maire-de-saint-pierre-1684206.html"
     }
   ]
 }
