@@ -1,12 +1,12 @@
 {
-  "updated": "2026-03-23 10:41 UTC",
+  "updated": "2026-03-23 11:36 UTC",
   "meteo": {
     "temp": 29,
-    "feels": 36,
+    "feels": 35,
     "condition": "Nuageux",
     "icon": "☁️",
     "wind": 8,
-    "humidity": 79,
+    "humidity": 77,
     "precipitation": 0.0,
     "hourly_temps": [
       29.5,
@@ -30,14 +30,19 @@
     ]
   },
   "ticker": [
+    "Lionel Jospin était le troisième premier ministre à s&#039;être rendu à Mayotte en 2001",
     "Lionel Jospin, ancien Premier ministre socialiste et architecte de la \"gauche plurielle\", est mort à l&#039;âge de 88 ans",
     "Après le 2nd tour des municipales, place aux élections des adjoints et des présidents des intercommunalités",
     "\"Jamais de mémoire de Mahorais on a eu droit à un tel spectacle\", affirme Said Issouf, consultant politique, après le 2nd tour des municipales",
     "Les cinq points à retenir des résultats à Mayotte du 2nd tour des élections municipales 2026",
-    "RESULTATS. 2nd tour des Municipales 2026 à Sada : Houssamoudine Abdallah sera six ans de plus à la tête de la mairie",
-    "RESULTATS. 2nd tour des Municipales 2026 à Pamandzi : Issoufi Maandhui sort vainqueur de la seule quadrangulaire de Mayotte"
+    "RESULTATS. 2nd tour des Municipales 2026 à Sada : Houssamoudine Abdallah sera six ans de plus à la tête de la mairie"
   ],
   "actus_mayotte": [
+    {
+      "title": "Lionel Jospin était le troisième premier ministre à s&#039;être rendu à Mayotte en 2001",
+      "desc": "L'ancien premier ministre s'était rendu à Mayotte en janvier 2001, après un passage à la Réunion. C'est sous son gouvernement, sous la présidence de Jacques Chirac, qu'ont été initiés les premières ét",
+      "img": "https://la1ere.franceinfo.fr/image/D5KPjYUpbbpHZMGHbyd7qvcoU9U/600x400/outremer/2019/10/02/5d94a60e3186c_avec_jospin_bertrand_langlois_afp.jpg"
+    },
     {
       "title": "Lionel Jospin, ancien Premier ministre socialiste et architecte de la \"gauche plurielle\", est mort à l&#039;âge de 88 ans",
       "desc": "Premier ministre d'un gouvernement d'union de la gauche de 1997 à 2002, Lionel Jospin avait choisi de quitter la vie politique après son élimination au premier tour de l'élection présidentielle de 200",
@@ -62,11 +67,6 @@
       "title": "RESULTATS. 2nd tour des Municipales 2026 à Sada : Houssamoudine Abdallah sera six ans de plus à la tête de la mairie",
       "desc": "Pas de changement au nouvel hôtel de ville de Sada, Houssamoudine Abdallah valide son avance au premier tour. Ce dimanche 22 mars, il l'emporte avec 52,37% des suffrages exprimés face à Abdel-Lattuf I",
       "img": "https://la1ere.franceinfo.fr/image/qzSo5nMHkgsheLaXdmwM0aULlsE/600x400/outremer/2026/03/22/whatsapp-image-2026-03-22-at-21-39-24-69c037cb7b069281425420.jpg"
-    },
-    {
-      "title": "RESULTATS. 2nd tour des Municipales 2026 à Pamandzi : Issoufi Maandhui sort vainqueur de la seule quadrangulaire de Mayotte",
-      "desc": "Conseiller municipal d'opposition, Issoufi Maandhui devrait être élu au prochain conseil municipal de Pamandzi. Ce dimanche 22 mars, il remporte la quadrangulaire face à Arbabiddini Chanfi, Siti Ali M",
-      "img": "https://la1ere.franceinfo.fr/image/usx31Wr54BebIXfxtECrbf97TvU/600x400/outremer/2026/03/22/whatsapp-image-2026-03-22-at-21-04-57-69c0314d7b540211088234.jpg"
     }
   ],
   "actus_outremer": [
@@ -77,22 +77,22 @@
       "link": "https://la1ere.franceinfo.fr/qui-sont-les-nouveaux-maires-elus-en-outre-mer-les-resultats-deja-connus-en-nouvelle-caledonie-a-la-reunion-et-mayotte-1683945.html"
     },
     {
+      "title": "Tortues marines : la saison de ponte démarre en Martinique",
+      "desc": "",
+      "img": "https://la1ere.franceinfo.fr/image/UoPVqpoyBw-DW0jkLFab1SiLjDA/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F22%2Fcopie-de-copie-de-martinique-la-1ere-2026-03-22t095853-823-69bffd40b1bb2998996738.png",
+      "link": "https://la1ere.franceinfo.fr/tortues-marines-la-saison-de-ponte-demarre-en-martinique-1684293.html"
+    },
+    {
+      "title": "Municipales en Guyane : Lénaïck Adam met fin à quatre décennies de continuité politique à Saint-Laurent-du-Maroni",
+      "desc": "",
+      "img": "https://la1ere.franceinfo.fr/image/_hVvF32L3fosddTxnAdaAQ8vq3A/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F23%2Fimg-2293-69c10119c9e50827012498.jpg",
+      "link": "https://la1ere.franceinfo.fr/municipales-en-guyane-lenaick-adam-met-fin-a-quatre-decennies-de-continuite-politique-a-saint-laurent-du-maroni-1684275.html"
+    },
+    {
       "title": "DIRECT. Suivez les résultats des élections municipales 2026 en Polynésie française",
       "desc": "",
       "img": "https://la1ere.franceinfo.fr/image/QWskcXgY1Krnaw5IRvI9KNFtmfc/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F23%2Fchapo-articles-1600-x-1100-px-23-69c0b090e802a640996200.png",
       "link": "https://la1ere.franceinfo.fr/direct-suivez-les-resultats-des-elections-municipales-2026-en-polynesie-francaise-1684200.html"
-    },
-    {
-      "title": "Percée des femmes, recomposition politique, maires réélus : bilan du second tour des élections municipales en Martinique",
-      "desc": "",
-      "img": "https://la1ere.franceinfo.fr/image/dB__KmjY8XnxtBPpoVKJIu7VeLM/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F23%2Fguylene-joseph-angelique-69c090b93f5f5043194481.jpg",
-      "link": "https://la1ere.franceinfo.fr/percee-des-femmes-recomposition-politique-maires-reelus-bilan-du-second-tour-des-elections-municipales-en-martinique-1684218.html"
-    },
-    {
-      "title": "Municipales à Mayotte : ce qu'il faut retenir des résultats du second tour",
-      "desc": "",
-      "img": "https://la1ere.franceinfo.fr/image/_2foVEFQ7AUl5O-rjw_UdBRvoLE/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F22%2Fwhatsapp-image-2026-03-22-at-08-26-53-69bf7e108cd5c651728556.jpg",
-      "link": "https://la1ere.franceinfo.fr/municipales-a-mayotte-ce-qu-il-faut-retenir-des-resultats-du-second-tour-1684212.html"
     }
   ]
 }
