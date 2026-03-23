@@ -118,3 +118,4 @@ PYEOF
           git add programme.json
           git diff --staged --quiet || git commit -m "🤖 Éditorial auto: mise à jour quotidienne"
           git push
+ 
