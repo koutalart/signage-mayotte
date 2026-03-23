@@ -1,12 +1,12 @@
 {
-  "updated": "2026-03-23 12:38 UTC",
+  "updated": "2026-03-23 14:06 UTC",
   "meteo": {
-    "temp": 29,
+    "temp": 30,
     "feels": 35,
     "condition": "Nuageux",
     "icon": "☁️",
-    "wind": 9,
-    "humidity": 77,
+    "wind": 8,
+    "humidity": 78,
     "precipitation": 0.0,
     "hourly_temps": [
       29.5,
@@ -30,14 +30,19 @@
     ]
   },
   "ticker": [
+    "Au Kenya, déjà 81 morts en mars après les pluies diluviennes",
     "Lionel Jospin était le troisième premier ministre à s&#039;être rendu à Mayotte en 2001",
     "Lionel Jospin, ancien Premier ministre socialiste et architecte de la \"gauche plurielle\", est mort à l&#039;âge de 88 ans",
     "Après le 2nd tour des municipales, place aux élections des adjoints et des présidents des intercommunalités",
     "\"Jamais de mémoire de Mahorais on a eu droit à un tel spectacle\", affirme Said Issouf, consultant politique, après le 2nd tour des municipales",
-    "Les cinq points à retenir des résultats à Mayotte du 2nd tour des élections municipales 2026",
-    "RESULTATS. 2nd tour des Municipales 2026 à Sada : Houssamoudine Abdallah sera six ans de plus à la tête de la mairie"
+    "Les cinq points à retenir des résultats à Mayotte du 2nd tour des élections municipales 2026"
   ],
   "actus_mayotte": [
+    {
+      "title": "Au Kenya, déjà 81 morts en mars après les pluies diluviennes",
+      "desc": "Au moins 81 personnes sont mortes au Kenya et des milliers d'autres ont été déplacées depuis début mars, parfois avec leur bétail, selon un bilan officiel paru dimanche 22 mars. Toutes sont victimes d",
+      "img": "https://la1ere.franceinfo.fr/image/Q6jexh8btJTg9L8uKI5DQT7ccCY/600x400/outremer/2020/05/07/5eb37ab0c8b50_nairobi-2770340_1280-1363848.jpg"
+    },
     {
       "title": "Lionel Jospin était le troisième premier ministre à s&#039;être rendu à Mayotte en 2001",
       "desc": "L'ancien premier ministre s'était rendu à Mayotte en janvier 2001, après un passage à la Réunion. C'est sous son gouvernement, sous la présidence de Jacques Chirac, qu'ont été initiés les premières ét",
@@ -62,11 +67,6 @@
       "title": "Les cinq points à retenir des résultats à Mayotte du 2nd tour des élections municipales 2026",
       "desc": "Le second tour des élections municipales s’est conclu ce dimanche 22 mars à Mayotte. Renouvellement des deux tiers des maires, le retour d'anciens élus ou les LR qui doublent leurs fiefs, on vous a ré",
       "img": "https://la1ere.franceinfo.fr/image/5ipJXltt-Nn3iT7LkCCf1xmf2Lo/600x400/outremer/2026/03/23/whatsapp-image-2026-03-22-at-19-55-14-69c0aae72c517189979671.jpg"
-    },
-    {
-      "title": "RESULTATS. 2nd tour des Municipales 2026 à Sada : Houssamoudine Abdallah sera six ans de plus à la tête de la mairie",
-      "desc": "Pas de changement au nouvel hôtel de ville de Sada, Houssamoudine Abdallah valide son avance au premier tour. Ce dimanche 22 mars, il l'emporte avec 52,37% des suffrages exprimés face à Abdel-Lattuf I",
-      "img": "https://la1ere.franceinfo.fr/image/qzSo5nMHkgsheLaXdmwM0aULlsE/600x400/outremer/2026/03/22/whatsapp-image-2026-03-22-at-21-39-24-69c037cb7b069281425420.jpg"
     }
   ],
   "actus_outremer": [
@@ -89,10 +89,10 @@
       "link": "https://la1ere.franceinfo.fr/tortues-marines-la-saison-de-ponte-demarre-en-martinique-1684293.html"
     },
     {
-      "title": "Municipales en Guyane : Lénaïck Adam met fin à quatre décennies de continuité politique à Saint-Laurent-du-Maroni",
+      "title": "Municipales en Polynésie : large victoire de Rémy Brillant à Papeete",
       "desc": "",
-      "img": "https://la1ere.franceinfo.fr/image/_hVvF32L3fosddTxnAdaAQ8vq3A/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F23%2Fimg-2293-69c10119c9e50827012498.jpg",
-      "link": "https://la1ere.franceinfo.fr/municipales-en-guyane-lenaick-adam-met-fin-a-quatre-decennies-de-continuite-politique-a-saint-laurent-du-maroni-1684275.html"
+      "img": "https://la1ere.franceinfo.fr/image/bbmDJzvpKufuLfBdwC4V_TJfUO0/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F23%2Fwhatsapp-image-2026-03-22-at-20-48-26-1-69c1145b76ae0009712116.jpg",
+      "link": "https://la1ere.franceinfo.fr/municipales-en-polynesie-large-victoire-de-remy-brillant-a-papeete-1684329.html"
     }
   ]
 }
