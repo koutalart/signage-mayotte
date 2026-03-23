@@ -1,11 +1,11 @@
 {
-  "updated": "2026-03-23 04:54 UTC",
+  "updated": "2026-03-23 06:03 UTC",
   "meteo": {
     "temp": 29,
     "feels": 35,
-    "condition": "Nuageux",
-    "icon": "☁️",
-    "wind": 5,
+    "condition": "Pluie",
+    "icon": "🌧️",
+    "wind": 6,
     "humidity": 81,
     "precipitation": 0.1,
     "hourly_temps": [
