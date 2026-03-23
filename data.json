@@ -1,12 +1,12 @@
 {
-  "updated": "2026-03-23 06:32 UTC",
+  "updated": "2026-03-23 07:54 UTC",
   "meteo": {
     "temp": 29,
     "feels": 35,
     "condition": "Pluie",
     "icon": "🌧️",
     "wind": 7,
-    "humidity": 80,
+    "humidity": 81,
     "precipitation": 0.1,
     "hourly_temps": [
       29.5,
@@ -29,7 +29,70 @@
       3
     ]
   },
-  "ticker": [],
-  "actus_mayotte": [],
-  "actus_outremer": []
+  "ticker": [
+    "Après le 2nd tour des municipales, place aux élections des adjoints et des présidents des intercommunalités",
+    "\"Jamais de mémoire de Mahorais on a eu droit à un tel spectacle\", affirme Said Issouf, consultant politique, après le 2nd tour des municipales",
+    "Les cinq points à retenir des résultats à Mayotte du 2nd tour des élections municipales 2026",
+    "RESULTATS. 2nd tour des Municipales 2026 à Sada : Houssamoudine Abdallah sera six ans de plus à la tête de la mairie",
+    "RESULTATS. 2nd tour des Municipales 2026 à Pamandzi : Issoufi Maandhui sort vainqueur de la seule quadrangulaire de Mayotte",
+    "RESULTATS. 2nd tour des Municipales 2026 à Koungou : Saïd \"Raos\" Ahamadi revient à la mairie 18 ans après"
+  ],
+  "actus_mayotte": [
+    {
+      "title": "Après le 2nd tour des municipales, place aux élections des adjoints et des présidents des intercommunalités",
+      "desc": "Les élections municipales sont terminées, mais il reste encore des bulletins à placer dans les urnes. Les conseils municipaux vont se réunir pour désigner les maires et leurs adjoints, tout comme les ",
+      "img": "https://la1ere.franceinfo.fr/image/LL0O1CNlJCCoeSA2ZqzcsDDDdSA/600x400/outremer/2026/03/22/whatsapp-image-2026-03-22-at-08-26-53-69bf7e108cd5c651728556.jpg"
+    },
+    {
+      "title": "\"Jamais de mémoire de Mahorais on a eu droit à un tel spectacle\", affirme Said Issouf, consultant politique, après le 2nd tour des municipales",
+      "desc": "Le consultant politique Said Issouf revient sur les résultats du second tour des élections municipales à Mayotte. Entre le renouvellement des deux tiers des maires, le retour d'anciens élus, les allia",
+      "img": "https://la1ere.franceinfo.fr/image/_NAlaCGmkUSoW_q5680xw7K-gY8/600x400/outremer/2026/03/23/whatsapp-image-2026-03-23-at-07-42-43-69c0c4e1c6129324273841.jpg"
+    },
+    {
+      "title": "Les cinq points à retenir des résultats à Mayotte du 2nd tour des élections municipales 2026",
+      "desc": "Le second tour des élections municipales s’est conclu ce dimanche 22 mars à Mayotte. Renouvellement des deux tiers des maires, le retour d'anciens élus ou les LR qui doublent leurs fiefs, on vous a ré",
+      "img": "https://la1ere.franceinfo.fr/image/5ipJXltt-Nn3iT7LkCCf1xmf2Lo/600x400/outremer/2026/03/23/whatsapp-image-2026-03-22-at-19-55-14-69c0aae72c517189979671.jpg"
+    },
+    {
+      "title": "RESULTATS. 2nd tour des Municipales 2026 à Sada : Houssamoudine Abdallah sera six ans de plus à la tête de la mairie",
+      "desc": "Pas de changement au nouvel hôtel de ville de Sada, Houssamoudine Abdallah valide son avance au premier tour. Ce dimanche 22 mars, il l'emporte avec 52,37% des suffrages exprimés face à Abdel-Lattuf I",
+      "img": "https://la1ere.franceinfo.fr/image/qzSo5nMHkgsheLaXdmwM0aULlsE/600x400/outremer/2026/03/22/whatsapp-image-2026-03-22-at-21-39-24-69c037cb7b069281425420.jpg"
+    },
+    {
+      "title": "RESULTATS. 2nd tour des Municipales 2026 à Pamandzi : Issoufi Maandhui sort vainqueur de la seule quadrangulaire de Mayotte",
+      "desc": "Conseiller municipal d'opposition, Issoufi Maandhui devrait être élu au prochain conseil municipal de Pamandzi. Ce dimanche 22 mars, il remporte la quadrangulaire face à Arbabiddini Chanfi, Siti Ali M",
+      "img": "https://la1ere.franceinfo.fr/image/usx31Wr54BebIXfxtECrbf97TvU/600x400/outremer/2026/03/22/whatsapp-image-2026-03-22-at-21-04-57-69c0314d7b540211088234.jpg"
+    },
+    {
+      "title": "RESULTATS. 2nd tour des Municipales 2026 à Koungou : Saïd \"Raos\" Ahamadi revient à la mairie 18 ans après",
+      "desc": "Des trois listes restantes à Koungou, ce dimanche 22 mars, celle de Saïd \"Raos\" Ahamadi arrive finalement en tête avec 52,13% des suffrages exprimés au second tour des élections municipales, devant ce",
+      "img": "https://la1ere.franceinfo.fr/image/Wh9qBWJpZrpSJyfmCYj4DbEyJwg/600x400/outremer/2026/03/22/whatsapp-image-2026-03-22-at-21-20-37-69c0355ae87db503831001.jpg"
+    }
+  ],
+  "actus_outremer": [
+    {
+      "title": "DIRECT. Suivez les résultats des élections municipales 2026 en Polynésie française",
+      "desc": "",
+      "img": "https://la1ere.franceinfo.fr/image/QWskcXgY1Krnaw5IRvI9KNFtmfc/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F23%2Fchapo-articles-1600-x-1100-px-23-69c0b090e802a640996200.png",
+      "link": "https://la1ere.franceinfo.fr/direct-suivez-les-resultats-des-elections-municipales-2026-en-polynesie-francaise-1684200.html"
+    },
+    {
+      "title": "Municipales à Mayotte : ce qu'il faut retenir des résultats du second tour",
+      "desc": "",
+      "img": "https://la1ere.franceinfo.fr/image/_2foVEFQ7AUl5O-rjw_UdBRvoLE/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F22%2Fwhatsapp-image-2026-03-22-at-08-26-53-69bf7e108cd5c651728556.jpg",
+      "link": "https://la1ere.franceinfo.fr/municipales-a-mayotte-ce-qu-il-faut-retenir-des-resultats-du-second-tour-1684212.html"
+    },
+    {
+      "title": "Municipales à Saint-Pierre et Miquelon : absent lors du conseil d'installation, Yannick Cambray réélu maire de Saint-Pierre",
+      "desc": "",
+      "img": "https://la1ere.franceinfo.fr/image/Pz6Rx3_V2iEdp9QCZlV0VdkfOh4/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F22%2Fjts-conseil-municipal-2026-03-22-bab-frame-4374-69c068597f05d329898926.png",
+      "link": "https://la1ere.franceinfo.fr/municipales-a-saint-pierre-et-miquelon-absent-lors-du-conseil-d-installation-yannick-cambray-reelu-maire-de-saint-pierre-1684206.html"
+    },
+    {
+      "title": "Municipales en Polynésie : un candidat d'une liste à Papeete en garde à vue après la saisie de 21 kg de drogue",
+      "desc": "",
+      "img": "https://la1ere.franceinfo.fr/image/L1paejrYvGFED8WIgMbY803_uuc/560x0:1120x630/800x450/filters:quality(80)/outremer%2F2026%2F03%2F23%2Fchapo-articles-1600-x-1100-px-41-69c0a42471513072220013.jpg",
+      "link": "https://la1ere.franceinfo.fr/municipales-en-polynesie-un-candidat-d-une-liste-a-papeete-en-garde-a-vue-apres-la-saisie-de-21-kg-de-drogue-1684188.html"
+    }
+  ]
 }
